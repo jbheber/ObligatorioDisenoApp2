@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stockapp.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Data
 {
-    public class Portfolio
+    public class Portfolio: ISoftDelete
     {
         public Guid Id { get; set; }
 
@@ -19,5 +20,7 @@ namespace Stockapp.Data
         public double ActionsValue { get; set; }
 
         public virtual IEnumerable<Action> Actions { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

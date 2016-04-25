@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Action.cs" />
     <Compile Include="Admin.cs" />
+    <Compile Include="Interfaces\ISoftDelete.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Portfolio.cs" />
