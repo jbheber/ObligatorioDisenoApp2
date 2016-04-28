@@ -1,0 +1,9 @@
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.dll.config
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.pdb

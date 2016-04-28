@@ -19,7 +19,7 @@ namespace Stockapp.Data
 
         public double ActionsValue { get; set; }
 
-        public virtual IEnumerable<Action> Actions { get; set; }
+        public virtual IEnumerable<Transaction> Transactions { get; set; }
 
         public bool IsDeleted { get; set; }
     }

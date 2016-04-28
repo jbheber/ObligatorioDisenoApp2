@@ -35,7 +35,22 @@ namespace Stockapp.Data.Access.Interfaces
         /// <summary>
         /// All Actions from database
         /// </summary>
-        IDbSet<Action> Actions { get; set; }
+        IDbSet<Stock> Stocks { get; set; }
+
+        /// <summary>
+        /// All transactions from database.
+        /// </summary>
+        IDbSet<Transaction> Transactions { get; set; }
+
+        /// <summary>
+        /// All stock recorded changes from database.
+        /// </summary>
+        IDbSet<StockHistory> StockHistories { get; set; }
+
+        /// <summary>
+        /// All stock recorded news from database.
+        /// </summary>
+        IDbSet<StockNews> StockNews { get; set; }
 
         /// <summary>
         /// All non deleted Users
@@ -58,8 +73,23 @@ namespace Stockapp.Data.Access.Interfaces
         IQueryable<Portfolio> PortfoliosGet { get; }
 
         /// <summary>
-        /// All non deleted Actions
+        /// All non deleted Stocks
         /// </summary>
-        IQueryable<Action> ActionsGet { get; }
+        IQueryable<Stock> StocksGet { get; }
+
+        /// <summary>
+        /// All non deleted Transactions
+        /// </summary>
+        IQueryable<Transaction> TransactionsGet { get; }
+
+        /// <summary>
+        /// All non deleted stock recorded changes.
+        /// </summary>
+        IQueryable<StockHistory> StockHistoriesGet { get; }
+
+        /// <summary>
+        /// All non deleted recorded stock news.
+        /// </summary>
+        IQueryable<StockNews> StockNewsGet { get; }
     }
 }

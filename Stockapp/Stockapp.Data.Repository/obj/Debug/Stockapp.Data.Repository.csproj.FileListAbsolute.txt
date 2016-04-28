@@ -1,0 +1,14 @@
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll.config
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb

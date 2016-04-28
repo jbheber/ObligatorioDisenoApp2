@@ -43,7 +43,22 @@ namespace Stockapp.Data.Access
         /// <summary>
         /// All Actions from database
         /// </summary>
-        public IDbSet<Action> Actions { get; set; }
+        public IDbSet<Stock> Stocks { get; set; }
+
+        /// <summary>
+        /// All Transactions from database
+        /// </summary>
+        public IDbSet<Transaction> Transactions { get; set; }
+
+        /// <summary>
+        /// All stock changes from database
+        /// </summary>
+        public IDbSet<StockHistory> StockHistories { get; set; }
+
+        /// <summary>
+        /// All stock recorded news from database.
+        /// </summary>
+        public IDbSet<StockNews> StockNews { get; set; }
         #endregion
 
         #region Get non-deleted
@@ -92,13 +107,46 @@ namespace Stockapp.Data.Access
         }
 
         /// <summary>
-        /// All non deleted Actions
+        /// All non deleted Stocks
         /// </summary>
-        public IQueryable<Action> ActionsGet
+        public IQueryable<Stock> StocksGet
         {
             get
             {
-                return Actions.GetNonDeleted<Action>();
+                return Stocks.GetNonDeleted<Stock>();
+            }
+        }
+
+        /// <summary>
+        /// All non deleted transactions
+        /// </summary>
+        public IQueryable<Transaction> TransactionsGet
+        {
+            get
+            {
+                return Transactions.GetNonDeleted<Transaction>();
+            }
+        }
+
+        /// <summary>
+        /// All non deleted recorded stock changes.
+        /// </summary>
+        public IQueryable<StockHistory> StockHistoriesGet
+        {
+            get
+            {
+                return StockHistories.GetNonDeleted<StockHistory>();
+            }
+        }
+
+        /// <summary>
+        /// All non deleted stock news.
+        /// </summary>
+        public IQueryable<StockNews> StockNewsGet
+        {
+            get
+            {
+                return StockNews.GetNonDeleted<StockNews>();
             }
         }
         #endregion

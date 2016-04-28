@@ -8,3 +8,12 @@
 \\vmware-host\shared folders\documents\visual studio 2015\Projects\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.csprojResolveAssemblyReference.cache
 \\vmware-host\shared folders\documents\visual studio 2015\Projects\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
 \\vmware-host\shared folders\documents\visual studio 2015\Projects\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.dll.config
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
