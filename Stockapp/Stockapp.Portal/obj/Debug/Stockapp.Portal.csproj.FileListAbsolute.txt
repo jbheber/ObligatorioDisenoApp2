@@ -38,3 +38,43 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\ApplicationInsights.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CSharp.Core.targets
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\System.Collections.Immutable.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\System.Reflection.Metadata.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\vbc.exe
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\VBCSCompiler.exe
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\VBCSCompiler.exe.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Agent.Intercept.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.PerfCounterCollector.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.ServerTelemetryChannel.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Web.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.WindowsServer.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.ApplicationInsights.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.ServerTelemetryChannel.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Web.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.WindowsServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.ApplicationInsights.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb

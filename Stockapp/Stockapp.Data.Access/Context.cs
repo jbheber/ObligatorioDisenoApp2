@@ -1,18 +1,14 @@
-﻿using Stockapp.Data.Access.Interfaces;
-using Stockapp.Data.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using Stockapp.Data.Interfaces;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity.Infrastructure;
 
 namespace Stockapp.Data.Access
 {
     /// <summary>
     /// Context implementation
     /// </summary>
-    public class Context : DbContext, IContext
+    public class Context : DbContext
     {
         public Context() : base("name=Context")
         {
@@ -59,96 +55,8 @@ namespace Stockapp.Data.Access
         /// All stock recorded news from database.
         /// </summary>
         public IDbSet<StockNews> StockNews { get; set; }
-        #endregion
 
-        #region Get non-deleted
-        /// <summary>
-        /// All non deleted Users
-        /// </summary>
-        public IQueryable<User> UsersGet
-        {
-            get
-            {
-                return Users.GetNonDeleted<User>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted Players
-        /// </summary>
-        public IQueryable<Player> PlayersGet
-        {
-            get
-            {
-                return Players.GetNonDeleted<Player>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted Administrators
-        /// </summary>
-        public IQueryable<Admin> AdminsGet
-        {
-            get
-            {
-                return Admins.GetNonDeleted<Admin>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted Portfolios
-        /// </summary>
-        public IQueryable<Portfolio> PortfoliosGet
-        {
-            get
-            {
-                return Portfolios.GetNonDeleted<Portfolio>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted Stocks
-        /// </summary>
-        public IQueryable<Stock> StocksGet
-        {
-            get
-            {
-                return Stocks.GetNonDeleted<Stock>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted transactions
-        /// </summary>
-        public IQueryable<Transaction> TransactionsGet
-        {
-            get
-            {
-                return Transactions.GetNonDeleted<Transaction>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted recorded stock changes.
-        /// </summary>
-        public IQueryable<StockHistory> StockHistoriesGet
-        {
-            get
-            {
-                return StockHistories.GetNonDeleted<StockHistory>();
-            }
-        }
-
-        /// <summary>
-        /// All non deleted stock news.
-        /// </summary>
-        public IQueryable<StockNews> StockNewsGet
-        {
-            get
-            {
-                return StockNews.GetNonDeleted<StockNews>();
-            }
-        }
+        public IDbSet<InvitationCode> InvitationCodes { get; set; }
         #endregion
     }
 

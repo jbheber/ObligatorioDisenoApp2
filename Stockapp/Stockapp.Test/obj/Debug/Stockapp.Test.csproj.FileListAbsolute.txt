@@ -29,3 +29,34 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.e
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.csprojResolveAssemblyReference.cache
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Test.dll.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Test.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Test.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.SqlServer.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Access.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Repository.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Logic.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.abstractions.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.core.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.execution.desktop.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Access.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Repository.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Logic.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.abstractions.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.core.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.core.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.execution.desktop.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.execution.desktop.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb

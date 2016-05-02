@@ -7,3 +7,12 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Entity
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.dll.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Logic.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.pdb

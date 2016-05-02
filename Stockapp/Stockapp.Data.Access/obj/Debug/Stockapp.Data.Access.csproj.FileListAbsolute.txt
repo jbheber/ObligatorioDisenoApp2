@@ -27,3 +27,18 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.SqlServer.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.EntityChanges.resources
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.Init.resources
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.EntityChanges.resources
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\Stockapp.Data.Access.dll.config
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\Stockapp.Data.Access.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\Stockapp.Data.Access.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.SqlServer.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\Stockapp.Data.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\Stockapp.Data.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.csprojResolveAssemblyReference.cache
