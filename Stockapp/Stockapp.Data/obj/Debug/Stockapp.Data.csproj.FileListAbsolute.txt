@@ -17,8 +17,6 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityF
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.SqlServer.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.dll.config
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\Stockapp.Data.pdb
@@ -26,3 +24,7 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockap
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.SqlServer.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.csprojResolveAssemblyReference.cache
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.csprojResolveAssemblyReference.cache

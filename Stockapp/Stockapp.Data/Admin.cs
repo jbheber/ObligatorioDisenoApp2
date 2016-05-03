@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Data
 {
-    public class Admin : ISoftDelete
+    public class Admin : ISoftDelete, Identificable
     {
         /// <summary>
         /// DataBase generated Id

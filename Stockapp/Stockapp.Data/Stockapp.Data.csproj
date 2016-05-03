@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Identificable.cs" />
     <Compile Include="InvitationCode.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="Admin.cs" />

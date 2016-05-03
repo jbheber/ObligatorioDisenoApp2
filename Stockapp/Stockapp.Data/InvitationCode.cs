@@ -3,7 +3,7 @@ using System;
 
 namespace Stockapp.Data
 {
-    public class InvitationCode: ISoftDelete
+    public class InvitationCode: ISoftDelete, Identificable
     {
         public Guid Id { get; set; }
 

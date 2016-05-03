@@ -8,26 +8,65 @@ using System.Linq.Expressions;
 
 namespace Stockapp.Data.Repository
 {
-    public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class, ISoftDelete
+    public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class, ISoftDelete, Identificable
     {
         internal Context context;
         internal IDbSet<TEntity> dbSet;
-        internal IQueryable<TEntity> dbGet;
 
         public GenericRepository(Context context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();
-            this.dbGet = dbGet.GetNonDeleted<TEntity>();
         }
 
+        /// <summary>
+        /// Get all non deleted records
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="includeProperties"></param>
+        /// <returns></returns>
         public virtual IEnumerable<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "")
         {
-            IQueryable<TEntity> query = dbGet;
+            IQueryable<TEntity> query = dbSet.GetNonDeleted<TEntity>();
 
+            return PrivateGet(query, filter, orderBy, includeProperties);
+        }
+
+        /// <summary>
+        /// Get all records from database, including deleted ones.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="includeProperties"></param>
+        /// <returns></returns>
+        public virtual IEnumerable<TEntity> GetAll(
+            Expression<Func<TEntity, bool>> filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            string includeProperties = "")
+        {
+            IQueryable<TEntity> query = dbSet;
+
+            return PrivateGet(query, filter, orderBy, includeProperties);
+        }
+
+        /// <summary>
+        /// Gets all records from query.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="filter"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="includeProperties"></param>
+        /// <returns></returns>
+        private IEnumerable<TEntity> PrivateGet(
+            IQueryable<TEntity> query,
+            Expression<Func<TEntity, bool>> filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            string includeProperties = "")
+        {
             if (filter != null)
                 query = query.Where(filter);
 
@@ -41,9 +80,9 @@ namespace Stockapp.Data.Repository
                 return query.ToList();
         }
 
-        public virtual TEntity GetByID(object id)
+        public virtual TEntity GetById(object id)
         {
-            return dbSet.Find(id);
+            return dbSet.GetNonDeleted().Where(e => e.Id == (Guid)id).SingleOrDefault();
         }
 
         public virtual void Insert(TEntity entity)
@@ -53,7 +92,7 @@ namespace Stockapp.Data.Repository
 
         public virtual void Delete(object id)
         {
-            TEntity entityToDelete = dbSet.Find(id);
+            TEntity entityToDelete = this.GetById(id);
             Delete(entityToDelete);
         }
 

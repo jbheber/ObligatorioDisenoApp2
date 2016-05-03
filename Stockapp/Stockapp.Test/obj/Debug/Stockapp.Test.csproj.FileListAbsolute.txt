@@ -19,7 +19,6 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockap
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.SqlServer.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.abstractions.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.pdb
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.core.pdb
@@ -34,7 +33,10 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockap
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Test.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.SqlServer.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Access.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Repository.dll
@@ -49,8 +51,12 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockap
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Logic.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.xml
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.abstractions.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.assert.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.core.pdb
@@ -60,3 +66,15 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockap
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.csprojResolveAssemblyReference.cache
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.utility.desktop.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.utility.desktop.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.xml

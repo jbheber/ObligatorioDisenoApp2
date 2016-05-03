@@ -12,9 +12,6 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\De
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
-\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll.config
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.pdb
@@ -26,3 +23,6 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\De
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb

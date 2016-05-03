@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Data
 {
-    public class Portfolio: ISoftDelete
+    public class Portfolio: ISoftDelete, Identificable
     {
         public Guid Id { get; set; }
 

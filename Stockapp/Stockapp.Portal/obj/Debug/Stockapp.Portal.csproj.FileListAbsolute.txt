@@ -54,6 +54,8 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stock
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll.config
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Agent.Intercept.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -66,6 +68,8 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stock
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.dll
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.xml
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.ServerTelemetryChannel.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Web.xml
@@ -78,3 +82,9 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stock
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache

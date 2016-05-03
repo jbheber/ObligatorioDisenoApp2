@@ -16,3 +16,5 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stocka
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\EntityFramework.SqlServer.xml
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.pdb
+\\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.csprojResolveAssemblyReference.cache
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.csprojResolveAssemblyReference.cache

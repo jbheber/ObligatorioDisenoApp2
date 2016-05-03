@@ -10,7 +10,7 @@ namespace Stockapp.Data.Access
     /// </summary>
     public class Context : DbContext
     {
-        public Context() : base("name=Context")
+        public Context() : base()
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

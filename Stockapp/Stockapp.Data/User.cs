@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Stockapp.Data
 {
-    public class User : ISoftDelete
+    public class User : ISoftDelete, Identificable
     {
         /// <summary>
         /// Identifies the User.
