@@ -1,6 +1,7 @@
 ﻿using Moq;
 using Stockapp.Data;
 using Stockapp.Data.Access;
+using Stockapp.Data.Extensions;
 using Stockapp.Data.Repository;
 using System;
 using System.Collections.Generic;
@@ -25,13 +26,28 @@ namespace Stockapp.Test
 
             IEnumerable<User> result = unitOfWork.UserRepository.GetAll();
 
-            Assert.Equal(result.Count(), data.Count);
+            Assert.Equal(result.SafeCount(), data.Count);
+        }
+
+        [Fact]
+        public void GetAllFilterUsersTest()
+        {
+            var data = GetUserList();
+            var set = new Mock<DbSet<User>>().SetupData(data);
+
+            var context = new Mock<Context>();
+            context.Setup(ctx => ctx.Set<User>()).Returns(set.Object);
+
+            var unitOfWork = new UnitOfWork(context.Object);
+
+            IEnumerable<User> result = unitOfWork.UserRepository.GetAll(u => u.IsAdmin == true);
+
+            Assert.Equal(result.SafeCount(), data.Where(d => d.IsAdmin == true).SafeCount());
         }
 
         [Fact]
         public void GetNonDeletedUsersTest()
         {
-
             var data = GetUserList();
             var set = new Mock<DbSet<User>>().SetupData(data);
 
@@ -42,7 +58,7 @@ namespace Stockapp.Test
 
             IEnumerable<User> result = unitOfWork.UserRepository.Get();
 
-            Assert.Equal(result.Count(), data.Where(d => d.IsDeleted == false).Count());
+            Assert.Equal(result.SafeCount(), data.Where(d => d.IsDeleted == false).SafeCount());
         }
 
         [Theory]
@@ -89,6 +105,32 @@ namespace Stockapp.Test
             var result = unitOfWork.UserRepository.GetAll();
 
             Assert.Equal(newUser, unitOfWork.UserRepository.GetById(newUser.Id));
+        }
+
+        [Fact]
+        public void InsertSingleUserTest()
+        {
+            var set = new Mock<DbSet<User>>().SetupData();
+
+            var context = new Mock<Context>();
+            context.Setup(ctx => ctx.Set<User>()).Returns(set.Object);
+
+            var unitOfWork = new UnitOfWork(context.Object);
+            var newUser = new User()
+            {
+                Name = "dario",
+                Password = "DRodriguez.22",
+                Email = "dario.rodriguez@outlook.com",
+                IsAdmin = false,
+                IsDeleted = false,
+                Id = Guid.NewGuid()
+            };
+
+            unitOfWork.UserRepository.Insert(newUser);
+
+            var result = unitOfWork.UserRepository.GetAll();
+
+            Assert.True(result.isNotEmpty());
         }
 
         [Theory]

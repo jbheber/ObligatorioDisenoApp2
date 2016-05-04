@@ -1,4 +1,5 @@
 ﻿using Stockapp.Data.Access;
+using Stockapp.Data.Extensions;
 using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -82,7 +83,8 @@ namespace Stockapp.Data.Repository
 
         public virtual TEntity GetById(object id)
         {
-            return dbSet.GetNonDeleted().Where(e => e.Id == (Guid)id).SingleOrDefault();
+            var searchedEntity = dbSet.GetNonDeleted().Where(e => e.Id == (Guid)id);
+            return searchedEntity.isNotEmpty() ? searchedEntity.SingleOrDefault() : null;
         }
 
         public virtual void Insert(TEntity entity)
