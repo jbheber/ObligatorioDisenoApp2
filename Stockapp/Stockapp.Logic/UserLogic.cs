@@ -15,17 +15,17 @@ namespace Stockapp.Logic
             this.UnitOfWork = UnitOfWork;
         }
 
-        public bool AlphaNumeric(string word)
+        public bool IsAlphaNumeric(string word)
         {
             throw new NotImplementedException();
         }
 
-        public bool EmptyMail(string email)
+        public bool MailIsEmpty(string email)
         {
             throw new NotImplementedException();
         }
 
-        public bool InvitationCodeLenght(string invitationCode)
+        public bool ValidInvitationCodeLenght(string invitationCode)
         {
             throw new NotImplementedException();
         }
@@ -40,24 +40,29 @@ namespace Stockapp.Logic
             throw new NotImplementedException();
         }
 
-        public bool PasswordLenght(string password)
+        public bool ValidPasswordLenght(string password)
         {
             throw new NotImplementedException();
         }
 
-        public void Register(User user, InvitationCode invitationCode)
+        public void RegisterUser(User user, InvitationCode invitationCode)
         {
             throw new NotImplementedException();
         }
 
-        public void RegisterValidations(User user, InvitationCode invitationCode)
+        public void ValidateUser(User user, InvitationCode invitationCode)
         {
             throw new NotImplementedException();
         }
 
-        public bool UniqueUserEmail(string email)
+        public bool EmailIsUnique(string email)
         {
-            throw new NotImplementedException();
+            var userList = UnitOfWork.UserRepository.Get();
+            if (userList.Any(u => u.Email == email))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

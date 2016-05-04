@@ -9,13 +9,13 @@ namespace Stockapp.Logic.API
 {
     public interface IUserLogic
     {
-        bool UniqueUserEmail(string email);
-        bool EmptyMail(string email);
-        bool PasswordLenght(string password);
-        bool AlphaNumeric(string word);
-        bool InvitationCodeLenght(string invitationCode);
-        void RegisterValidations(User user, InvitationCode invitationCode);
-        void Register(User user, InvitationCode invitationCode);
+        bool EmailIsUnique(string email);
+        bool MailIsEmpty(string email);
+        bool ValidPasswordLenght(string password);
+        bool IsAlphaNumeric(string word);
+        bool ValidInvitationCodeLenght(string invitationCode);
+        void ValidateUser(User user, InvitationCode invitationCode);
+        void RegisterUser(User user, InvitationCode invitationCode);
         void IsInDb(User user);
         User LogIn(User user);
 
