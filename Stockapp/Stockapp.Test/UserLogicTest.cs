@@ -117,7 +117,7 @@ namespace Stockapp.Test
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
 
-            string word = "a@f4567l";
+            string word = "af4567l";
             bool expected = true;
             bool obtain = userLogic.IsAlphaNumeric(word);
 
@@ -145,12 +145,11 @@ namespace Stockapp.Test
         }
 
         [Theory]
-        [InlineData("Carlos", "carlos@hotmail.com", "carlos123", "abc12345")]
         [InlineData("Carlos", "", "carlos123", "abc12345")]
         [InlineData("Carlos", "carlos@hotmail.com", "carlos", "abc12345")]
         [InlineData("Carlos", "carlos@hotmail.com", "carlos123", "12345")]
         [InlineData("", "", "", "")]
-        public void RegisterValidationsTest(string name, string email, string password, string ic)
+        public void RegisterValidationsTest1(string name, string email, string password, string ic)
         {
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
@@ -165,12 +164,58 @@ namespace Stockapp.Test
             user.Name = name;
             user.Email = email;
             user.Password = password;
-            userLogic.ValidateUser(user, invitationCode);
-
-            Assert.Throws<UserExceptions>(
-            delegate {
+            bool throwUserException = false;
+            try
+            {
                 userLogic.ValidateUser(user, invitationCode);
-            });
+                // If test gets to this assert then it failed
+                throwUserException = false;
+            }
+            catch (UserExceptions ue)
+            {
+                // If test gets to this assert then its correct
+                throwUserException = true;
+            }
+            catch (Exception e)
+            {
+                throwUserException = false;
+            }
+            Assert.True(throwUserException);
+        }
+
+        [Theory]
+        [InlineData("Carlos", "car@gmail.com", "carlos123", "abc12345")]
+        [InlineData("Arto", "artoo@gmail.com", "artola123", "abc12345")]
+        public void RegisterValidationsTest2(string name, string email, string password, string ic)
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = ic;
+            User user = new User();
+            user.Name = name;
+            user.Email = email;
+            user.Password = password;
+            try
+            {
+                userLogic.ValidateUser(user, invitationCode);
+                // If test gets to this assert then its correct
+                Assert.True(true);
+            }
+            catch (UserExceptions ue)
+            {
+                // If test gets to this assert then it failed
+                Assert.True(false);
+            }
+            catch (Exception e)
+            {
+                Assert.True(false);
+            }
         }
     }
 }
