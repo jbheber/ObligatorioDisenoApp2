@@ -1,6 +1,7 @@
 ﻿using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Stockapp.Data
 
         public Guid StockId { get; set; }
 
+        [ForeignKey("StockId")]
         public virtual Stock Stock { get; set; }
 
         public double NetVariation { get; set; }
@@ -31,6 +33,7 @@ namespace Stockapp.Data
 
         public Guid PortfolioId { get; set; }
 
+        [ForeignKey("PortfolioId")]
         public virtual Portfolio Portfolio { get; set; }
 
         public bool IsDeleted { get; set; }
