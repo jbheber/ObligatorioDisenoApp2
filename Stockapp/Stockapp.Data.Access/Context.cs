@@ -58,6 +58,22 @@ namespace Stockapp.Data.Access
 
         public IDbSet<InvitationCode> InvitationCodes { get; set; }
         #endregion
+
+        // Additional conventions to help EF understand our data relationships
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Player>().HasRequired(x => x.User);
+            modelBuilder.Entity<Admin>().HasRequired(x => x.User);
+            modelBuilder.Entity<InvitationCode>().HasOptional(x => x.ParentUser);
+            modelBuilder.Entity<Portfolio>().HasOptional(x => x.Transactions).WithRequired();
+            modelBuilder.Entity<Stock>()
+                .HasOptional(x => x.StockHistory)
+                .WithRequired();
+            modelBuilder.Entity<Stock>()
+                .HasOptional(x => x.StockNews)
+                .WithMany();
+
+        }
     }
 
     #region Extension methods for getting non-deleted
