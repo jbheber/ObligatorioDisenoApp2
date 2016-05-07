@@ -26,3 +26,17 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\De
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb

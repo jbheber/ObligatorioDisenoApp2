@@ -5,10 +5,6 @@ using Stockapp.Data.Repository;
 using Stockapp.Logic;
 using Stockapp.Logic.API;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Stockapp.Test
@@ -206,6 +202,114 @@ namespace Stockapp.Test
                 userLogic.ValidateUser(user, invitationCode);
                 // If test gets to this assert then its correct
                 Assert.True(true);
+            }
+            catch (UserExceptions ue)
+            {
+                // If test gets to this assert then it failed
+                Assert.True(false);
+            }
+            catch (Exception e)
+            {
+                Assert.True(false);
+            }
+        }
+
+        [Theory]
+        [InlineData("Carlos", "car@gmail.com", "carlos123", "abc12345")]
+        [InlineData("Arto", "artoo@gmail.com", "artola123", "abc12345")]
+        public void RegisterUserTest(string name, string email, string password, string ic)
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(null, null, null));
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = ic;
+            mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
+            User user = new User();
+            user.Name = name;
+            user.Email = email;
+            user.Password = password;
+            try
+            {
+                userLogic.RegisterUser(user, invitationCode);
+                // If test gets to this assert then its correct
+                User searchedUser = mockUnitOfWork.Object.UserRepository.GetById(user.Id);
+                InvitationCode searchedIC = mockUnitOfWork.Object.InvitationCodeRepository.GetById(invitationCode.Id);
+                bool result = (user.Id == searchedUser.Id) && (searchedIC == null);
+                Assert.True(result);
+            }
+            catch (UserExceptions ue)
+            {
+                // If test gets to this assert then it failed
+                Assert.True(false);
+            }
+            catch (Exception e)
+            {
+                Assert.True(false);
+            }
+        }
+
+        [Fact]
+        public void IsInDbTest()
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = "abc12345";
+            User user = new User();
+            user.Name = "Carlos";
+            user.Email = "car@gmail.com";
+            user.Password = "carlos123";
+            try
+            {
+                userLogic.RegisterUser(user, invitationCode);
+                userLogic.IsInDb(user);
+                // If test gets to this assert then its correct
+                Assert.True(true);
+            }
+            catch (UserExceptions ue)
+            {
+                // If test gets to this assert then it failed
+                Assert.True(false);
+            }
+            catch (Exception e)
+            {
+                Assert.True(false);
+            }
+        }
+
+        [Fact]
+        public void LogInTest()
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = "abc12345";
+            User user = new User();
+            user.Name = "Carlos";
+            user.Email = "car@gmail.com";
+            user.Password = "carlos123";
+            try
+            {
+                userLogic.RegisterUser(user, invitationCode);
+                User searched = userLogic.LogIn(user);
+                // If test gets to this assert then its correct
+                Assert.Equal(user.Id, searched.Id);
             }
             catch (UserExceptions ue)
             {

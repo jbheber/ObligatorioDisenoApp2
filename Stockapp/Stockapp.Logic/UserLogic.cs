@@ -17,6 +17,16 @@ namespace Stockapp.Logic
             this.UnitOfWork = UnitOfWork;
         }
 
+        public bool EmailIsUnique(string email)
+        {
+            var userList = UnitOfWork.UserRepository.Get();
+            if (userList.Any(u => u.Email == email))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public bool IsAlphaNumeric(string word)
         {
             Regex r = new Regex("(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{2,})$");
@@ -33,24 +43,9 @@ namespace Stockapp.Logic
             return (invitationCode.Length != 8) ? false : true;
         }
 
-        public void IsInDb(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User LogIn(User user)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool ValidPasswordLenght(string password)
         {
             return password.Length < 6 ? false : true;
-        }
-
-        public void RegisterUser(User user, InvitationCode invitationCode)
-        {
-            throw new NotImplementedException();
         }
 
         public void ValidateUser(User user, InvitationCode invitationCode)
@@ -81,14 +76,45 @@ namespace Stockapp.Logic
             }
         }
 
-        public bool EmailIsUnique(string email)
+        public void RegisterUser(User user, InvitationCode invitationCode)
+        {
+            try
+            {
+                ValidateUser(user, invitationCode);
+                UnitOfWork.UserRepository.Insert(user);
+                UnitOfWork.InvitationCodeRepository.Delete(invitationCode);
+            }
+            catch (Exception e)
+            {
+                throw new UserExceptions(e.Message);
+            }
+        }
+
+        public void IsInDb(User user)
         {
             var userList = UnitOfWork.UserRepository.Get();
-            if (userList.Any(u => u.Email == email))
+            if (userList.Any(u => u.Name == user.Name && u.Password == user.Password))
             {
-                return false;
+                //Ingresa correctamente
             }
-            return true;
+            else
+            {
+                throw new UserExceptions("Nombre de usuario o contraseña inválido");
+            }
+        }
+
+        public User LogIn(User user)
+        {
+            try
+            {
+                IsInDb(user);
+                User searchedUser = UnitOfWork.UserRepository.GetById(user.Id);
+                return searchedUser;
+            }
+            catch (Exception e)
+            {
+                throw new UserExceptions(e.Message);
+            }
         }
     }
 }
