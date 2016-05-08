@@ -1,8 +1,10 @@
 ﻿using Stockapp.Data;
 using Stockapp.Data.Exceptions;
+using Stockapp.Data.Extensions;
 using Stockapp.Data.Repository;
 using Stockapp.Logic.API;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -38,9 +40,10 @@ namespace Stockapp.Logic
             return (email == string.Empty) ? true : false;
         }
 
-        public bool ValidInvitationCodeLenght(string invitationCode)
+        public bool ValidInvitationCode(InvitationCode invitationCode)
         {
-            return (invitationCode.Length != 8) ? false : true;
+            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isEmpty();
+            return exisitingCode;
         }
 
         public bool ValidPasswordLenght(string password)
@@ -66,13 +69,17 @@ namespace Stockapp.Logic
             {
                 throw new UserExceptions("La contraseña debe ser alpfanumerica");
             }
-            if (!ValidInvitationCodeLenght(invitationCode.Code))
+            if (!ValidInvitationCode(invitationCode))
             {
-                throw new UserExceptions("El largo del codigo de invitacion debe ser 8");
+                throw new UserExceptions("El codigo de invitacion no es correcto");
             }
             if (!IsAlphaNumeric(invitationCode.Code))
             {
                 throw new UserExceptions("El codigo de invitacion debe ser alpfanumerico");
+            }
+            if (IsInDb(user))
+            {
+                throw new UserExceptions("Ese usuario ya fue registrado");
             }
         }
 
@@ -83,6 +90,7 @@ namespace Stockapp.Logic
                 ValidateUser(user, invitationCode);
                 UnitOfWork.UserRepository.Insert(user);
                 UnitOfWork.InvitationCodeRepository.Delete(invitationCode);
+                UnitOfWork.Save();
             }
             catch (Exception e)
             {
@@ -90,31 +98,39 @@ namespace Stockapp.Logic
             }
         }
 
-        public void IsInDb(User user)
+        public bool IsInDb(User user)
         {
             var userList = UnitOfWork.UserRepository.Get();
-            if (userList.Any(u => u.Name == user.Name && u.Password == user.Password))
-            {
-                //Ingresa correctamente
-            }
+            if (userList.isEmpty())
+                return false;
             else
-            {
-                throw new UserExceptions("Nombre de usuario o contraseña inválido");
-            }
+                return userList.Any(x => x.Name == user.Name && x.Id != user.Id);
         }
 
         public User LogIn(User user)
         {
-            try
-            {
-                IsInDb(user);
-                User searchedUser = UnitOfWork.UserRepository.GetById(user.Id);
-                return searchedUser;
-            }
-            catch (Exception e)
-            {
-                throw new UserExceptions(e.Message);
-            }
+            if (IsInDb(user) == false)
+                return null;
+            var searchedUser = UnitOfWork.UserRepository.Get(x => x.Name == user.Name).SingleOrDefault();
+
+            if (searchedUser.Password != searchedUser.Password)
+                throw new UserExceptions("Contraseña incorrecta");
+
+            return searchedUser;
+        }
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            return UnitOfWork.UserRepository.Get();
+        }
+
+        public bool UpdateUser(User user)
+        {
+            if (IsInDb(user))
+                return false;
+            UnitOfWork.UserRepository.Update(user);
+            UnitOfWork.Save();
+            return true;
         }
     }
 }

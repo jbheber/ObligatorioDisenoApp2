@@ -72,12 +72,10 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.r
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.utility.desktop.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.pdb
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.pdb
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\EntityFramework.Testing.Moq.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Test\bin\Debug\Moq.EntityFramework.xml
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Test\bin\Debug\xunit.abstractions.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.visualstudio.testadapter.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Test\bin\Debug\xunit.runner.utility.desktop.dll

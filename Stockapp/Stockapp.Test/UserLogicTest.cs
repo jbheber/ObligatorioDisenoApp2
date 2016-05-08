@@ -5,6 +5,7 @@ using Stockapp.Data.Repository;
 using Stockapp.Logic;
 using Stockapp.Logic.API;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Stockapp.Test
@@ -121,26 +122,6 @@ namespace Stockapp.Test
         }
 
         [Theory]
-        [InlineData("1234")]
-        [InlineData("123456")]
-        [InlineData("12345678")]
-        public void InvitationCodeLenghtTest(string invitationCode)
-        {
-            //Arrange
-            var mockUnitOfWork = new Mock<IUnitOfWork>();
-
-            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
-
-            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
-
-            bool expected = invitationCode.Length != 8 ? false : true;
-
-            bool obtain = userLogic.ValidInvitationCodeLenght(invitationCode);
-
-            Assert.Equal(expected, obtain);
-        }
-
-        [Theory]
         [InlineData("Carlos", "", "carlos123", "abc12345")]
         [InlineData("Carlos", "carlos@hotmail.com", "carlos", "abc12345")]
         [InlineData("Carlos", "carlos@hotmail.com", "carlos123", "12345")]
@@ -149,17 +130,24 @@ namespace Stockapp.Test
         {
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Insert(It.IsAny<InvitationCode>()));
             mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
 
-            InvitationCode invitationCode = new InvitationCode();
-            invitationCode.Code = ic;
-            User user = new User();
-            user.Name = name;
-            user.Email = email;
-            user.Password = password;
+            var invitationCode = new InvitationCode()
+            {
+                Code = ic
+            };
+            mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
+
+            var user = new User()
+            {
+                Name = name,
+                Email = email,
+                Password = password
+            };
             bool throwUserException = false;
             try
             {
@@ -186,13 +174,15 @@ namespace Stockapp.Test
         {
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Insert(It.IsAny<InvitationCode>()));
             mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
 
             InvitationCode invitationCode = new InvitationCode();
             invitationCode.Code = ic;
+            mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
+
             User user = new User();
             user.Name = name;
             user.Email = email;
@@ -219,29 +209,31 @@ namespace Stockapp.Test
         [InlineData("Arto", "artoo@gmail.com", "artola123", "abc12345")]
         public void RegisterUserTest(string name, string email, string password, string ic)
         {
-            //Arrange
+            // Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-
-            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
-            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(null, null, null));
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Insert(It.IsAny<InvitationCode>()));
+            mockUnitOfWork.Setup(un => un.UserRepository.Insert(It.IsAny<User>()));
+            mockUnitOfWork.Setup(un => un.Save());
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
 
             InvitationCode invitationCode = new InvitationCode();
             invitationCode.Code = ic;
             mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
-            User user = new User();
-            user.Name = name;
-            user.Email = email;
-            user.Password = password;
+
+            User user = new User()
+            {
+                Name = name,
+                Email = email,
+                Password = password
+            };
+
             try
             {
                 userLogic.RegisterUser(user, invitationCode);
-                // If test gets to this assert then its correct
-                User searchedUser = mockUnitOfWork.Object.UserRepository.GetById(user.Id);
-                InvitationCode searchedIC = mockUnitOfWork.Object.InvitationCodeRepository.GetById(invitationCode.Id);
-                bool result = (user.Id == searchedUser.Id) && (searchedIC == null);
-                Assert.True(result);
+                //Assert
+                mockUnitOfWork.Verify(un => un.UserRepository.Insert(It.IsAny<User>()), Times.Exactly(1));
+                mockUnitOfWork.Verify(un => un.Save(), Times.Exactly(1));
             }
             catch (UserExceptions ue)
             {
@@ -252,74 +244,111 @@ namespace Stockapp.Test
             {
                 Assert.True(false);
             }
+        }
+
+        [Fact]
+        public void IsInDbTestFalse()
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            InvitationCode invitationCode = new InvitationCode()
+            {
+                Code = "abc12345"
+            };
+
+            User user = new User()
+            {
+                Name = "Carlos",
+                Email = "car@gmail.com",
+                Password = "carlos123"
+            };
+            Assert.False(userLogic.IsInDb(user));
         }
 
         [Fact]
         public void IsInDbTest()
         {
-            //Arrange
+            var user = new User()
+            {
+                Name = "Carlos",
+                Email = "car@gmail.com",
+                Password = "carlos123",
+                Id = Guid.NewGuid()
+            };
+            // Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-
-            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
-
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, ""));
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
-
-            InvitationCode invitationCode = new InvitationCode();
-            invitationCode.Code = "abc12345";
-            User user = new User();
-            user.Name = "Carlos";
-            user.Email = "car@gmail.com";
-            user.Password = "carlos123";
-            try
-            {
-                userLogic.RegisterUser(user, invitationCode);
-                userLogic.IsInDb(user);
-                // If test gets to this assert then its correct
-                Assert.True(true);
-            }
-            catch (UserExceptions ue)
-            {
-                // If test gets to this assert then it failed
-                Assert.True(false);
-            }
-            catch (Exception e)
-            {
-                Assert.True(false);
-            }
+            userLogic.IsInDb(user);
+            mockUnitOfWork.VerifyAll();
         }
 
         [Fact]
         public void LogInTest()
         {
+            var user = new User()
+            {
+                Name = "Carlos",
+                Email = "car@gmail.com",
+                Password = "carlos123",
+                Id = Guid.NewGuid()
+            };
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-
-            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, ""));
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
 
-            InvitationCode invitationCode = new InvitationCode();
-            invitationCode.Code = "abc12345";
-            User user = new User();
-            user.Name = "Carlos";
-            user.Email = "car@gmail.com";
-            user.Password = "carlos123";
-            try
-            {
-                userLogic.RegisterUser(user, invitationCode);
-                User searched = userLogic.LogIn(user);
-                // If test gets to this assert then its correct
-                Assert.Equal(user.Id, searched.Id);
-            }
-            catch (UserExceptions ue)
-            {
-                // If test gets to this assert then it failed
-                Assert.True(false);
-            }
-            catch (Exception e)
-            {
-                Assert.True(false);
-            }
+            User searched = userLogic.LogIn(user);
+            // If test gets to this assert then its correct
+            mockUnitOfWork.VerifyAll();
+        }
+
+        [Fact]
+        public void GetAllUsersFromRepositoryTest()
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, ""));
+
+            IUserLogic userService = new UserLogic(mockUnitOfWork.Object);
+
+            //Act
+            IEnumerable<User> returnedUsers = userService.GetAllUsers();
+
+            //Assert
+            mockUnitOfWork.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdatesExistingUser()
+        {
+            //Arrange 
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+            mockUnitOfWork
+                .Setup(un => un.UserRepository.GetById(It.IsAny<int>()))
+                .Returns(() => new User() { });
+
+            mockUnitOfWork.Setup(un => un.UserRepository.Update(It.IsAny<User>()));
+            mockUnitOfWork.Setup(un => un.Save());
+
+            IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
+
+            //act
+            bool updated = userLogic.UpdateUser(new User() { });
+
+            //Assert
+            mockUnitOfWork.Verify(un => un.UserRepository.Update(It.IsAny<User>()), Times.Exactly(1));
+            mockUnitOfWork.Verify(un => un.Save(), Times.Exactly(1));
+            Assert.True(updated);
+
         }
     }
 }
