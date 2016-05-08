@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlayerRepositoryTest.cs" />
+    <Compile Include="PortfolioLogicTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLogicTest.cs" />
     <Compile Include="UserRepositoryTest.cs" />

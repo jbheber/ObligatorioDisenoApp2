@@ -49,9 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\IPortfolioLogic.cs" />
     <Compile Include="API\IUserLogic.cs" />
+    <Compile Include="Implementation\PortfolioLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserLogic.cs" />
+    <Compile Include="Implementation\UserLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

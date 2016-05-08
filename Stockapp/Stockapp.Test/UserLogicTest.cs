@@ -2,8 +2,8 @@
 using Stockapp.Data;
 using Stockapp.Data.Exceptions;
 using Stockapp.Data.Repository;
-using Stockapp.Logic;
 using Stockapp.Logic.API;
+using Stockapp.Logic.Implementation;
 using System;
 using System.Collections.Generic;
 using Xunit;

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Stockapp.Logic
+namespace Stockapp.Logic.Implementation
 {
     public class UserLogic : IUserLogic
     {
