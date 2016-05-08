@@ -19,7 +19,17 @@ namespace Stockapp.Data
 
         public double AvailableMoney { get; set; }
 
+        /// <summary>
+        /// Properties used only for data calculations
+        /// </summary>
+        [NotMapped]
         public double ActionsValue { get; set; }
+
+        /// <summary>
+        /// Properties used only for data calculations
+        /// </summary>
+        [NotMapped]
+        public double TotalMoney { get; set; }
 
         public virtual IEnumerable<Transaction> Transactions { get; set; }
 

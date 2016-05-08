@@ -13,7 +13,7 @@ namespace Stockapp.Logic.API
         /// Creates a portfolio for a player
         /// </summary>
         /// <param name="player">Portfolio owner</param>
-        void CreatePortfolio(Player player);
+        bool CreatePortfolio(Player player);
 
         /// <summary>
         /// Gets the portfolio for the player
@@ -26,6 +26,6 @@ namespace Stockapp.Logic.API
         /// Updates the portfolio with a new transaction
         /// </summary>
         /// <param name="transaction"></param>
-        void UpdatePortfolio(Portfolio portfolio, Transaction transaction);
+        bool UpdatePortfolio(Transaction transaction);
     }
 }

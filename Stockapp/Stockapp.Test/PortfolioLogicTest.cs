@@ -17,23 +17,49 @@ namespace Stockapp.Test
         [Fact]
         public void CreatePortfolioTest()
         {
-            //Arrange
-            var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.PlayerRepository.GetById(It.IsAny<int>()));
-            mockUnitOfWork.Setup(un => un.PortfolioRepository.Insert(It.IsAny<Portfolio>()));
-
             var player = new Player()
             {
                 CI = 1111111,
                 Email = "juan@gmail.com",
                 Name = "Juan",
                 Surname = "Heber",
-                User = new User()
+                User = new User(),
+                Id = Guid.NewGuid()
             };
 
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Get(null, null, ""));
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Insert(It.IsAny<Portfolio>()));
+            mockUnitOfWork.Setup(un => un.Save());
+
             IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
+            Assert.True(portfolioLogic.CreatePortfolio(player));
+        }
+
+        [Fact]
+        public void CreatePortfolioTestFalse()
+        {
+            var player = new Player()
+            {
+                CI = 1111111,
+                Email = "juan@gmail.com",
+                Name = "Juan",
+                Surname = "Heber",
+                User = new User(),
+                Id = Guid.NewGuid()
+            };
+
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Get(null, null, ""));
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Insert(It.IsAny<Portfolio>()));
+            mockUnitOfWork.Setup(un => un.Save());
+
+            IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
+
             portfolioLogic.CreatePortfolio(player);
-            mockUnitOfWork.VerifyAll();
+            Assert.True(portfolioLogic.CreatePortfolio(player));
         }
 
         [Fact]
@@ -41,12 +67,16 @@ namespace Stockapp.Test
         {
             var player = new Player()
             {
-                Id = Guid.NewGuid()
+                Id = Guid.NewGuid(),
             };
+            var playerId = player.Id;
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.PlayerRepository.GetById(It.IsAny<int>()));
-            mockUnitOfWork.Setup(un => un.PortfolioRepository.Get(p => p.PlayerId == player.Id, null, ""));
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Get(x => x.Player.Id == playerId, null, "Player,Transactions"))
+                .Returns(new List<Portfolio>() { new Portfolio { PlayerId = player.Id} });
+            mockUnitOfWork.Setup(un => un.Save());
+
+            mockUnitOfWork.Object.PortfolioRepository.Insert(new Portfolio { PlayerId = player.Id });
 
             IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
 
@@ -57,14 +87,7 @@ namespace Stockapp.Test
         [Fact]
         public void UpdatePortfolioTest()
         {
-            var player = new Player()
-            {
-                Id = Guid.NewGuid()
-            };
-            var portfolio = new Portfolio()
-            {
-                Player = player
-            };
+            var portfolio = new Portfolio();
             var transaction = new Transaction()
             {
                 MarketCapital = 500,
@@ -74,17 +97,24 @@ namespace Stockapp.Test
                 StockQuantity = 20,
                 TotalValue = 1000,
                 Type = TransactionType.Buy,
-                TransactionDate = DateTimeOffset.Now
+                TransactionDate = DateTimeOffset.Now,
+                Portfolio = portfolio
             };
 
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.PortfolioRepository.Get(p => p.PlayerId == player.Id, null, ""));
+            mockUnitOfWork.Setup(un => un.PortfolioRepository
+                .GetById(It.IsAny<Portfolio>()))
+                .Returns(() => new Portfolio());
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Update(It.IsAny<Portfolio>()));
+            mockUnitOfWork.Setup(un => un.PortfolioRepository.Insert(It.IsAny<Portfolio>()));
+            mockUnitOfWork.Setup(un => un.Save());
+
+            mockUnitOfWork.Object.PortfolioRepository.Insert(portfolio);
 
             IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
 
-            portfolioLogic.UpdatePortfolio(portfolio, transaction);
-            mockUnitOfWork.VerifyAll();
+            Assert.True(portfolioLogic.UpdatePortfolio(transaction));
         }
     }
 }
