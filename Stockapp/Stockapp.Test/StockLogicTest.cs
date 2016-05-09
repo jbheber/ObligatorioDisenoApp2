@@ -45,7 +45,6 @@ namespace Stockapp.Test
                 Id = Guid.NewGuid()
             };
 
-            mockUnitOfWork.Setup(un => un.StockRepository.GetById(It.IsAny<Guid>())).Returns(stock);
             mockUnitOfWork.Setup(un => un.StockRepository.Update(It.IsAny<Stock>()));
             mockUnitOfWork.Setup(un => un.Save());
 
@@ -54,7 +53,6 @@ namespace Stockapp.Test
             stock.Code = "AAAA";
             var result = stockLogic.UpdateStock(stock);
 
-            mockUnitOfWork.Verify(un => un.StockRepository.GetById(It.IsAny<Guid>()), Times.Once());
             mockUnitOfWork.Verify(un => un.StockRepository.Update(It.IsAny<Stock>()), Times.Once());
             mockUnitOfWork.Verify(un => un.Save(), Times.Once());
             Assert.True(result);
@@ -110,7 +108,7 @@ namespace Stockapp.Test
             IStockLogic stockLogic = new StockLogic(mockUnitOfWork.Object);
             var result = stockLogic.GetStock(stock.Id);
 
-            mockUnitOfWork.Verify(un => un.StockRepository.Get(null, null, ""), Times.Once());
+            mockUnitOfWork.Verify(un => un.StockRepository.GetById(It.IsAny<Guid>()), Times.Once());
             Assert.Equal(result, stock);
         }
     }

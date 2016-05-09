@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockapp.Data;
 using Stockapp.Data.Repository;
+using Stockapp.Data.Extensions;
 
 namespace Stockapp.Logic.Implementation
 {
@@ -20,22 +21,31 @@ namespace Stockapp.Logic.Implementation
 
         public bool CreateStock(Stock stock)
         {
-            throw new NotImplementedException();
+            var existingStocks = UnitOfWork.StockRepository.Get();
+
+            if (existingStocks.isNotEmpty() && existingStocks.Any(s => s.Code == stock.Code || s.Name == stock.Name))
+                return false;
+
+            UnitOfWork.StockRepository.Insert(stock);
+            UnitOfWork.Save();
+            return true;
         }
 
         public IEnumerable<Stock> GetAllStocks()
         {
-            throw new NotImplementedException();
+            return UnitOfWork.StockRepository.Get();
         }
 
         public Stock GetStock(Guid stockId)
         {
-            throw new NotImplementedException();
+           return UnitOfWork.StockRepository.GetById(stockId);
         }
 
         public bool UpdateStock(Stock stock)
         {
-            throw new NotImplementedException();
+            UnitOfWork.StockRepository.Update(stock);
+            UnitOfWork.Save();
+            return true;
         }
     }
 }
