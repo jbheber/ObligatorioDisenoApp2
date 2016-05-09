@@ -75,7 +75,7 @@ namespace Stockapp.Test
         }
 
         [Theory]
-        [InlineData(2)]
+        [InlineData(3)]
         [InlineData(1)]
         public void GetByIdTest(int index)
         {
@@ -338,10 +338,10 @@ namespace Stockapp.Test
                 },
                  new InvitationCode()
                 {
-                    Code = "AA245GJ4",
-                    IsDeleted = users.ElementAt(3).IsDeleted,
-                    ParentUser = users.ElementAt(3),
-                    ParentUserId = users.ElementAt(3).Id,
+                    Code = "AA245GJ5",
+                    IsDeleted = users.ElementAt(4).IsDeleted,
+                    ParentUser = users.ElementAt(4),
+                    ParentUserId = users.ElementAt(4).Id,
                     Id = Guid.NewGuid()
                 },
             };
