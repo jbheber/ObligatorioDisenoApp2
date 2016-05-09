@@ -10,7 +10,7 @@ using Xunit;
 
 namespace Stockapp.Test
 {
-    public class StockHistoryTest
+    public class StockHistoryLogicTest
     {
         [Fact]
         public void FetchStockHistoriesTest()
