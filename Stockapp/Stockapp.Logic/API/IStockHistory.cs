@@ -15,7 +15,7 @@ namespace Stockapp.Logic.API
         /// <param name="from">Default is 0</param>
         /// <param name="to">Default is 20</param>
         /// <returns></returns>
-        IEnumerable<StockHistoryLogic> FetchStockHistories(Stock stock, int from = 0, int to = 20);
+        IEnumerable<StockHistory> FetchStockHistories(Stock stock, int from = 0, int to = 20);
 
         /// <summary>
         /// Updates the stock hisoty.

@@ -43,16 +43,13 @@ namespace Stockapp.Test
             var stockHistoriesResult = stockHistoryLogic.FetchStockHistories(stock);
             var expected = stock.StockHistory.OrderByDescending(x => x.DateOfChange).Take(20);
 
-            Assert.Equal(expected.SafeCount(), stockHistoriesResult.SafeCount());
+            Assert.Equal(expected, stockHistoriesResult);
         }
 
         public void UpdateStockHistoryTest()
         {
             //Arrange 
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork
-                .Setup(un => un.StockHistoryRepository.GetById(It.IsAny<Guid>()))
-                .Returns(() => new StockHistory() { });
 
             mockUnitOfWork.Setup(un => un.StockHistoryRepository.Update(It.IsAny<StockHistory>()));
             mockUnitOfWork.Setup(un => un.Save());

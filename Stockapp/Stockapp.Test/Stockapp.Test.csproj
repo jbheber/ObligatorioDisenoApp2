@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="PlayerRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockHistoryTest.cs" />
     <Compile Include="UserLogicTest.cs" />
     <Compile Include="UserRepositoryTest.cs" />
   </ItemGroup>

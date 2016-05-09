@@ -17,14 +17,21 @@ namespace Stockapp.Logic
         {
             this.UnitOfWork = UnitOfWork;
         }
-        public IEnumerable<StockHistoryLogic> FetchStockHistories(Stock stock, int from = 0, int to = 20)
+        public IEnumerable<StockHistory> FetchStockHistories(Stock stock, int from = 0, int to = 20)
         {
-            throw new NotImplementedException();
+            var stockHistories = stock.StockHistory
+                .OrderByDescending(x => x.DateOfChange)
+                .Skip(from)
+                .Take(to);
+
+            return stockHistories;
         }
 
         public bool UpdateStockHistory(StockHistory history)
         {
-            throw new NotImplementedException();
+            UnitOfWork.StockHistoryRepository.Update(history);
+            UnitOfWork.Save();
+            return true;
         }
     }
 }
