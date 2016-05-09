@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Stockapp.Resolver;
 using Stockapp.Logic.API;
 using Stockapp.Logic.Implementation;
+using Stockapp.Data.Repository;
 
 namespace Stockapp.Logic
 {
@@ -19,7 +20,7 @@ namespace Stockapp.Logic
             registerComponent.RegisterType<IStockHistory, StockHistoryLogic>();
             registerComponent.RegisterType<IStockNewsLogic, StockNewsLogic>();
 
-            //registerComponent.RegisterTypeWithControlledLifeTime<IUnitOfWork,UnitOfWork>();
+            registerComponent.RegisterTypeWithControlledLifeTime<IUnitOfWork,UnitOfWork>();
 
         }
     }
