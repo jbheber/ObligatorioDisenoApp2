@@ -87,6 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LogicTest\StockHistoryLogicTest.cs" />
     <Compile Include="LogicTest\StockNewsLogicTest.cs" />
+    <Compile Include="RepositoryTest\StockHistoryRepositoryTest.cs" />
     <Compile Include="RepositoryTest\StockRepositoryTest.cs" />
     <Compile Include="LogicTest\UserLogicTest.cs" />
     <Compile Include="RepositoryTest\UserRepositoryTest.cs" />
