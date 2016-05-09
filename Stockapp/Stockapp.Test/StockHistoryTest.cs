@@ -18,7 +18,7 @@ namespace Stockapp.Test
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
 
-            IStockHistory stockHistoryLogic = new StockHistoryLogic(mockUnitOfWork.Object);
+            IStockHistoryLogic stockHistoryLogic = new StockHistoryLogic(mockUnitOfWork.Object);
 
             var stock = new Stock()
             {
@@ -51,7 +51,7 @@ namespace Stockapp.Test
             mockUnitOfWork.Setup(un => un.StockHistoryRepository.Update(It.IsAny<StockHistory>()));
             mockUnitOfWork.Setup(un => un.Save());
 
-            IStockHistory stockHistoryLogic = new StockHistoryLogic(mockUnitOfWork.Object);
+            IStockHistoryLogic stockHistoryLogic = new StockHistoryLogic(mockUnitOfWork.Object);
 
             //act
             bool updated = stockHistoryLogic.UpdateStockHistory(new StockHistory() { });

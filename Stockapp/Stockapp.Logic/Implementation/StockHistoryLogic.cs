@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Logic.Implementation
 {
-    public class StockHistoryLogic : IStockHistory
+    public class StockHistoryLogic : IStockHistoryLogic
     {
         private readonly IUnitOfWork UnitOfWork;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Logic.API
 {
-    public interface IStockHistory
+    public interface IStockHistoryLogic
     {
         /// <summary>
         /// Fetchs a group of histories.
