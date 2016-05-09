@@ -49,19 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\UserExceptions.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Interfaces\Identificable.cs" />
-    <Compile Include="InvitationCode.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="Admin.cs" />
+    <Compile Include="Entities\InvitationCode.cs" />
+    <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Interfaces\ISoftDelete.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Portfolio.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Portfolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StockHistory.cs" />
-    <Compile Include="StockNews.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Entities\StockHistory.cs" />
+    <Compile Include="Entities\StockNews.cs" />
+    <Compile Include="Entities\Transaction.cs" />
+    <Compile Include="Entities\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
