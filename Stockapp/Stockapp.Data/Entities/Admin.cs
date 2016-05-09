@@ -29,7 +29,6 @@ namespace Stockapp.Data
         /// <summary>
         /// Asociated User.
         /// </summary>
-        [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
         /// <summary>
@@ -48,6 +47,23 @@ namespace Stockapp.Data
         /// User email. Used for registration
         /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// Soft delete
+        /// </summary>
         public bool IsDeleted { get; set; }
+
+        public Admin()
+        {
+            IsDeleted = false;
+        }
+
+        public Admin(User user)
+        {
+            User = user;
+            Email = user.Email;
+            IsDeleted = false;
+        }
+
     }
 }

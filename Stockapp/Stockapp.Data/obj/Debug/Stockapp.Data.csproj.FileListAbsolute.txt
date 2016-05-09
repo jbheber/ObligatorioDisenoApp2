@@ -27,4 +27,3 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockap
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.dll
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.pdb
 \\vmware-host\Shared Folders\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.csprojResolveAssemblyReference.cache
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data\obj\Debug\Stockapp.Data.csprojResolveAssemblyReference.cache
