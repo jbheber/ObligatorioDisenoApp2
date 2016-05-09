@@ -91,6 +91,7 @@
     <Compile Include="RepositoryTest\StockNewsRepositoryTest.cs" />
     <Compile Include="RepositoryTest\StockRepositoryTest.cs" />
     <Compile Include="LogicTest\UserLogicTest.cs" />
+    <Compile Include="RepositoryTest\TransactionRepositoryTest.cs" />
     <Compile Include="RepositoryTest\UserRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
