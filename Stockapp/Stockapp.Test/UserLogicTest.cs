@@ -333,7 +333,7 @@ namespace Stockapp.Test
             //Arrange 
             var mockUnitOfWork = new Mock<IUnitOfWork>();
             mockUnitOfWork
-                .Setup(un => un.UserRepository.GetById(It.IsAny<int>()))
+                .Setup(un => un.UserRepository.GetById(It.IsAny<Guid>()))
                 .Returns(() => new User() { });
 
             mockUnitOfWork.Setup(un => un.UserRepository.Update(It.IsAny<User>()));
