@@ -39,6 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +53,7 @@
     <Compile Include="API\IStockHistory.cs" />
     <Compile Include="API\IStockNewsLogic.cs" />
     <Compile Include="API\IUserLogic.cs" />
+    <Compile Include="DependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Implementation\StockHistoryLogic.cs" />
     <Compile Include="Implementation\StockNewsLogic.cs" />
@@ -69,6 +71,10 @@
     <ProjectReference Include="..\Stockapp.Data\Stockapp.Data.csproj">
       <Project>{4b86cb28-6043-4006-9224-733daf420e48}</Project>
       <Name>Stockapp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stockapp.Resolver\Stockapp.Resolver.csproj">
+      <Project>{d3092a33-9163-4b7e-acfc-1056ecd86b2e}</Project>
+      <Name>Stockapp.Resolver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

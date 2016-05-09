@@ -1,4 +1,3 @@
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\ApplicationInsights.config
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -14,23 +13,11 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\roslyn\VBCS
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll.config
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.pdb
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Agent.Intercept.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.PerfCounterCollector.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.ServerTelemetryChannel.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Web.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.WindowsServer.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.ApplicationInsights.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.dll
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.dll
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.DependencyCollector.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.ServerTelemetryChannel.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.Web.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.AI.WindowsServer.xml
-Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.ApplicationInsights.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.xml
@@ -161,3 +148,22 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligato
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.Configuration.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.Configuration.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Microsoft.Web.Infrastructure.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Unity.WebApi.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\WebActivatorEx.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.pdb

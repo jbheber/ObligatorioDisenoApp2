@@ -1,8 +1,6 @@
-﻿using Microsoft.Practices.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Microsoft.Practices.Unity;
+using Stockapp.Resolver;
 
 namespace Stockapp.Portal
 {
@@ -10,10 +8,11 @@ namespace Stockapp.Portal
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
             var container = new UnityContainer();
-            // Here goes unity resolvers
-            config.DependencyResolver = new UnityResolver(container);
+            
+            ComponentLoader.LoadContainer(container, ".\\bin", "Stockapp.*.dll");
+
+            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

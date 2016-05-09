@@ -40,3 +40,10 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligato
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.csprojResolveAssemblyReference.cache
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Obligatorio\Stockapp\Stockapp.Logic\obj\Debug\Stockapp.Logic.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Resolver.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Microsoft.Practices.Unity.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Stockapp.Resolver.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Microsoft.Practices.Unity.xml
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Logic\bin\Debug\Microsoft.Practices.ServiceLocation.xml
