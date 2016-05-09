@@ -80,15 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminRepositoryTest.cs" />
-    <Compile Include="InvitationCodeRepositoryTest.cs" />
-    <Compile Include="PlayerRepositoryTest.cs" />
-    <Compile Include="PortfolioRepositoryTest.cs" />
+    <Compile Include="RepositoryTest\AdminRepositoryTest.cs" />
+    <Compile Include="RepositoryTest\InvitationCodeRepositoryTest.cs" />
+    <Compile Include="RepositoryTest\PlayerRepositoryTest.cs" />
+    <Compile Include="RepositoryTest\PortfolioRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StockHistoryTest.cs" />
-    <Compile Include="StockNewsLogicTest.cs" />
-    <Compile Include="UserLogicTest.cs" />
-    <Compile Include="UserRepositoryTest.cs" />
+    <Compile Include="LogicTest\StockHistoryLogicTest.cs" />
+    <Compile Include="LogicTest\StockNewsLogicTest.cs" />
+    <Compile Include="RepositoryTest\StockRepositoryTest.cs" />
+    <Compile Include="LogicTest\UserLogicTest.cs" />
+    <Compile Include="RepositoryTest\UserRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stockapp.Data.Access\Stockapp.Data.Access.csproj">
@@ -115,6 +116,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
