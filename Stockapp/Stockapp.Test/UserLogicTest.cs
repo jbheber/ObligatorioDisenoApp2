@@ -2,8 +2,8 @@
 using Stockapp.Data;
 using Stockapp.Data.Exceptions;
 using Stockapp.Data.Repository;
-using Stockapp.Logic;
 using Stockapp.Logic.API;
+using Stockapp.Logic.Implementation;
 using System;
 using System.Collections.Generic;
 using Xunit;
@@ -157,11 +157,15 @@ namespace Stockapp.Test
             }
             catch (UserExceptions ue)
             {
+                //For debug purposes
+                var exceptionMessage = ue.Message;
                 // If test gets to this assert then its correct
                 throwUserException = true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                //For debug purposes
+                var exceptionMessage = ex.Message;
                 throwUserException = false;
             }
             Assert.True(throwUserException);
@@ -195,11 +199,15 @@ namespace Stockapp.Test
             }
             catch (UserExceptions ue)
             {
+                //For debug purposes
+                var exceptionMessage = ue.Message;
                 // If test gets to this assert then it failed
                 Assert.True(false);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                //For debug purposes
+                var exceptionMessage = ex.Message;
                 Assert.True(false);
             }
         }
@@ -237,11 +245,15 @@ namespace Stockapp.Test
             }
             catch (UserExceptions ue)
             {
+                //For debug purposes
+                var exceptionMessage = ue.Message;
                 // If test gets to this assert then it failed
                 Assert.True(false);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
+                //For debug purposes
+                var exceptionMessage = ex.Message;
                 Assert.True(false);
             }
         }

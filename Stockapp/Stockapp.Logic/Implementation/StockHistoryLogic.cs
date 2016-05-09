@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stockapp.Logic
+namespace Stockapp.Logic.Implementation
 {
     public class StockHistoryLogic : IStockHistory
     {
