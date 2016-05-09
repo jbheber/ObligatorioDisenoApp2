@@ -3,11 +3,6 @@ using Stockapp.Data;
 using Stockapp.Data.Repository;
 using Stockapp.Logic;
 using Stockapp.Logic.API;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Stockapp.Test

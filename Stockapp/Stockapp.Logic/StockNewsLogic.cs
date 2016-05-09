@@ -20,12 +20,16 @@ namespace Stockapp.Logic
 
         public bool DeleteStockNews(StockNews news)
         {
-            throw new NotImplementedException();
+            UnitOfWork.StockNewsRepository.Delete(news);
+            UnitOfWork.Save();
+            return true;
         }
 
         public bool RegisterStockNews(StockNews news)
         {
-            throw new NotImplementedException();
+            UnitOfWork.StockNewsRepository.Insert(news);
+            UnitOfWork.Save();
+            return true;
         }
     }
 }
