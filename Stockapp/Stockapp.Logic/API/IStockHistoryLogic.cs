@@ -23,5 +23,8 @@ namespace Stockapp.Logic.API
         /// <param name="history"></param>
         /// <returns></returns>
         bool UpdateStockHistory(StockHistory history);
+
+        void Dispose();
+
     }
 }

@@ -16,5 +16,8 @@ namespace Stockapp.Logic.API
         IEnumerable<Stock> GetAllStocks();
 
         Stock GetStock(Guid stockId);
+
+        void Dispose();
+
     }
 }

@@ -38,3 +38,24 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.csprojResolveAssemblyReference.cache
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Stockapp.Resolver.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Stockapp.Resolver.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Web.Http.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Unity.WebApi.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Web.Http.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.csprojResolveAssemblyReference.cache
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.pdb

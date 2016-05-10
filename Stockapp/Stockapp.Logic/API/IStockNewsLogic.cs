@@ -22,5 +22,8 @@ namespace Stockapp.Logic.API
         /// <param name="news"></param>
         /// <returns></returns>
         bool DeleteStockNews(StockNews news);
+
+        void Dispose();
+
     }
 }

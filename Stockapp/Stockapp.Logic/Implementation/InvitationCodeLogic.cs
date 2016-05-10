@@ -19,6 +19,11 @@ namespace Stockapp.Logic.Implementation
             this.UnitOfWork = UnitOfWork;
         }
 
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
+        }
+
         public InvitationCode GenerateCode(User administator)
         {
             if (administator.IsAdmin == false)

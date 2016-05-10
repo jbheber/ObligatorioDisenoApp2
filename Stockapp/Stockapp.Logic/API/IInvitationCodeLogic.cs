@@ -15,5 +15,8 @@ namespace Stockapp.Logic.API
         /// <param name="administator">The user that is requesting the code</param>
         /// <returns></returns>
         InvitationCode GenerateCode(User administator);
+
+        void Dispose();
+
     }
 }
