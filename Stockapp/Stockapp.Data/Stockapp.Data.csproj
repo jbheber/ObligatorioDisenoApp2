@@ -49,6 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\AdminExceptions.cs" />
+    <Compile Include="Exceptions\InvitationCodeExceptions.cs" />
+    <Compile Include="Exceptions\PlayerExceptions.cs" />
+    <Compile Include="Exceptions\PortfolioExceptions.cs" />
+    <Compile Include="Exceptions\StockExceptions.cs" />
+    <Compile Include="Exceptions\StockHistoryExceptions.cs" />
+    <Compile Include="Exceptions\StockNewsExceptions.cs" />
+    <Compile Include="Exceptions\TransactionExceptions.cs" />
     <Compile Include="Exceptions\UserExceptions.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Interfaces\Identificable.cs" />
