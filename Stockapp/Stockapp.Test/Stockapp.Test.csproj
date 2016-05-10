@@ -88,6 +88,7 @@
     <Compile Include="LogicTest\InvitationCodeLogicTest.cs" />
     <Compile Include="LogicTest\PlayerLogicTest.cs" />
     <Compile Include="PortalTest\AdminControllerTest.cs" />
+    <Compile Include="PortalTest\InvitationCodeControllerTest.cs" />
     <Compile Include="PortalTest\UserControllerTest.cs" />
     <Compile Include="LogicTest\PortfolioLogicTest.cs" />
     <Compile Include="RepositoryTest\AdminRepositoryTest.cs" />

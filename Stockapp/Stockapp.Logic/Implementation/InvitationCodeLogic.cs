@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Stockapp.Data;
 using Stockapp.Data.Repository;
 using Stockapp.Data.Extensions;
+using Stockapp.Data.Exceptions;
 
 namespace Stockapp.Logic.Implementation
 {
@@ -22,7 +23,7 @@ namespace Stockapp.Logic.Implementation
         public InvitationCode GenerateCode(User administator)
         {
             if (administator.IsAdmin == false)
-                throw new Exception("Solo administaradores pueden generar codigos");
+                throw new InvitationCodeExceptions("Solo administaradores pueden generar codigos");
 
             var exisitngCodes = UnitOfWork.InvitationCodeRepository.Get();
 
@@ -52,6 +53,11 @@ namespace Stockapp.Logic.Implementation
             var random = new Random();
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
         }
     }
 }
