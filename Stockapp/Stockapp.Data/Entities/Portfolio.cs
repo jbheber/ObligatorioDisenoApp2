@@ -48,6 +48,7 @@ namespace Stockapp.Data
             this.ActionsValue = 0;
             this.AvailableMoney = 0;
             this.TotalMoney = 0;
+            this.Transactions = new List<Transaction>();
         }
 
     }
