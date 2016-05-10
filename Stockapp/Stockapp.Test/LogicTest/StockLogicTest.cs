@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Stockapp.Test
+namespace Stockapp.Test.LogicTest
 {
     public class StockLogicTest
     {

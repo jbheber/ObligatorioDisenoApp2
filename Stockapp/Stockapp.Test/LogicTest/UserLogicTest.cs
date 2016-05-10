@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using Xunit;
 
-namespace Stockapp.Test
+namespace Stockapp.Test.LogicTest
 {
     public class UserLogicTest
     {

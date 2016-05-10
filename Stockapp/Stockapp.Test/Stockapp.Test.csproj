@@ -87,7 +87,7 @@
     <Compile Include="LogicTest\InvitationCodeLogicTest.cs" />
     <Compile Include="LogicTest\PlayerLogicTest.cs" />
     <Compile Include="PortalTest\UserControllerTest.cs" />
-    <Compile Include="PortfolioLogicTest.cs" />
+    <Compile Include="LogicTest\PortfolioLogicTest.cs" />
     <Compile Include="RepositoryTest\AdminRepositoryTest.cs" />
     <Compile Include="RepositoryTest\InvitationCodeRepositoryTest.cs" />
     <Compile Include="RepositoryTest\PlayerRepositoryTest.cs" />
@@ -96,12 +96,13 @@
     <Compile Include="LogicTest\StockHistoryLogicTest.cs" />
     <Compile Include="LogicTest\StockNewsLogicTest.cs" />
     <Compile Include="RepositoryTest\StockHistoryRepositoryTest.cs" />
+    <Compile Include="LogicTest\StockLogicTest.cs" />
     <Compile Include="RepositoryTest\StockNewsRepositoryTest.cs" />
     <Compile Include="RepositoryTest\StockRepositoryTest.cs" />
     <Compile Include="LogicTest\UserLogicTest.cs" />
     <Compile Include="RepositoryTest\TransactionRepositoryTest.cs" />
     <Compile Include="RepositoryTest\UserRepositoryTest.cs" />
-    <Compile Include="TransactionLogicTest.cs" />
+    <Compile Include="LogicTest\TransactionLogicTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stockapp.Data.Access\Stockapp.Data.Access.csproj">
