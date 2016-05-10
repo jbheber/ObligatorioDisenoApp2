@@ -22,7 +22,7 @@ namespace Stockapp.Data
         /// User email. Used for registration
         /// </summary>
         [Required]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
+        [EmailAddress]
         public string Email { get; set; }
 
         /// <summary>

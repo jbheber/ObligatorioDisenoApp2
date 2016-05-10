@@ -238,10 +238,11 @@ namespace Stockapp.Test
 
             try
             {
-                userLogic.RegisterUser(user, invitationCode);
+                var response = userLogic.RegisterUser(user, invitationCode);
                 //Assert
                 mockUnitOfWork.Verify(un => un.UserRepository.Insert(It.IsAny<User>()), Times.Exactly(1));
                 mockUnitOfWork.Verify(un => un.Save(), Times.Exactly(1));
+                Assert.True(response);
             }
             catch (UserExceptions ue)
             {

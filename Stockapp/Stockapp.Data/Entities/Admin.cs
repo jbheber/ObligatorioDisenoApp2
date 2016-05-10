@@ -47,7 +47,12 @@ namespace Stockapp.Data
         /// <summary>
         /// User email. Used for registration
         /// </summary>
+        [EmailAddress]
         public string Email { get; set; }
+
+        /// <summary>
+        /// Soft delete.
+        /// </summary>
         public bool IsDeleted { get; set; }
     }
 }

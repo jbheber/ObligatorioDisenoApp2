@@ -119,9 +119,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserSignInDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityResolver.cs" />
   </ItemGroup>
@@ -136,10 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Stockapp.Data\Stockapp.Data.csproj">
+      <Project>{4B86CB28-6043-4006-9224-733DAF420E48}</Project>
+      <Name>Stockapp.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Stockapp.Logic\Stockapp.Logic.csproj">
       <Project>{2862dcab-5d1d-40fc-a445-817c19cb738c}</Project>
       <Name>Stockapp.Logic</Name>
