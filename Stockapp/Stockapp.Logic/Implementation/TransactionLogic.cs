@@ -46,5 +46,10 @@ namespace Stockapp.Logic.Implementation
 
             return transactions;
         }
+
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
+        }
     }
 }

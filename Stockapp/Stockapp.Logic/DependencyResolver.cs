@@ -17,8 +17,14 @@ namespace Stockapp.Logic
         public void SetUp(IRegisterComponent registerComponent)
         {
             registerComponent.RegisterType<IUserLogic, UserLogic>();
+            registerComponent.RegisterType<IPlayerLogic, PlayerLogic>();
+            registerComponent.RegisterType<IAdminLogic, AdminLogic>();
+            registerComponent.RegisterType<IStockLogic, StockLogic>();
             registerComponent.RegisterType<IStockHistoryLogic, StockHistoryLogic>();
             registerComponent.RegisterType<IStockNewsLogic, StockNewsLogic>();
+            registerComponent.RegisterType<ITransactionLogic, TransactionLogic>();
+            registerComponent.RegisterType<IInvitationCodeLogic, InvitationCodeLogic>();
+            registerComponent.RegisterType<IPortfolioLogic, PortfolioLogic>();
 
             registerComponent.RegisterTypeWithControlledLifeTime<IUnitOfWork,UnitOfWork>();
 
