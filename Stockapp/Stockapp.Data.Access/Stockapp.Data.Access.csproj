@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="ContextInitializer.cs" />
     <Compile Include="Migrations\201604202351196_Init.cs" />
     <Compile Include="Migrations\201604202351196_Init.Designer.cs">
       <DependentUpon>201604202351196_Init.cs</DependentUpon>
