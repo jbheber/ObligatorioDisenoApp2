@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockapp.Data;
 using Stockapp.Data.Repository;
+using Stockapp.Data.Extensions;
 
 namespace Stockapp.Logic.Implementation
 {
@@ -31,7 +32,17 @@ namespace Stockapp.Logic.Implementation
 
         public IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null)
         {
-            throw new NotImplementedException();
+            var transactions = UnitOfWork.TransactionRepository.Get(null, null, "Portfolio,Stock");
+            if (transactions.isEmpty())
+                return null;
+
+            if (stock != null)
+                transactions.Where(x => x.StockId == stock.Id);
+
+            if (transactionType != null)
+                transactions.Where(x => x.Type.ToString() == transactionType);
+
+            return transactions;
         }
     }
 }
