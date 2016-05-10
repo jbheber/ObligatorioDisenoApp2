@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="API\IAdminLogic.cs" />
     <Compile Include="API\IInvitationCodeLogic.cs" />
+    <Compile Include="API\IPlayerLogic.cs" />
     <Compile Include="API\IPortfolioLogic.cs" />
     <Compile Include="API\IStockHistoryLogic.cs" />
     <Compile Include="API\IStockLogic.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="Implementation\AdminLogic.cs" />
     <Compile Include="Implementation\InvitationCodeLogic.cs" />
+    <Compile Include="Implementation\PlayerLogic.cs" />
     <Compile Include="Implementation\PortfolioLogic.cs" />
     <Compile Include="Implementation\StockLogic.cs" />
     <Compile Include="Implementation\TransactionLogic.cs" />
