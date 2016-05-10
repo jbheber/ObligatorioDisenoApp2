@@ -42,7 +42,7 @@ namespace Stockapp.Logic.Implementation
 
         public bool ValidInvitationCode(InvitationCode invitationCode)
         {
-            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isEmpty();
+            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isNotEmpty();
             return exisitingCode;
         }
 
@@ -83,7 +83,7 @@ namespace Stockapp.Logic.Implementation
             }
         }
 
-        public void RegisterUser(User user, InvitationCode invitationCode)
+        public bool RegisterUser(User user, InvitationCode invitationCode)
         {
             try
             {
@@ -91,6 +91,7 @@ namespace Stockapp.Logic.Implementation
                 UnitOfWork.UserRepository.Insert(user);
                 UnitOfWork.InvitationCodeRepository.Delete(invitationCode);
                 UnitOfWork.Save();
+                return true;
             }
             catch (Exception e)
             {
@@ -131,6 +132,22 @@ namespace Stockapp.Logic.Implementation
             UnitOfWork.UserRepository.Update(user);
             UnitOfWork.Save();
             return true;
+        }
+
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
+        }
+
+        public bool DeleteUser(Guid userId)
+        {
+            if (UnitOfWork.UserRepository.GetById(userId) != null)
+            {
+                UnitOfWork.UserRepository.Delete(userId);
+                UnitOfWork.Save();
+                return true;
+            }
+            return false;
         }
     }
 }

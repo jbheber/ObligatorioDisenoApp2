@@ -17,7 +17,7 @@ namespace Stockapp.Logic
         public void SetUp(IRegisterComponent registerComponent)
         {
             registerComponent.RegisterType<IUserLogic, UserLogic>();
-            registerComponent.RegisterType<IStockHistory, StockHistoryLogic>();
+            registerComponent.RegisterType<IStockHistoryLogic, StockHistoryLogic>();
             registerComponent.RegisterType<IStockNewsLogic, StockNewsLogic>();
 
             registerComponent.RegisterTypeWithControlledLifeTime<IUnitOfWork,UnitOfWork>();

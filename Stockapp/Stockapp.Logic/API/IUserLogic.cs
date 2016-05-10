@@ -56,7 +56,7 @@ namespace Stockapp.Logic.API
         /// </summary>
         /// <param name="user">New user</param>
         /// <param name="invitationCode">Invitation code the user recieved</param>
-        void RegisterUser(User user, InvitationCode invitationCode);
+        bool RegisterUser(User user, InvitationCode invitationCode);
 
         /// <summary>
         /// Checks if that user is already registered in the database
@@ -84,5 +84,9 @@ namespace Stockapp.Logic.API
         /// <param name="user">Modified user</param>
         /// <returns></returns>
         bool UpdateUser(User user);
+
+        bool DeleteUser(Guid userId);
+
+        void Dispose();
     }
 }

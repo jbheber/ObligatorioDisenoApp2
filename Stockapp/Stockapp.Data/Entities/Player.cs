@@ -46,6 +46,7 @@ namespace Stockapp.Data
         /// <summary>
         /// User email. Used for registration
         /// </summary>
+        [EmailAddress]
         public string Email { get; set; }
 
         /// <summary>
