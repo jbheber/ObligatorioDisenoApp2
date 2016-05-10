@@ -51,13 +51,15 @@ namespace Stockapp.Test.LogicTest
 
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.TransactionRepository.Get(null, null, "Portfolio,Stock"));
+            mockUnitOfWork.Setup(un => un.TransactionRepository.Get(null, null, It.IsAny<string>())).Returns(transactions);
 
             ITransactionLogic transactionLogic = new TransactionLogic(mockUnitOfWork.Object);
             DateTimeOffset now = DateTimeOffset.Now;
-            DateTimeOffset thirtyDaysAgo = DateTimeOffset.Now.AddDays(30);
+            DateTimeOffset thirtyDaysAgo = DateTimeOffset.Now.AddDays(-30);
             var response = transactionLogic.GetTransacions(thirtyDaysAgo, now);
-            Assert.Equal(response, transactions.Where(t => t.TransactionDate > thirtyDaysAgo));
+            mockUnitOfWork.Verify(un => un.TransactionRepository.Get(null, null, It.IsAny<string>()));
+
+            Assert.Equal(response.Count(), transactions.Where(t => t.TransactionDate > thirtyDaysAgo && t.TransactionDate < now).Count());
         }
 
         [Fact]
@@ -80,14 +82,15 @@ namespace Stockapp.Test.LogicTest
 
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.TransactionRepository.Get(null, null, "Portfolio,Stock")).Returns(transactions);
+            mockUnitOfWork.Setup(un => un.TransactionRepository.Get(null, null, It.IsAny<string>())).Returns(transactions);
 
             ITransactionLogic transactionLogic = new TransactionLogic(mockUnitOfWork.Object);
             DateTimeOffset now = DateTimeOffset.Now;
-            DateTimeOffset thirtyDaysAgo = DateTimeOffset.Now.AddDays(30);
+            DateTimeOffset thirtyDaysAgo = DateTimeOffset.Now.AddDays(-30);
             var response = transactionLogic.GetTransacions(thirtyDaysAgo, now);
 
-            Assert.Equal(response, transactions.Where(t => t.TransactionDate > thirtyDaysAgo && t.Type.ToString() == "Sell"));
+            Assert.Equal(response, transactions.Where(t => t.TransactionDate > thirtyDaysAgo &&
+            t.TransactionDate > thirtyDaysAgo && t.Type.ToString() == "Sell"));
         }
     }
 }

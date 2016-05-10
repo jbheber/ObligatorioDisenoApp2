@@ -36,11 +36,13 @@ namespace Stockapp.Logic.Implementation
             if (transactions.isEmpty())
                 return null;
 
+            transactions = transactions.Where(x => x.TransactionDate > from && x.TransactionDate < to);
+
             if (stock != null)
-                transactions.Where(x => x.StockId == stock.Id);
+                transactions = transactions.Where(x => x.StockId == stock.Id);
 
             if (transactionType != null)
-                transactions.Where(x => x.Type.ToString() == transactionType);
+                transactions = transactions.Where(x => x.Type.ToString() == transactionType);
 
             return transactions;
         }
