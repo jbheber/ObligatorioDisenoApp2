@@ -56,5 +56,9 @@ namespace Stockapp.Logic.Implementation
             UnitOfWork.Save();
             return true;
         }
+        public void Dispose()
+        {
+            UnitOfWork.Dispose();
+        }
     }
 }

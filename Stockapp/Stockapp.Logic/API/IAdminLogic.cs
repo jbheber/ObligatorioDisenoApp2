@@ -14,5 +14,6 @@ namespace Stockapp.Logic.API
         bool DeleteAdmin(Admin admin);
         Admin GetAdmin(Guid adminId);
         bool UpdateAdmin(Admin admin);
+        void Dispose();
     }
 }
