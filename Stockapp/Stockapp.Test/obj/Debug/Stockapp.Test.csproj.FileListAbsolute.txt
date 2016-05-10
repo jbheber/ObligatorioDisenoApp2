@@ -276,3 +276,4 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\D
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.dll

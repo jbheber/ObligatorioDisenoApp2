@@ -59,10 +59,5 @@ namespace Stockapp.Logic.Implementation
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-
-        public void Dispose()
-        {
-            UnitOfWork.Dispose();
-        }
     }
 }
