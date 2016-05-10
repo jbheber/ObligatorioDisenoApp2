@@ -295,3 +295,4 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.ServiceLocation.dll

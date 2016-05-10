@@ -19,5 +19,6 @@ namespace Stockapp.Logic.API
 
         Player GetPlayer(Guid playerId);
 
+        void Dispose();
     }
 }

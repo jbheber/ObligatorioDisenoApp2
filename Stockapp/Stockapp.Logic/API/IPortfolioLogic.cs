@@ -28,5 +28,8 @@ namespace Stockapp.Logic.API
         /// </summary>
         /// <param name="transaction"></param>
         bool UpdatePortfolio(Transaction transaction);
+
+        void Dispose();
+
     }
 }
