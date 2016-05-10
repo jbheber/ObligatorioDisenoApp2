@@ -35,5 +35,26 @@ namespace Stockapp.Test.LogicTest
 
             mockUnitOfWork.VerifyAll();
         }
+
+        [Fact]
+        public void GenerateInvitationCodeThrowExceptionTest()
+        {
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(null, null, ""));
+            IInvitationCodeLogic invitationCodeLogic = new InvitationCodeLogic(mockUnitOfWork.Object);
+
+            try
+            {
+                var code = invitationCodeLogic.GenerateCode(new User() { IsAdmin = false });
+                Assert.True(false);
+            }
+            catch (Exception e)
+            {
+                //for debug purposes
+                var errorMessage = e.Message;
+                Assert.True(true);
+            }
+        }
     }
 }
