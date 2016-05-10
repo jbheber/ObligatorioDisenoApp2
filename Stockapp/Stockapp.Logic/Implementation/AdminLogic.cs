@@ -33,8 +33,7 @@ namespace Stockapp.Logic.Implementation
 
         public bool DeleteAdmin(Guid adminId)
         {
-            Admin admin = GetAdmin(adminId);
-            UnitOfWork.AdminRepository.Delete(admin);
+            UnitOfWork.AdminRepository.Delete(adminId);
             UnitOfWork.Save();
             return true;
         }

@@ -68,7 +68,7 @@ namespace Stockapp.Test
                 Id = Guid.NewGuid()
             };
 
-            mockUnitOfWork.Setup(un => un.AdminRepository.GetById(It.IsAny<Admin>())).Returns(admin);
+            mockUnitOfWork.Setup(un => un.AdminRepository.GetById(It.IsAny<Guid>())).Returns(admin);
 
             IAdminLogic adminLogic = new AdminLogic(mockUnitOfWork.Object);
             var result = adminLogic.GetAdmin(admin.Id);
@@ -97,7 +97,6 @@ namespace Stockapp.Test
         [Fact]
         public void DeleteAdminTest()
         {
-            var adminId = Guid.NewGuid();
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
             mockUnitOfWork.Setup(un => un.AdminRepository.Delete(It.IsAny<Admin>()));
@@ -105,8 +104,8 @@ namespace Stockapp.Test
 
             IAdminLogic adminLogic = new AdminLogic(mockUnitOfWork.Object);
 
-            var deletedAdmin = adminLogic.DeleteAdmin(adminId);
-            mockUnitOfWork.Verify(un => un.AdminRepository.Delete(It.IsAny<Guid>()));
+            var deletedAdmin = adminLogic.DeleteAdmin(new Admin());
+            mockUnitOfWork.Verify(un => un.AdminRepository.Delete(It.IsAny<Admin>()));
             mockUnitOfWork.Verify(un => un.Save());
             Assert.True(deletedAdmin);
         }
