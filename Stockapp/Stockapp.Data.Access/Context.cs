@@ -61,6 +61,8 @@ namespace Stockapp.Data.Access
         // Additional conventions to help EF understand our data relationships
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Admin>().HasKey(x => x.Id);
             modelBuilder.Entity<InvitationCode>().HasKey(x => x.Id);
             modelBuilder.Entity<Player>().HasKey(x => x.Id);
