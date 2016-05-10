@@ -20,17 +20,20 @@ namespace Stockapp.Test
             var player = new Player()
             {
                 Id = Guid.NewGuid(),
+                Portfolio = new Portfolio()
             };
             var playerId = player.Id;
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
 
             IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
+            mockUnitOfWork.Setup(un => un.PlayerRepository.GetById(It.IsAny<Guid>())).Returns(() => player);
 
-            var portfolio = portfolioLogic.FetchPlayerPortfolio(player);
+            var portfolio = portfolioLogic.FetchPlayerPortfolio(player.Id);
 
             Assert.NotNull(portfolio);
         }
+
 
         [Fact]
         public void FetchPortfolioTest2()
@@ -78,13 +81,10 @@ namespace Stockapp.Test
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
             mockUnitOfWork.Setup(un => un.PortfolioRepository
-                .GetById(It.IsAny<Portfolio>()))
+                .GetById(It.IsAny<Guid>()))
                 .Returns(() => new Portfolio());
             mockUnitOfWork.Setup(un => un.PortfolioRepository.Update(It.IsAny<Portfolio>()));
-            mockUnitOfWork.Setup(un => un.PortfolioRepository.Insert(It.IsAny<Portfolio>()));
             mockUnitOfWork.Setup(un => un.Save());
-
-            mockUnitOfWork.Object.PortfolioRepository.Insert(portfolio);
 
             IPortfolioLogic portfolioLogic = new PortfolioLogic(mockUnitOfWork.Object);
 

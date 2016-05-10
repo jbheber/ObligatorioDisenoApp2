@@ -19,3 +19,21 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Resolver\bin\Debug\New
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Resolver\bin\Debug\System.Net.Http.Formatting.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Resolver\bin\Debug\System.Web.Http.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.csprojResolveAssemblyReference.cache
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Stockapp.Resolver.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Stockapp.Resolver.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Web.Http.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Unity.WebApi.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\bin\Debug\System.Web.Http.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.pdb

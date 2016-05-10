@@ -25,7 +25,6 @@ namespace Stockapp.Test
                 Portfolio = new Portfolio()
             };
             var response = transactionLogic.RegisterTransaction(transaction);
-            mockUnitOfWork.VerifyAll();
             Assert.True(response);
         }
     }

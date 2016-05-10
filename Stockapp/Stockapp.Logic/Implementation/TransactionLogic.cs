@@ -12,15 +12,21 @@ namespace Stockapp.Logic.Implementation
     public class TransactionLogic : ITransactionLogic
     {
         private readonly IUnitOfWork UnitOfWork;
+        private readonly IPortfolioLogic portfolioLogic;
 
         public TransactionLogic(IUnitOfWork UnitOfWork)
         {
             this.UnitOfWork = UnitOfWork;
+            portfolioLogic = new PortfolioLogic(UnitOfWork);
         }
 
         public bool RegisterTransaction(Transaction transaction)
         {
-            throw new NotImplementedException();
+            if (portfolioLogic.UpdatePortfolio(transaction) == false)
+                return false;
+            UnitOfWork.TransactionRepository.Update(transaction);
+            UnitOfWork.Save();
+            return true;
         }
     }
 }

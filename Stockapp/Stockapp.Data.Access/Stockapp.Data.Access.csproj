@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201605032132015_InvitationCode.Designer.cs">
       <DependentUpon>201605032132015_InvitationCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605092232101_ModelChanges.cs" />
+    <Compile Include="Migrations\201605092232101_ModelChanges.Designer.cs">
+      <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605032132015_InvitationCode.resx">
       <DependentUpon>201605032132015_InvitationCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605092232101_ModelChanges.resx">
+      <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
