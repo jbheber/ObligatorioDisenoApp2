@@ -1,7 +1,6 @@
 ﻿using Stockapp.Data.Interfaces;
 using System.Data.Entity;
 using System.Linq;
-using System.Data.Entity.Infrastructure;
 
 namespace Stockapp.Data.Access
 {
@@ -62,17 +61,20 @@ namespace Stockapp.Data.Access
         // Additional conventions to help EF understand our data relationships
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Player>().HasRequired(x => x.User);
-            modelBuilder.Entity<Admin>().HasRequired(x => x.User);
-            modelBuilder.Entity<InvitationCode>().HasOptional(x => x.ParentUser);
-            modelBuilder.Entity<Portfolio>().HasOptional(x => x.Transactions).WithRequired();
-            modelBuilder.Entity<Stock>()
-                .HasOptional(x => x.StockHistory)
-                .WithRequired();
-            modelBuilder.Entity<Stock>()
-                .HasOptional(x => x.StockNews)
-                .WithMany();
+            modelBuilder.Entity<Admin>().HasKey(x => x.Id);
+            modelBuilder.Entity<InvitationCode>().HasKey(x => x.Id);
+            modelBuilder.Entity<Player>().HasKey(x => x.Id);
+            modelBuilder.Entity<Portfolio>().HasKey(x => x.Id);
+            modelBuilder.Entity<Stock>().HasKey(x => x.Id);
+            modelBuilder.Entity<StockHistory>().HasKey(x => x.Id);
+            modelBuilder.Entity<Transaction>().HasKey(x => x.Id);
+            modelBuilder.Entity<User>().HasKey(x => x.Id);
 
+            modelBuilder.Entity<Player>().HasRequired(x => x.User);
+            modelBuilder.Entity<Player>().HasRequired(x => x.Portfolio);
+
+            modelBuilder.Entity<Admin>().HasRequired(x => x.User);
+            modelBuilder.Entity<InvitationCode>().HasRequired(x => x.ParentUser);
         }
     }
 

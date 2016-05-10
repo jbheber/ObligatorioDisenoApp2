@@ -50,12 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\IInvitationCodeLogic.cs" />
+    <Compile Include="API\IPlayerLogic.cs" />
+    <Compile Include="API\IPortfolioLogic.cs" />
     <Compile Include="API\IStockHistoryLogic.cs" />
     <Compile Include="API\IStockLogic.cs" />
     <Compile Include="API\IStockNewsLogic.cs" />
+    <Compile Include="API\ITransactionLogic.cs" />
     <Compile Include="API\IUserLogic.cs" />
     <Compile Include="DependencyResolver.cs" />
+    <Compile Include="Implementation\InvitationCodeLogic.cs" />
+    <Compile Include="Implementation\PlayerLogic.cs" />
+    <Compile Include="Implementation\PortfolioLogic.cs" />
     <Compile Include="Implementation\StockLogic.cs" />
+    <Compile Include="Implementation\TransactionLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Implementation\StockHistoryLogic.cs" />
     <Compile Include="Implementation\StockNewsLogic.cs" />

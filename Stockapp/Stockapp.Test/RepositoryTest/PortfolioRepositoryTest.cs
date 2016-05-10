@@ -49,11 +49,11 @@ namespace Stockapp.Test
 
             var unitOfWork = new UnitOfWork(context.Object);
 
-            IEnumerable<Portfolio> result = unitOfWork.PortfolioRepository.Get(p => p.Player.User.IsAdmin == true, null, "User");
+            IEnumerable<Portfolio> result = unitOfWork.PortfolioRepository.Get(p => p.AvailableMoney > 100, null, "User");
 
             Assert.Equal(
                 result.SafeCount(),
-                playerData.Where(d => d.User.IsAdmin == true && !d.IsDeleted).SafeCount());
+                portfolioData.Where(d => d.AvailableMoney > 100 && !d.IsDeleted).SafeCount());
         }
 
         [Fact]
@@ -116,24 +116,6 @@ namespace Stockapp.Test
                 ActionsValue = 0,
                 Transactions = new List<Transaction>(),
                 IsDeleted = false,
-                Player = new Player()
-                {
-                    CI = 46640529,
-                    Email = "aaa@hotmail.com",
-                    IsDeleted = false,
-                    Name = "Juan Bautista",
-                    Surname = "Heber",
-                    Id = Guid.NewGuid(),
-                    User = new User()
-                    {
-                        Name = "test1",
-                        Password = "te12345678",
-                        Email = "test@test.com",
-                        IsAdmin = false,
-                        IsDeleted = false,
-                        Id = Guid.NewGuid()
-                    },
-                },
                 Id = Guid.NewGuid()
             };
 
@@ -163,24 +145,6 @@ namespace Stockapp.Test
                 ActionsValue = 0,
                 Transactions = new List<Transaction>(),
                 IsDeleted = false,
-                Player = new Player()
-                {
-                    CI = 46640529,
-                    Email = "aaa@hotmail.com",
-                    IsDeleted = false,
-                    Name = "Juan Bautista",
-                    Surname = "Heber",
-                    Id = Guid.NewGuid(),
-                    User = new User()
-                    {
-                        Name = "test1",
-                        Password = "te12345678",
-                        Email = "test@test.com",
-                        IsAdmin = false,
-                        IsDeleted = false,
-                        Id = Guid.NewGuid()
-                    },
-                },
                 Id = Guid.NewGuid()
             };
 
@@ -395,8 +359,6 @@ namespace Stockapp.Test
             {
                 new Portfolio()
                 {
-                    Player = players.ElementAt(0),
-                    PlayerId = players.ElementAt(0).Id,
                     AvailableMoney = 0,
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
@@ -405,8 +367,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(1),
-                    PlayerId = players.ElementAt(1).Id,
                     AvailableMoney = 5,
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
@@ -415,8 +375,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(2),
-                    PlayerId = players.ElementAt(2).Id,
                     AvailableMoney = 10,
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
@@ -425,8 +383,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(3),
-                    PlayerId = players.ElementAt(3).Id,
                     AvailableMoney = 15,
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
@@ -435,8 +391,6 @@ namespace Stockapp.Test
                 },
                  new Portfolio()
                 {
-                    Player = players.ElementAt(4),
-                    PlayerId = players.ElementAt(4).Id,
                     AvailableMoney = 20,
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),

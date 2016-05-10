@@ -5,7 +5,7 @@ using Stockapp.Logic.API;
 using Stockapp.Logic.Implementation;
 using Xunit;
 
-namespace Stockapp.Test
+namespace Stockapp.Test.LogicTest
 {
     public class StockNewsLogicTest
     {

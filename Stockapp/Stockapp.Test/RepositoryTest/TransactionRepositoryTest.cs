@@ -29,7 +29,7 @@ namespace Stockapp.Test
             var transactionData = GetTransactionList();
             var transactionSet = new Mock<DbSet<Transaction>>().SetupData(transactionData);
 
-            var context = new Mock<Context>();
+            var context = new Mock<Context>() { CallBase = true };
             context.Setup(ctx => ctx.Set<User>()).Returns(userSet.Object);
             context.Setup(ctx => ctx.Set<Player>()).Returns(playerSet.Object);
             context.Setup(ctx => ctx.Set<Stock>()).Returns(stockSet.Object);
@@ -176,24 +176,6 @@ namespace Stockapp.Test
                 Type = new TransactionType(),
                 Portfolio = new Portfolio()
                 {
-                    Player = new Player()
-                    {
-                        CI = 46640529,
-                        Email = "aaa@hotmail.com",
-                        IsDeleted = false,
-                        Name = "Juan Bautista",
-                        Surname = "Heber",
-                        User = new User()
-                        {
-                            Name = "jbheber",
-                            Password = "Jb12345",
-                            Email = "juanbheber@outlook.com",
-                            IsAdmin = false,
-                            IsDeleted = false,
-                            Id = Guid.NewGuid()
-                        },
-                        Id = Guid.NewGuid()
-                    },
                     AvailableMoney = 0,
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
@@ -255,24 +237,6 @@ namespace Stockapp.Test
                 Type = new TransactionType(),
                 Portfolio = new Portfolio()
                 {
-                    Player = new Player()
-                    {
-                        CI = 46640529,
-                        Email = "aaa@hotmail.com",
-                        IsDeleted = false,
-                        Name = "Juan Bautista",
-                        Surname = "Heber",
-                        User = new User()
-                        {
-                            Name = "jbheber",
-                            Password = "Jb12345",
-                            Email = "juanbheber@outlook.com",
-                            IsAdmin = false,
-                            IsDeleted = false,
-                            Id = Guid.NewGuid()
-                        },
-                        Id = Guid.NewGuid()
-                    },
                     AvailableMoney = 0,
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
@@ -580,8 +544,6 @@ namespace Stockapp.Test
             {
                 new Portfolio()
                 {
-                    Player = players.ElementAt(0),
-                    PlayerId = players.ElementAt(0).Id,
                     AvailableMoney = 0,
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
@@ -590,8 +552,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(1),
-                    PlayerId = players.ElementAt(1).Id,
                     AvailableMoney = 5,
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
@@ -600,8 +560,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(2),
-                    PlayerId = players.ElementAt(2).Id,
                     AvailableMoney = 10,
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
@@ -610,8 +568,6 @@ namespace Stockapp.Test
                 },
                 new Portfolio()
                 {
-                    Player = players.ElementAt(3),
-                    PlayerId = players.ElementAt(3).Id,
                     AvailableMoney = 15,
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
@@ -620,8 +576,6 @@ namespace Stockapp.Test
                 },
                  new Portfolio()
                 {
-                    Player = players.ElementAt(4),
-                    PlayerId = players.ElementAt(4).Id,
                     AvailableMoney = 20,
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),

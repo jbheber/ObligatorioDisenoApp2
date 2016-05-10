@@ -47,3 +47,45 @@ Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\De
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.Unity.xml
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 Z:\Documents\Diseño Aplicaciones 2\da2\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Resolver.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Resolver.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll.config
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Repository.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Resolver.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.Access.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Data.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Stockapp.Resolver.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.dll
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Repository\obj\Debug\Stockapp.Data.Repository.pdb

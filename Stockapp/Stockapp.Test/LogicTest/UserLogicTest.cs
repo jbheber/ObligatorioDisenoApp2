@@ -6,9 +6,10 @@ using Stockapp.Logic.API;
 using Stockapp.Logic.Implementation;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using Xunit;
 
-namespace Stockapp.Test
+namespace Stockapp.Test.LogicTest
 {
     public class UserLogicTest
     {
@@ -176,16 +177,15 @@ namespace Stockapp.Test
         [InlineData("Arto", "artoo@gmail.com", "artola123", "abc12345")]
         public void RegisterValidationsTest2(string name, string email, string password, string ic)
         {
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = ic;
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Insert(It.IsAny<InvitationCode>()));
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(It.IsAny<Expression<Func<InvitationCode, bool>>>(), null, ""))
+                .Returns(new List<InvitationCode>() { invitationCode });
             mockUnitOfWork.Setup(un => un.UserRepository.Get(null, null, null));
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
-
-            InvitationCode invitationCode = new InvitationCode();
-            invitationCode.Code = ic;
-            mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
 
             User user = new User();
             user.Name = name;
@@ -217,17 +217,16 @@ namespace Stockapp.Test
         [InlineData("Arto", "artoo@gmail.com", "artola123", "abc12345")]
         public void RegisterUserTest(string name, string email, string password, string ic)
         {
+            InvitationCode invitationCode = new InvitationCode();
+            invitationCode.Code = ic;
             // Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Insert(It.IsAny<InvitationCode>()));
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(It.IsAny<Expression<Func<InvitationCode, bool>>>(), null, ""))
+                .Returns(new List<InvitationCode>() { invitationCode });
             mockUnitOfWork.Setup(un => un.UserRepository.Insert(It.IsAny<User>()));
             mockUnitOfWork.Setup(un => un.Save());
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
-
-            InvitationCode invitationCode = new InvitationCode();
-            invitationCode.Code = ic;
-            mockUnitOfWork.Object.InvitationCodeRepository.Insert(invitationCode);
 
             User user = new User()
             {

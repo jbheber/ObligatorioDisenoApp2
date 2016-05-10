@@ -9,7 +9,6 @@ namespace Stockapp.Data
         /// <summary>
         /// Identifies the User.
         /// </summary>
-        [Key]
         public Guid Id { get; set; }
 
         /// <summary>
@@ -41,5 +40,12 @@ namespace Stockapp.Data
         /// Soft delete
         /// </summary>
         public bool IsDeleted { get; set; }
+
+        public User()
+        {
+            IsAdmin = false;
+            IsDeleted = false;
+        }
+
     }
 }

@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Data
 {
-    public class Stock: ISoftDelete, Identificable
+    public class Stock : ISoftDelete, Identificable
     {
+        /// <summary>
+        /// Database generated Id.
+        /// </summary>
         public Guid Id { get; set; }
 
         /// <summary>
@@ -24,7 +27,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Stock brief description.
         /// </summary>
-        public string Description { get; set;}
+        public string Description { get; set; }
 
         /// <summary>
         /// Single stock value.
@@ -45,5 +48,12 @@ namespace Stockapp.Data
         /// Used for soft(logic) delete.
         /// </summary>
         public bool IsDeleted { get; set; }
+
+        public Stock()
+        {
+            IsDeleted = false;
+            UnityValue = 0;
+        }
+
     }
 }

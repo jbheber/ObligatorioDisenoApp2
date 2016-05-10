@@ -42,7 +42,7 @@ namespace Stockapp.Logic.Implementation
 
         public bool ValidInvitationCode(InvitationCode invitationCode)
         {
-            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isEmpty();
+            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isNotEmpty();
             return exisitingCode;
         }
 

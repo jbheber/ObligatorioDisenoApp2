@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Stockapp.Data
 {
-    public class Player: ISoftDelete, Identificable
+    public class Player : ISoftDelete, Identificable
     {
         /// <summary>
         /// DataBase generated Id
@@ -29,7 +29,6 @@ namespace Stockapp.Data
         /// <summary>
         /// Asociated User.
         /// </summary>
-        [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
         /// <summary>
@@ -49,6 +48,34 @@ namespace Stockapp.Data
         /// </summary>
         [EmailAddress]
         public string Email { get; set; }
+
+        /// <summary>
+        /// Reference to the portfolio
+        /// </summary>
+        public Guid PortfolioId { get; set; }
+
+        /// <summary>
+        /// Player's portfolio.
+        /// </summary>
+        public virtual Portfolio Portfolio { get; set; }
+
+        /// <summary>
+        /// Soft delete
+        /// </summary>
         public bool IsDeleted { get; set; }
+
+        public Player()
+        {
+            this.IsDeleted = false;
+            this.Portfolio = new Portfolio();
+        }
+        public Player(User user)
+        {
+            IsDeleted = false;
+            Portfolio = new Portfolio();
+            User = user;
+            Email = user.Email;
+        }
+
     }
 }
