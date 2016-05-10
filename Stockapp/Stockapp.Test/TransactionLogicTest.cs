@@ -5,6 +5,7 @@ using Stockapp.Logic.API;
 using Stockapp.Logic.Implementation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Stockapp.Test
@@ -28,6 +29,35 @@ namespace Stockapp.Test
             };
             var response = transactionLogic.RegisterTransaction(transaction);
             Assert.True(response);
+        }
+
+        [Fact]
+        public void GetTransactionsBetweenDatesTest()
+        {
+            IList<Transaction> transactions = new List<Transaction>();
+            for (int i = 0; i < 100; i++)
+                transactions.Add(new Transaction()
+                {
+                    Id = Guid.NewGuid(),
+                    MarketCapital = 55 * i,
+                    NetVariation = 120 * i,
+                    PercentageVariation = 20 + i,
+                    Portfolio = new Portfolio(),
+                    Stock = new Stock(),
+                    StockQuantity = 100,
+                    TotalValue = 500,
+                    TransactionDate = DateTimeOffset.Now.AddDays(-i)
+                });
+
+            //Arrange
+            var mockUnitOfWork = new Mock<IUnitOfWork>();
+            mockUnitOfWork.Setup(un => un.TransactionRepository.Get(null, null, "Portfolio,Stock"));
+
+            ITransactionLogic transactionLogic = new TransactionLogic(mockUnitOfWork.Object);
+            DateTimeOffset now = DateTimeOffset.Now;
+            DateTimeOffset thirtyDaysAgo = DateTimeOffset.Now.AddDays(30);
+            var response = transactionLogic.GetTransacions(thirtyDaysAgo, now);
+            Assert.Equal(response, transactions.Where(t => t.TransactionDate > thirtyDaysAgo));
         }
     }
 }

@@ -28,5 +28,10 @@ namespace Stockapp.Logic.Implementation
             UnitOfWork.Save();
             return true;
         }
+
+        public IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
