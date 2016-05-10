@@ -93,3 +93,4 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Acces
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.csproj.GenerateResource.Cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.pdb
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.CreatedGameSettingsTable.resources

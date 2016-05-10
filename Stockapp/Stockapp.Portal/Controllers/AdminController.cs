@@ -52,7 +52,7 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="user">Admin created client-side</param>
         /// <returns></returns>
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(Admin))]
         public IHttpActionResult PostAdmin(Admin admin)
         {
             if (!ModelState.IsValid)
@@ -79,7 +79,7 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="id">Admin.Id</param>
         /// <returns></returns>
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(Admin))]
         public IHttpActionResult DeleteAdmin(Guid id)
         {
             if (adminLogic.DeleteAdmin(id))

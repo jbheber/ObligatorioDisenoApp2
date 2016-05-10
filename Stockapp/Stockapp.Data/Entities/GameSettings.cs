@@ -30,5 +30,11 @@ namespace Stockapp.Data.Entities
         /// </summary>
         public bool IsDeleted { get; set; }
 
+        public GameSettings()
+        {
+            this.InitialMoney = 1000000;
+            this.MaxTransactionsPerDay = 50;
+            this.IsDeleted = false;
+        }
     }
 }
