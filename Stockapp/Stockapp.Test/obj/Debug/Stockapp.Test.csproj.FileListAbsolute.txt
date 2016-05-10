@@ -143,7 +143,6 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\xunit.execution.desktop.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Resolver.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.Unity.dll
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Access.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Repository.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.pdb
@@ -163,9 +162,40 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\xunit.execution.desktop.xml
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Resolver.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.Unity.xml
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csi.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csi.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.AppContext.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.IO.FileSystem.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\vbc.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\vbc.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\vbc.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Portal.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Unity.WebApi.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Portal.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.exe
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.exe.config
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\roslyn\csc.rsp
