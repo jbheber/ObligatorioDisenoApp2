@@ -17,6 +17,20 @@ namespace Stockapp.Portal.Controllers
             this.playerLogic = playerLogic;
         }
 
+        public IHttpActionResult Get(Guid playerId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            Player player = playerLogic.GetPlayer(playerId);
+            if (player == null)
+            {
+                return NotFound();
+            }
+            return Ok(player);
+        }
+
         // PUT: api/Player/5
         /// <summary>
         /// Update Player
@@ -51,7 +65,7 @@ namespace Stockapp.Portal.Controllers
         /// <param name="userId">Current user Id</param>
         /// <param name="newPlayer">Player to register</param>
         /// <returns></returns>
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(Player))]
         public IHttpActionResult PostPlayer(Guid userId, Player newPlayer)
         {
             if (!ModelState.IsValid)
@@ -78,7 +92,7 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="id">Player.Id</param>
         /// <returns></returns>
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(Player))]
         public IHttpActionResult DeletePlayer(Guid id)
         {
             if (playerLogic.DeletePlayer(id))

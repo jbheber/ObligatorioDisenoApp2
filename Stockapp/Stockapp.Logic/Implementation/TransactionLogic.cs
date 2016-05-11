@@ -31,20 +31,28 @@ namespace Stockapp.Logic.Implementation
         }
 
         public IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null)
-        {
-            var transactions = UnitOfWork.TransactionRepository.Get(null, null, "Portfolio,Stock");
-            if (transactions.isEmpty())
-                return null;
-
+         {
+             var transactions = UnitOfWork.TransactionRepository.Get(null, null, "Portfolio,Stock");
+             if (transactions.isEmpty())
+                 return null;
+ 
             transactions = transactions.Where(x => x.TransactionDate > from && x.TransactionDate < to);
 
-            if (stock != null)
+             if (stock != null)
                 transactions = transactions.Where(x => x.StockId == stock.Id);
-
-            if (transactionType != null)
+ 
+             if (transactionType != null)
                 transactions = transactions.Where(x => x.Type.ToString() == transactionType);
 
-            return transactions;
+ 
+             return transactions;
+         }
+
+        public bool UpdateTransaction(Transaction transaction)
+        {
+            UnitOfWork.TransactionRepository.Update(transaction);
+            UnitOfWork.Save();
+            return true;
         }
 
         public void Dispose()

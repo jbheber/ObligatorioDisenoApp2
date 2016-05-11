@@ -25,7 +25,7 @@ namespace Stockapp.Logic.API
         /// <param name="transactionType">String to show if sell or buy</param>
         /// <returns></returns>
         IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null);
-
+        bool UpdateTransaction(Transaction transaction);
         void Dispose();
 
     }

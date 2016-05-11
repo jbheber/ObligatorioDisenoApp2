@@ -19,13 +19,27 @@ namespace Stockapp.Portal.Controllers
             this.invitationCodeLogic = invitationCodeLogic;
         }
 
+        public IHttpActionResult Get(User user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            InvitationCode invitationCode = invitationCodeLogic.GenerateCode(user);
+            if (invitationCode == null)
+            {
+                return NotFound();
+            }
+            return Ok(invitationCode);
+        }
+
         // POST: api/InvitationCode
         /// <summary>
         /// Register a new InvitationCode
         /// </summary>
         /// <param name="user">InvitationCode created client-side</param>
         /// <returns></returns>
-        [ResponseType(typeof(User))]
+        [ResponseType(typeof(InvitationCode))]
         public IHttpActionResult PostInvitationCode(User user)
         {
             if (!ModelState.IsValid)

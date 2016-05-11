@@ -19,6 +19,20 @@ namespace Stockapp.Portal.Controllers
             this.userLogic = userLogic;
         }
 
+        public IHttpActionResult Get()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            IEnumerable<User> users = userLogic.GetAllUsers();
+            if (users == null)
+            {
+                return NotFound();
+            }
+            return Ok(users);
+        }
+
         // PUT: api/User/5
         /// <summary>
         /// Update User

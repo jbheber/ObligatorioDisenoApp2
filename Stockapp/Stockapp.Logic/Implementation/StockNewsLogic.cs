@@ -18,6 +18,11 @@ namespace Stockapp.Logic.Implementation
             this.UnitOfWork = UnitOfWork;
         }
 
+        public StockNews GetStockNews(Guid stockNewsId)
+        {
+            return UnitOfWork.StockNewsRepository.GetById(stockNewsId);
+        }
+
         public bool DeleteStockNews(StockNews news)
         {
             UnitOfWork.StockNewsRepository.Delete(news);

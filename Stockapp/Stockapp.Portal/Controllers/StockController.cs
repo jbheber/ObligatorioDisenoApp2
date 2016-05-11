@@ -10,74 +10,73 @@ using System.Web.Http.Description;
 
 namespace Stockapp.Portal.Controllers
 {
-    public class AdminController : ApiController
+    public class StockController : ApiController
     {
-        private readonly IAdminLogic adminLogic;
+        private readonly IStockLogic stockLogic;
 
-        public AdminController(IAdminLogic adminLogic)
+        public StockController(IStockLogic stockLogic)
         {
-            this.adminLogic = adminLogic;
+            this.stockLogic = stockLogic;
         }
 
-        public IHttpActionResult Get(Guid adminId)
+        public IHttpActionResult Get(Guid stockId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            Admin admin = adminLogic.GetAdmin(adminId);
-            if (admin == null)
+            Stock stock = stockLogic.GetStock(stockId);
+            if (stock == null)
             {
                 return NotFound();
             }
-            return Ok(admin);
+            return Ok(stock);
         }
 
-        // PUT: api/Admin/5
+        // PUT: api/Stock/5
         /// <summary>
-        /// Update Admin
+        /// Update Stock
         /// </summary>
-        /// <param name="id">Admin.Id</param>
-        /// <param name="user">Updated admin</param>
+        /// <param name="id">Stock.Id</param>
+        /// <param name="user">Updated Stock</param>
         /// <returns></returns>
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutAdmin(Guid id, Admin admin)
+        public IHttpActionResult PutStock(Guid id, Stock stock)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != admin.Id)
+            if (id != stock.Id)
             {
                 return BadRequest();
             }
 
-            if (!adminLogic.UpdateAdmin(admin))
+            if (!stockLogic.UpdateStock(stock))
             {
                 return NotFound();
             }
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Admin
+        // POST: api/Stock
         /// <summary>
-        /// Register a new Admin
+        /// Register a new Stock
         /// </summary>
-        /// <param name="user">Admin created client-side</param>
+        /// <param name="user">Stock created client-side</param>
         /// <returns></returns>
-        [ResponseType(typeof(Admin))]
-        public IHttpActionResult PostAdmin(Admin admin)
+        [ResponseType(typeof(Stock))]
+        public IHttpActionResult PostStock(Stock stock)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
             try
             {
-                if (adminLogic.CreateAdmin(admin))
-                    return CreatedAtRoute("DefaultApi", new { id = admin.Id }, admin);
+                if (stockLogic.CreateStock(stock))
+                    return CreatedAtRoute("DefaultApi", new { id = stock.Id }, stock);
                 return BadRequest();
             }
             catch (UserExceptions ue)
@@ -87,27 +86,11 @@ namespace Stockapp.Portal.Controllers
 
         }
 
-        // DELETE: api/Admin/5
-        /// <summary>
-        /// Delete admin
-        /// </summary>
-        /// <param name="id">Admin.Id</param>
-        /// <returns></returns>
-        [ResponseType(typeof(Admin))]
-        public IHttpActionResult DeleteAdmin(Guid id)
-        {
-            if (adminLogic.DeleteAdmin(id))
-            {
-                return StatusCode(HttpStatusCode.NoContent);
-            }
-            return NotFound();
-        }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                adminLogic.Dispose();
+                stockLogic.Dispose();
             }
             base.Dispose(disposing);
         }

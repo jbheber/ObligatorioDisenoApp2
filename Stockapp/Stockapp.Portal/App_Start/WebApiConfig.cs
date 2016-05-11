@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using Microsoft.Practices.Unity;
 using Stockapp.Resolver;
+using Stockapp.Logic;
 
 namespace Stockapp.Portal
 {
