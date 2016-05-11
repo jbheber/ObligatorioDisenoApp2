@@ -1,6 +1,7 @@
 ﻿using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,7 @@ namespace Stockapp.Data
             DateOfChange = DateTimeOffset.Now;
             IsDeleted = false;
             RecordedValue = 0;
+            Id = Guid.NewGuid();
         }
 
         public StockHistory(Stock stock)
@@ -52,6 +54,7 @@ namespace Stockapp.Data
             IsDeleted = false;
             Stock = stock;
             RecordedValue = stock.UnityValue;
+            Id = Guid.NewGuid();
         }
 
     }

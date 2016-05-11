@@ -58,3 +58,4 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\b
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Resolver\obj\Debug\Stockapp.Resolver.csprojResolveAssemblyReference.cache

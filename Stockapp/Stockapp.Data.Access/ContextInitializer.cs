@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stockapp.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Stockapp.Data.Access
+{
+    public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
     {
-        public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
+        protected override void Seed(Context context)
         {
-            protected override void Seed(Context context)
-            {
-                var users = new List<User>()
+            var users = new List<User>()
             {
                 new User()
                 {
@@ -20,7 +21,7 @@ namespace Stockapp.Data.Access
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -29,7 +30,7 @@ namespace Stockapp.Data.Access
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -38,7 +39,7 @@ namespace Stockapp.Data.Access
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -47,7 +48,7 @@ namespace Stockapp.Data.Access
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -56,13 +57,13 @@ namespace Stockapp.Data.Access
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 }
             };
-                users.ForEach(u => context.Users.Add(u));
-                context.SaveChanges();
+            users.ForEach(u => context.Users.Add(u));
+            context.SaveChanges();
 
-                var players = new List<Player>()
+            var players = new List<Player>()
             {
                 new Player()
                 {
@@ -72,7 +73,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan Bautista",
                     Surname = "Heber",
                     User = users.ElementAt(0),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -82,7 +83,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(1),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -92,7 +93,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan",
                     Surname = "Heber",
                     User = users.ElementAt(2),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -102,7 +103,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(3),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new Player()
                 {
@@ -112,13 +113,13 @@ namespace Stockapp.Data.Access
                     Name = "Damian",
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                players.ForEach(p => context.Players.Add(p));
-                context.SaveChanges();
+            players.ForEach(p => context.Players.Add(p));
+            context.SaveChanges();
 
-                var admins = new List<Admin>()
+            var admins = new List<Admin>()
             {
                 new Admin()
                 {
@@ -128,7 +129,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan Bautista",
                     Surname = "Heber",
                     User = users.ElementAt(0),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -138,7 +139,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(1),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -148,7 +149,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan",
                     Surname = "Heber",
                     User = users.ElementAt(2),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -158,7 +159,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(3),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new Admin()
                 {
@@ -168,95 +169,93 @@ namespace Stockapp.Data.Access
                     Name = "Damian",
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                admins.ForEach(a => context.Admins.Add(a));
-                context.SaveChanges();
+            admins.ForEach(a => context.Admins.Add(a));
+            context.SaveChanges();
 
-                var invitationCodes = new List<InvitationCode>()
+            var invitationCodes = new List<InvitationCode>()
             {
                 new InvitationCode()
                 {
                     Code = "AA245GJ1",
                     IsDeleted = users.ElementAt(0).IsDeleted,
                     ParentUser = users.ElementAt(0),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ2",
                     IsDeleted = users.ElementAt(1).IsDeleted,
                     ParentUser = users.ElementAt(1),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ3",
                     IsDeleted = users.ElementAt(2).IsDeleted,
                     ParentUser = users.ElementAt(2),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ4",
                     IsDeleted = users.ElementAt(3).IsDeleted,
                     ParentUser = users.ElementAt(3),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new InvitationCode()
                 {
                     Code = "AA245GJ5",
                     IsDeleted = users.ElementAt(4).IsDeleted,
                     ParentUser = users.ElementAt(4),
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                invitationCodes.ForEach(ic => context.InvitationCodes.Add(ic));
-                context.SaveChanges();
+            invitationCodes.ForEach(ic => context.InvitationCodes.Add(ic));
+            context.SaveChanges();
 
-                var stockHistories = new List<StockHistory>()
+            var stockHistories = new List<StockHistory>()
             {
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 0,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 1,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 2,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 3,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 4,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                stockHistories.ForEach(sh => context.StockHistories.Add(sh));
-                context.SaveChanges();
 
-                var stockNews = new List<StockNews>()
+            var stockNews = new List<StockNews>()
             {
                 new StockNews()
                 {
@@ -265,7 +264,7 @@ namespace Stockapp.Data.Access
                     Title = "News1",
                     Content = "This is the news number 1",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -274,7 +273,7 @@ namespace Stockapp.Data.Access
                     Title = "News2",
                     Content = "This is the news number 2",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -283,7 +282,7 @@ namespace Stockapp.Data.Access
                     Title = "News3",
                     Content = "This is the news number 3",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -292,7 +291,7 @@ namespace Stockapp.Data.Access
                     Title = "News4",
                     Content = "This is the news number 4",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new StockNews()
                 {
@@ -301,13 +300,11 @@ namespace Stockapp.Data.Access
                     Title = "News5",
                     Content = "This is the news number 5",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                stockNews.ForEach(sn => context.StockNews.Add(sn));
-                context.SaveChanges();
 
-                var stocks = new List<Stock>()
+            var stocks = new List<Stock>()
             {
                 new Stock()
                 {
@@ -318,7 +315,7 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1)},
                     StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1)},
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -326,10 +323,10 @@ namespace Stockapp.Data.Access
                     Name = "Stock2",
                     Description = "Este es el stock2",
                     UnityValue = 2,
-                    StockNews = new List<StockNews>(),
+                    StockNews = new List<StockNews>(){stockNews.ElementAt(2), stockNews.ElementAt(3)},
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -338,9 +335,9 @@ namespace Stockapp.Data.Access
                     Description = "Este es el stock3",
                     UnityValue = 3,
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2)},
-                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1), stockHistories.ElementAt(2)},
+                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(2), stockHistories.ElementAt(3), stockHistories.ElementAt(2)},
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -349,9 +346,9 @@ namespace Stockapp.Data.Access
                     Description = "Este es el stock4",
                     UnityValue = 4,
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2), stockNews.ElementAt(3)},
-                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1), stockHistories.ElementAt(2), stockHistories.ElementAt(3)},
+                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(4)},
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new Stock()
                 {
@@ -359,16 +356,16 @@ namespace Stockapp.Data.Access
                     Name = "Stock5",
                     Description = "Este es el stock5",
                     UnityValue = 5,
-                    StockNews = stockNews,
-                    StockHistory = stockHistories,
+                    StockNews = new List<StockNews>(),
+                    StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                stocks.ForEach(s => context.Stocks.Add(s));
-                context.SaveChanges();
+            stocks.ForEach(s => context.Stocks.Add(s));
+            context.SaveChanges();
 
-                var portfolios = new List<Portfolio>()
+            var portfolios = new List<Portfolio>()
             {
                 new Portfolio()
                 {
@@ -376,7 +373,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(0).IsDeleted,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -384,7 +381,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(1).IsDeleted,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -392,7 +389,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(2).IsDeleted,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -400,7 +397,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(3).IsDeleted,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new Portfolio()
                 {
@@ -408,13 +405,13 @@ namespace Stockapp.Data.Access
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(4).IsDeleted,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                portfolios.ForEach(p => context.Portfolios.Add(p));
-                context.SaveChanges();
+            portfolios.ForEach(p => context.Portfolios.Add(p));
+            context.SaveChanges();
 
-                var transactions = new List<Transaction>()
+            var transactions = new List<Transaction>()
             {
                 new Transaction()
                 {
@@ -428,7 +425,7 @@ namespace Stockapp.Data.Access
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(0),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -442,7 +439,7 @@ namespace Stockapp.Data.Access
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(1),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -456,7 +453,7 @@ namespace Stockapp.Data.Access
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(2),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -470,7 +467,7 @@ namespace Stockapp.Data.Access
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(3),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
                  new Transaction()
                 {
@@ -484,12 +481,20 @@ namespace Stockapp.Data.Access
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(0),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                     Id = Guid.NewGuid()
                 },
             };
-                transactions.ForEach(t => context.Transactions.Add(t));
-                context.SaveChanges();
-            }
+            transactions.ForEach(t => context.Transactions.Add(t));
+            context.SaveChanges();
+
+            context.GameSettings.Add(new GameSettings()
+            {
+                InitialMoney = 1000000,
+                MaxTransactionsPerDay = 50,
+                IsDeleted = false,
+                Id = Guid.NewGuid()
+            });
         }
     }
+}
 

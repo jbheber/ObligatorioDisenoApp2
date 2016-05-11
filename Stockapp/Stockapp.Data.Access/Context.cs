@@ -1,4 +1,5 @@
-﻿using Stockapp.Data.Interfaces;
+﻿using Stockapp.Data.Entities;
+using Stockapp.Data.Interfaces;
 using System.Data.Entity;
 using System.Linq;
 
@@ -56,6 +57,8 @@ namespace Stockapp.Data.Access
         public DbSet<StockNews> StockNews { get; set; }
 
         public DbSet<InvitationCode> InvitationCodes { get; set; }
+
+        public DbSet<GameSettings> GameSettings { get; set; }
         #endregion
 
         // Additional conventions to help EF understand our data relationships

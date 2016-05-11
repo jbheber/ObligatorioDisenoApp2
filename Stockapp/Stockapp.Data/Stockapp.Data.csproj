@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\GameSettings.cs" />
     <Compile Include="Exceptions\AdminExceptions.cs" />
     <Compile Include="Exceptions\InvitationCodeExceptions.cs" />
     <Compile Include="Exceptions\PlayerExceptions.cs" />

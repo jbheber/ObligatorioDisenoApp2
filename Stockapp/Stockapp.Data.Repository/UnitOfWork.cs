@@ -1,4 +1,5 @@
 ﻿using Stockapp.Data.Access;
+using Stockapp.Data.Entities;
 using System;
 
 namespace Stockapp.Data.Repository
@@ -15,6 +16,7 @@ namespace Stockapp.Data.Repository
         private GenericRepository<StockNews> stockNewsRepository;
         private GenericRepository<Transaction> transactionRepository;
         private GenericRepository<InvitationCode> invitationCodeRepository;
+        private GenericRepository<GameSettings> gameSettingsRepository;
 
 
         public UnitOfWork(Context context)
@@ -127,6 +129,18 @@ namespace Stockapp.Data.Repository
                     this.userRepository = new GenericRepository<User>(context);
                 }
                 return userRepository;
+            }
+        }
+
+        public IRepository<GameSettings> GameSettingsRepository
+        {
+            get
+            {
+                if (this.gameSettingsRepository == null)
+                {
+                    this.gameSettingsRepository = new GenericRepository<GameSettings>(context);
+                }
+                return gameSettingsRepository;
             }
         }
 

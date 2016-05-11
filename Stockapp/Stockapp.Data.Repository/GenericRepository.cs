@@ -12,7 +12,7 @@ namespace Stockapp.Data.Repository
     public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : class, ISoftDelete, Identificable
     {
         internal Context context;
-        internal IDbSet<TEntity> dbSet;
+        internal DbSet<TEntity> dbSet;
 
         public GenericRepository(Context context)
         {

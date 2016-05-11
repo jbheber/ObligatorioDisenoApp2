@@ -67,6 +67,22 @@
     <Compile Include="Migrations\201605092232101_ModelChanges.Designer.cs">
       <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605102343251_CreatedGameSettingsTable.cs" />
+    <Compile Include="Migrations\201605102343251_CreatedGameSettingsTable.Designer.cs">
+      <DependentUpon>201605102343251_CreatedGameSettingsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605110009213_auxiliar.cs" />
+    <Compile Include="Migrations\201605110009213_auxiliar.Designer.cs">
+      <DependentUpon>201605110009213_auxiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605110039040_DatabaseGeneratedId.cs" />
+    <Compile Include="Migrations\201605110039040_DatabaseGeneratedId.Designer.cs">
+      <DependentUpon>201605110039040_DatabaseGeneratedId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605110112261_DatabaseGeneratedId2.cs" />
+    <Compile Include="Migrations\201605110112261_DatabaseGeneratedId2.Designer.cs">
+      <DependentUpon>201605110112261_DatabaseGeneratedId2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +108,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605092232101_ModelChanges.resx">
       <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605102343251_CreatedGameSettingsTable.resx">
+      <DependentUpon>201605102343251_CreatedGameSettingsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605110009213_auxiliar.resx">
+      <DependentUpon>201605110009213_auxiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605110039040_DatabaseGeneratedId.resx">
+      <DependentUpon>201605110039040_DatabaseGeneratedId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605110112261_DatabaseGeneratedId2.resx">
+      <DependentUpon>201605110112261_DatabaseGeneratedId2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

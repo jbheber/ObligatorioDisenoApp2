@@ -247,8 +247,6 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\D
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.WebHost.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Unity.WebApi.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Net.Http.Formatting.dll
-C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Access.pdb
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.Repository.pdb
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Stockapp.Data.pdb
@@ -272,8 +270,6 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\D
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Test\obj\Debug\Stockapp.Test.pdb
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Test\bin\Debug\Microsoft.Practices.ServiceLocation.dll

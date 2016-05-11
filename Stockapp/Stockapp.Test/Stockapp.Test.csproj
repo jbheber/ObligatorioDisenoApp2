@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogicTest\AdminLogicTest.cs" />
+    <Compile Include="LogicTest\GameSettingsLogicTest.cs" />
     <Compile Include="LogicTest\InvitationCodeLogicTest.cs" />
     <Compile Include="LogicTest\PlayerLogicTest.cs" />
     <Compile Include="PortalTest\AdminControllerTest.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="PortalTest\UserControllerTest.cs" />
     <Compile Include="LogicTest\PortfolioLogicTest.cs" />
     <Compile Include="RepositoryTest\AdminRepositoryTest.cs" />
+    <Compile Include="RepositoryTest\GameSettingsRepositoryTest.cs" />
     <Compile Include="RepositoryTest\InvitationCodeRepositoryTest.cs" />
     <Compile Include="RepositoryTest\PlayerRepositoryTest.cs" />
     <Compile Include="RepositoryTest\PortfolioRepositoryTest.cs" />

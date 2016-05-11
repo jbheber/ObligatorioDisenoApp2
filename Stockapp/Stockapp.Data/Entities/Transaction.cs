@@ -74,6 +74,12 @@ namespace Stockapp.Data
         /// Soft delete
         /// </summary>
         public bool IsDeleted { get; set; }
+
+        public Transaction()
+        {
+            this.Id = Guid.NewGuid();
+            this.IsDeleted = false;
+        }
     }
 
     /// <summary>
