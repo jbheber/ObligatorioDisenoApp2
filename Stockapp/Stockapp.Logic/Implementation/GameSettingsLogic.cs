@@ -32,6 +32,13 @@ namespace Stockapp.Logic.Implementation
             return gameSettings.SingleOrDefault();
         }
 
+        public GameSettings get()
+        {
+           var x = UnitOfWork.GameSettingsRepository.Get().First();
+            return x;
+        }
+        
+
         public bool UpdateOrCreateGameSettings(GameSettings settings)
         {
             if (UnitOfWork.GameSettingsRepository.GetById(settings.Id) != null)

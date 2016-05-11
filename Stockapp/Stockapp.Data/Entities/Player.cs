@@ -66,6 +66,7 @@ namespace Stockapp.Data
 
         public Player()
         {
+            this.Id = Guid.NewGuid();
             this.IsDeleted = false;
             this.Portfolio = new Portfolio();
         }

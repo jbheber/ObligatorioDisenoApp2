@@ -1,6 +1,7 @@
 ﻿using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace Stockapp.Data
         public StockNews()
         {
             IsDeleted = false;
+            Id = Guid.NewGuid();
         }
 
     }

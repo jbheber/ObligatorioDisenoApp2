@@ -94,3 +94,6 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Acces
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.pdb
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.CreatedGameSettingsTable.resources
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.auxiliar.resources
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.DatabaseGeneratedId.resources
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Data.Access\obj\Debug\Stockapp.Data.Access.Migrations.DatabaseGeneratedId2.resources

@@ -45,10 +45,11 @@ namespace Stockapp.Data
         public Portfolio()
         {
             IsDeleted = false;
-            this.ActionsValue = 0;
-            this.AvailableMoney = 0;
-            this.TotalMoney = 0;
-            this.Transactions = new List<Transaction>();
+            ActionsValue = 0;
+            AvailableMoney = 0;
+            TotalMoney = 0;
+            Transactions = new List<Transaction>();
+            Id = Guid.NewGuid();
         }
 
     }

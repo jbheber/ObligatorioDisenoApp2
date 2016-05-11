@@ -19,46 +19,46 @@ namespace Stockapp.Data.Access
         /// <summary>
         /// All Users from database
         /// </summary>
-        public IDbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         /// <summary>
         /// All Players from database
         /// </summary>
-        public IDbSet<Player> Players { get; set; }
+        public DbSet<Player> Players { get; set; }
 
         /// <summary>
         /// All Administrators from database
         /// </summary>
-        public IDbSet<Admin> Admins { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         /// <summary>
         /// All portfolios from database
         /// </summary>
-        public IDbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
 
         /// <summary>
         /// All Actions from database
         /// </summary>
-        public IDbSet<Stock> Stocks { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
 
         /// <summary>
         /// All Transactions from database
         /// </summary>
-        public IDbSet<Transaction> Transactions { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         /// <summary>
         /// All stock changes from database
         /// </summary>
-        public IDbSet<StockHistory> StockHistories { get; set; }
+        public DbSet<StockHistory> StockHistories { get; set; }
 
         /// <summary>
         /// All stock recorded news from database.
         /// </summary>
-        public IDbSet<StockNews> StockNews { get; set; }
+        public DbSet<StockNews> StockNews { get; set; }
 
-        public IDbSet<InvitationCode> InvitationCodes { get; set; }
+        public DbSet<InvitationCode> InvitationCodes { get; set; }
 
-        public IDbSet<GameSettings> GameSettings { get; set; }
+        public DbSet<GameSettings> GameSettings { get; set; }
         #endregion
 
         // Additional conventions to help EF understand our data relationships

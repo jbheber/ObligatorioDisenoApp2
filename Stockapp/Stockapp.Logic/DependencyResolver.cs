@@ -25,6 +25,7 @@ namespace Stockapp.Logic
             registerComponent.RegisterType<ITransactionLogic, TransactionLogic>();
             registerComponent.RegisterType<IInvitationCodeLogic, InvitationCodeLogic>();
             registerComponent.RegisterType<IPortfolioLogic, PortfolioLogic>();
+            registerComponent.RegisterType<IGameSettingsLogic, GameSettingsLogic>();
 
             registerComponent.RegisterTypeWithControlledLifeTime<IUnitOfWork,UnitOfWork>();
 

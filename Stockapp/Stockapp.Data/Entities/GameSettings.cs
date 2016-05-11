@@ -24,6 +24,8 @@ namespace Stockapp.Data.Entities
         /// Maximum number of transactions per day
         /// </summary>
         public int MaxTransactionsPerDay { get; set; }
+
+        public string RecomendationAlgorithm { get; set; }
         
         /// <summary>
         /// Soft delete
@@ -35,6 +37,14 @@ namespace Stockapp.Data.Entities
             this.InitialMoney = 1000000;
             this.MaxTransactionsPerDay = 50;
             this.IsDeleted = false;
+            this.RecomendationAlgorithm = RecomendationALgorithm.PriceEvolution;
+            this.Id = Guid.NewGuid();
         }
+    }
+
+    public static class RecomendationALgorithm
+    {
+        public const string PriceEvolution = "PriceEvolution";
+        public const string Behaviour = "Behaviour";
     }
 }

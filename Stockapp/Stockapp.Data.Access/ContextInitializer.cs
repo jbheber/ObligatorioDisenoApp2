@@ -20,7 +20,8 @@ namespace Stockapp.Data.Access
                     Password = "Jb.12345",
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -28,7 +29,8 @@ namespace Stockapp.Data.Access
                     Password = "Art.12345",
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -36,7 +38,8 @@ namespace Stockapp.Data.Access
                     Password = "Jh.1234554",
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -44,7 +47,8 @@ namespace Stockapp.Data.Access
                     Password = "Artoo.1234554",
                     Email = "arto@gmail.com",
                     IsAdmin = true,
-                    IsDeleted = true
+                    IsDeleted = true,
+                     Id = Guid.NewGuid()
                 },
                 new User()
                 {
@@ -52,7 +56,8 @@ namespace Stockapp.Data.Access
                     Password = "Maluso.1234554",
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 }
             };
             users.ForEach(u => context.Users.Add(u));
@@ -68,6 +73,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan Bautista",
                     Surname = "Heber",
                     User = users.ElementAt(0),
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -77,6 +83,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(1),
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -85,7 +92,8 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(2).IsDeleted,
                     Name = "Juan",
                     Surname = "Heber",
-                    User = users.ElementAt(2)
+                    User = users.ElementAt(2),
+                     Id = Guid.NewGuid()
                 },
                 new Player()
                 {
@@ -94,7 +102,8 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(3).IsDeleted,
                     Name = "Fernando",
                     Surname = "Artola",
-                    User = users.ElementAt(3)
+                    User = users.ElementAt(3),
+                     Id = Guid.NewGuid()
                 },
                  new Player()
                 {
@@ -103,7 +112,8 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(4).IsDeleted,
                     Name = "Damian",
                     Surname = "Macaluso",
-                    User = users.ElementAt(4)
+                    User = users.ElementAt(4),
+                     Id = Guid.NewGuid()
                 },
             };
             players.ForEach(p => context.Players.Add(p));
@@ -118,7 +128,8 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(0).IsDeleted,
                     Name = "Juan Bautista",
                     Surname = "Heber",
-                    User = users.ElementAt(0)
+                    User = users.ElementAt(0),
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -128,6 +139,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(1),
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -137,6 +149,7 @@ namespace Stockapp.Data.Access
                     Name = "Juan",
                     Surname = "Heber",
                     User = users.ElementAt(2),
+                     Id = Guid.NewGuid()
                 },
                 new Admin()
                 {
@@ -146,6 +159,7 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(3),
+                     Id = Guid.NewGuid()
                 },
                  new Admin()
                 {
@@ -155,6 +169,7 @@ namespace Stockapp.Data.Access
                     Name = "Damian",
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
+                     Id = Guid.NewGuid()
                 },
             };
             admins.ForEach(a => context.Admins.Add(a));
@@ -167,30 +182,35 @@ namespace Stockapp.Data.Access
                     Code = "AA245GJ1",
                     IsDeleted = users.ElementAt(0).IsDeleted,
                     ParentUser = users.ElementAt(0),
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ2",
                     IsDeleted = users.ElementAt(1).IsDeleted,
                     ParentUser = users.ElementAt(1),
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ3",
                     IsDeleted = users.ElementAt(2).IsDeleted,
                     ParentUser = users.ElementAt(2),
+                     Id = Guid.NewGuid()
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ4",
                     IsDeleted = users.ElementAt(3).IsDeleted,
                     ParentUser = users.ElementAt(3),
+                     Id = Guid.NewGuid()
                 },
                  new InvitationCode()
                 {
                     Code = "AA245GJ5",
                     IsDeleted = users.ElementAt(4).IsDeleted,
                     ParentUser = users.ElementAt(4),
+                     Id = Guid.NewGuid()
                 },
             };
             invitationCodes.ForEach(ic => context.InvitationCodes.Add(ic));
@@ -202,35 +222,38 @@ namespace Stockapp.Data.Access
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 0,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 1,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 2,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 3,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                  new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 4,
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
             };
-            stockHistories.ForEach(sh => context.StockHistories.Add(sh));
-            context.SaveChanges();
 
             var stockNews = new List<StockNews>()
             {
@@ -240,7 +263,8 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News1",
                     Content = "This is the news number 1",
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -248,7 +272,8 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News2",
                     Content = "This is the news number 2",
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -256,7 +281,8 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News3",
                     Content = "This is the news number 3",
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new StockNews()
                 {
@@ -264,7 +290,8 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News4",
                     Content = "This is the news number 4",
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                  new StockNews()
                 {
@@ -272,11 +299,10 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News5",
                     Content = "This is the news number 5",
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
             };
-            stockNews.ForEach(sn => context.StockNews.Add(sn));
-            context.SaveChanges();
 
             var stocks = new List<Stock>()
             {
@@ -288,7 +314,8 @@ namespace Stockapp.Data.Access
                     UnityValue = 1,
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1)},
                     StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1)},
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -296,9 +323,10 @@ namespace Stockapp.Data.Access
                     Name = "Stock2",
                     Description = "Este es el stock2",
                     UnityValue = 2,
-                    StockNews = new List<StockNews>(),
+                    StockNews = new List<StockNews>(){stockNews.ElementAt(2), stockNews.ElementAt(3)},
                     StockHistory = new List<StockHistory>(),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -307,8 +335,9 @@ namespace Stockapp.Data.Access
                     Description = "Este es el stock3",
                     UnityValue = 3,
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2)},
-                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1), stockHistories.ElementAt(2)},
-                    IsDeleted = false
+                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(2), stockHistories.ElementAt(3), stockHistories.ElementAt(2)},
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Stock()
                 {
@@ -317,8 +346,9 @@ namespace Stockapp.Data.Access
                     Description = "Este es el stock4",
                     UnityValue = 4,
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2), stockNews.ElementAt(3)},
-                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1), stockHistories.ElementAt(2), stockHistories.ElementAt(3)},
-                    IsDeleted = false
+                    StockHistory = new List<StockHistory>(){stockHistories.ElementAt(4)},
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                  new Stock()
                 {
@@ -326,9 +356,10 @@ namespace Stockapp.Data.Access
                     Name = "Stock5",
                     Description = "Este es el stock5",
                     UnityValue = 5,
-                    StockNews = stockNews,
-                    StockHistory = stockHistories,
-                    IsDeleted = false
+                    StockNews = new List<StockNews>(),
+                    StockHistory = new List<StockHistory>(),
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
             };
             stocks.ForEach(s => context.Stocks.Add(s));
@@ -342,6 +373,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(0).IsDeleted,
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -349,6 +381,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(1).IsDeleted,
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -356,6 +389,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(2).IsDeleted,
+                     Id = Guid.NewGuid()
                 },
                 new Portfolio()
                 {
@@ -363,6 +397,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(3).IsDeleted,
+                     Id = Guid.NewGuid()
                 },
                  new Portfolio()
                 {
@@ -370,6 +405,7 @@ namespace Stockapp.Data.Access
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(4).IsDeleted,
+                     Id = Guid.NewGuid()
                 },
             };
             portfolios.ForEach(p => context.Portfolios.Add(p));
@@ -388,7 +424,8 @@ namespace Stockapp.Data.Access
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(0),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -401,7 +438,8 @@ namespace Stockapp.Data.Access
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(1),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -414,7 +452,8 @@ namespace Stockapp.Data.Access
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(2),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                 new Transaction()
                 {
@@ -427,7 +466,8 @@ namespace Stockapp.Data.Access
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(3),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
                  new Transaction()
                 {
@@ -440,7 +480,8 @@ namespace Stockapp.Data.Access
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
                     Portfolio = portfolios.ElementAt(0),
-                    IsDeleted = false
+                    IsDeleted = false,
+                     Id = Guid.NewGuid()
                 },
             };
             transactions.ForEach(t => context.Transactions.Add(t));
@@ -450,7 +491,8 @@ namespace Stockapp.Data.Access
             {
                 InitialMoney = 1000000,
                 MaxTransactionsPerDay = 50,
-                IsDeleted = false
+                IsDeleted = false,
+                Id = Guid.NewGuid()
             });
         }
     }

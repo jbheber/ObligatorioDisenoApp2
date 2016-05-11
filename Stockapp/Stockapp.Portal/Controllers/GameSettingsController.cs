@@ -47,12 +47,13 @@ namespace Stockapp.Portal.Controllers
         /// <param name="user">Updated admin</param>
         /// <returns></returns>
         [ResponseType(typeof(GameSettings))]
-        public IHttpActionResult GetGameSettings(Guid id)
+        public IHttpActionResult GetGameSettings()
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
             var settings = gameSettingsLogic.GetOrCreateGameSettings();
             if (settings == null)
             {

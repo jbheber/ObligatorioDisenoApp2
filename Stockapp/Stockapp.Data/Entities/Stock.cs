@@ -1,6 +1,7 @@
 ﻿using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,7 @@ namespace Stockapp.Data
         {
             IsDeleted = false;
             UnityValue = 0;
+            Id = Guid.NewGuid();
         }
 
     }
