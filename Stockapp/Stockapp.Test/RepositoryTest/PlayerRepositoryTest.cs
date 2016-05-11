@@ -52,7 +52,7 @@ namespace Stockapp.Test
             IEnumerable<Player> result = unitOfWork.PlayerRepository.Get(p => p.User.IsAdmin == true, null, "User");
 
             Assert.Equal(
-                result.SafeCount(), 
+                result.SafeCount(),
                 userData.Where(d => d.IsAdmin == true && !d.IsDeleted).SafeCount());
         }
 
@@ -310,7 +310,7 @@ namespace Stockapp.Test
         private List<Player> GetPlayerList()
         {
             var users = this.GetUserList();
-            return new List<Player>()
+            var players = new List<Player>()
             {
                 new Player()
                 {
@@ -321,6 +321,7 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(0),
                     UserId = users.ElementAt(0).Id,
+                    Portfolio = new Portfolio(),
                     Id = Guid.NewGuid()
                 },
                 new Player()
@@ -332,6 +333,7 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(1),
                     UserId = users.ElementAt(1).Id,
+                    Portfolio = new Portfolio(),
                     Id = Guid.NewGuid()
                 },
                 new Player()
@@ -343,6 +345,7 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(2),
                     UserId = users.ElementAt(2).Id,
+                    Portfolio = new Portfolio(),
                     Id = Guid.NewGuid()
                 },
                 new Player()
@@ -354,6 +357,7 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(3),
                     UserId = users.ElementAt(3).Id,
+                    Portfolio = new Portfolio(),
                     Id = Guid.NewGuid()
                 },
                  new Player()
@@ -365,9 +369,12 @@ namespace Stockapp.Test
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
                     UserId = users.ElementAt(4).Id,
+                    Portfolio = new Portfolio(),
                     Id = Guid.NewGuid()
-                },
+                }
             };
+            players.ForEach(p => p.PortfolioId = p.Portfolio.Id);
+            return players;
         }
     }
 }
