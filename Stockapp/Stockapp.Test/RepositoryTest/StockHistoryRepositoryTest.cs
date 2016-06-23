@@ -100,7 +100,7 @@ namespace Stockapp.Test
                 DateOfChange = DateTimeOffset.Now,
                 RecordedValue = 100,
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.StockHistoryRepository.Insert(stockHisyory);
@@ -125,14 +125,14 @@ namespace Stockapp.Test
                 DateOfChange = DateTimeOffset.Now,
                 RecordedValue = 1000,
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.StockHistoryRepository.Insert(stockHisyory);
 
             var result = unitOfWork.StockHistoryRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -214,35 +214,35 @@ namespace Stockapp.Test
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 0,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 1,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 2,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 3,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 4,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }

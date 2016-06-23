@@ -165,11 +165,8 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   
                 },
-                NetVariation = 3,
-                PercentageVariation = 3,
-                MarketCapital = 3,
                 StockQuantity = 3,
                 TotalValue = 3,
                 TransactionDate = DateTimeOffset.Now,
@@ -180,10 +177,10 @@ namespace Stockapp.Test
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   
                 },
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.TransactionRepository.Insert(transaction);
@@ -226,11 +223,8 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   
                 },
-                NetVariation = 3,
-                PercentageVariation = 3,
-                MarketCapital = 3,
                 StockQuantity = 3,
                 TotalValue = 3,
                 TransactionDate = DateTimeOffset.Now,
@@ -241,17 +235,17 @@ namespace Stockapp.Test
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   
                 },
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.TransactionRepository.Insert(transaction);
 
             var result = unitOfWork.TransactionRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -348,16 +342,16 @@ namespace Stockapp.Test
             var unitOfWork = new UnitOfWork(context.Object);
             var element = transactionData.ElementAt(index);
 
-            var originalNetVariation = element.NetVariation;
+            var originalNetVariation = element.StockQuantity;
 
-            element.NetVariation = 1000;
+            element.StockQuantity = 1000;
 
             unitOfWork.TransactionRepository.Update(element);
             unitOfWork.Save();
 
             var allTransactions = unitOfWork.TransactionRepository.GetAll();
 
-            Assert.NotEqual(allTransactions.First(u => u.Id == element.Id).NetVariation, originalNetVariation);
+            Assert.NotEqual(allTransactions.First(u => u.Id == element.Id).StockQuantity, originalNetVariation);
         }
 
         private List<Stock> GetStockList()
@@ -373,7 +367,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new Stock()
                 {
@@ -384,7 +378,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new Stock()
                 {
@@ -395,7 +389,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new Stock()
                 {
@@ -406,7 +400,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new Stock()
                 {
@@ -417,7 +411,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }
@@ -433,7 +427,7 @@ namespace Stockapp.Test
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new User()
                 {
@@ -442,7 +436,7 @@ namespace Stockapp.Test
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new User()
                 {
@@ -451,7 +445,7 @@ namespace Stockapp.Test
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new User()
                 {
@@ -460,7 +454,7 @@ namespace Stockapp.Test
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                 new User()
                 {
@@ -469,7 +463,7 @@ namespace Stockapp.Test
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 }
             };
         }
@@ -488,7 +482,7 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(0),
                     UserId = users.ElementAt(0).Id,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new Player()
                 {
@@ -499,7 +493,7 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(1),
                     UserId = users.ElementAt(1).Id,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new Player()
                 {
@@ -510,7 +504,7 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(2),
                     UserId = users.ElementAt(2).Id,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new Player()
                 {
@@ -521,7 +515,7 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(3),
                     UserId = users.ElementAt(3).Id,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new Player()
                 {
@@ -532,7 +526,7 @@ namespace Stockapp.Test
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
                     UserId = users.ElementAt(4).Id,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }
@@ -548,7 +542,7 @@ namespace Stockapp.Test
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(0).IsDeleted,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new Portfolio()
                 {
@@ -556,7 +550,7 @@ namespace Stockapp.Test
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(1).IsDeleted,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new Portfolio()
                 {
@@ -564,7 +558,7 @@ namespace Stockapp.Test
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(2).IsDeleted,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new Portfolio()
                 {
@@ -572,7 +566,7 @@ namespace Stockapp.Test
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(3).IsDeleted,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new Portfolio()
                 {
@@ -580,7 +574,7 @@ namespace Stockapp.Test
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(4).IsDeleted,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }
@@ -595,9 +589,6 @@ namespace Stockapp.Test
                 {
                     Stock = stocks.ElementAt(0),
                     StockId = stocks.ElementAt(0).Id,
-                    NetVariation = 0,
-                    PercentageVariation = 0,
-                    MarketCapital = 0,
                     StockQuantity = 0,
                     TotalValue = 0,
                     TransactionDate = DateTimeOffset.Now,
@@ -605,15 +596,12 @@ namespace Stockapp.Test
                     Portfolio = portfolios.ElementAt(0),
                     PortfolioId = portfolios.ElementAt(0).Id,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(1),
                     StockId = stocks.ElementAt(1).Id,
-                    NetVariation = 1,
-                    PercentageVariation = 1,
-                    MarketCapital = 1,
                     StockQuantity = 1,
                     TotalValue = 1,
                     TransactionDate = DateTimeOffset.Now,
@@ -621,15 +609,12 @@ namespace Stockapp.Test
                     Portfolio = portfolios.ElementAt(1),
                     PortfolioId = portfolios.ElementAt(1).Id,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(2),
                     StockId = stocks.ElementAt(2).Id,
-                    NetVariation = 2,
-                    PercentageVariation = 2,
-                    MarketCapital = 2,
                     StockQuantity = 2,
                     TotalValue = 2,
                     TransactionDate = DateTimeOffset.Now,
@@ -637,15 +622,12 @@ namespace Stockapp.Test
                     Portfolio = portfolios.ElementAt(2),
                     PortfolioId = portfolios.ElementAt(2).Id,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(3),
                     StockId = stocks.ElementAt(3).Id,
-                    NetVariation = 3,
-                    PercentageVariation = 3,
-                    MarketCapital = 3,
                     StockQuantity = 3,
                     TotalValue = 3,
                     TransactionDate = DateTimeOffset.Now,
@@ -653,15 +635,12 @@ namespace Stockapp.Test
                     Portfolio = portfolios.ElementAt(3),
                     PortfolioId = portfolios.ElementAt(3).Id,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new Transaction()
                 {
                     Stock = stocks.ElementAt(4),
                     StockId = stocks.ElementAt(4).Id,
-                    NetVariation = 4,
-                    PercentageVariation = 4,
-                    MarketCapital = 4,
                     StockQuantity = 4,
                     TotalValue = 4,
                     TransactionDate = DateTimeOffset.Now,
@@ -669,7 +648,7 @@ namespace Stockapp.Test
                     Portfolio = portfolios.ElementAt(0),
                     PortfolioId = portfolios.ElementAt(0).Id,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }

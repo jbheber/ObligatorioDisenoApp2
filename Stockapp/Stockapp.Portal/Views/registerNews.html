@@ -1,0 +1,49 @@
+﻿<div class="row" style="margin:5px;">
+    <div class="form-group" style="margin-top:5px">
+        <label> Seleccione un Stock que sea mencionado en la noticia</label>
+        <select class="form-control" ng-model="selectedStock" data-ng-options="stock as stock.Code for stock in stocks">
+            <option value="0">-- Seleccione un Stock --</option>
+        </select>
+        <button class="btn btn-primary" type="button" style="margin:5px 0px;" ng-click="addStock()"> <i class="fa fa-plus"></i> Agregar </button>
+        <ul ng-repeat="stock in selectedStocks">
+            <li>
+                <label>Stock: {{stock.Code}}</label>
+                <button class="btn btn-warning" style="margin-left:5px;" ng-click="removeStock($index)"> Quitar </button>
+                <br />
+            </li>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Escriba La noticia
+        </div>
+        <div class="panel-body">
+            <div class="row" style="margin:5px;">
+                <form role="form" name="registerNewsForm" ng-submit="submit()">
+                    <fieldset>
+                        <div class="form-group">
+                            <input name="title" ng-model="newsTitle" class="form-control" placeholder="Titulo" type="text" required>
+                            <div ng-messages="registerNewsForm.title.$error">
+                                <div ng-message="required">Debe ingresar un titulo para la noticia.</div>
+                            </div>
+                        </div>
+                        <textarea name="body" ng-model="newsBody" class="form-control" rows="5" required></textarea>
+                        <div ng-messages="registerNewsForm.body.$error">
+                            <div ng-message="required">Debe ingresar un contenido para la noticia.</div>
+                        </div>
+                        <div class="form-group">
+                            <label> Fecha de Cambio </label>
+                            <input class="form-control" ng-model="publicationDate" name="date" date-time format="DD/MM/YYYY" min-date="1/1/1900" date-change="dateChanged" validateDate>
+                            <div ng-messages="registerNewsForm.date.$error">
+                                <div ng-message="date">La fecha debe ser menor a la actual</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-success btn-block" style="margin-top:5px;" ng-disabled="registerNewsForm.$invalid" ng-show="!isLoading"> Ingresar Noticia </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

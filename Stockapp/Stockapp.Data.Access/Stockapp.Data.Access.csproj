@@ -51,37 +51,9 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="ContextInitializer.cs" />
-    <Compile Include="Migrations\201604202351196_Init.cs" />
-    <Compile Include="Migrations\201604202351196_Init.Designer.cs">
-      <DependentUpon>201604202351196_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604282212238_EntityChanges.cs" />
-    <Compile Include="Migrations\201604282212238_EntityChanges.Designer.cs">
-      <DependentUpon>201604282212238_EntityChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605032132015_InvitationCode.cs" />
-    <Compile Include="Migrations\201605032132015_InvitationCode.Designer.cs">
-      <DependentUpon>201605032132015_InvitationCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605092232101_ModelChanges.cs" />
-    <Compile Include="Migrations\201605092232101_ModelChanges.Designer.cs">
-      <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605102343251_CreatedGameSettingsTable.cs" />
-    <Compile Include="Migrations\201605102343251_CreatedGameSettingsTable.Designer.cs">
-      <DependentUpon>201605102343251_CreatedGameSettingsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605110009213_auxiliar.cs" />
-    <Compile Include="Migrations\201605110009213_auxiliar.Designer.cs">
-      <DependentUpon>201605110009213_auxiliar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605110039040_DatabaseGeneratedId.cs" />
-    <Compile Include="Migrations\201605110039040_DatabaseGeneratedId.Designer.cs">
-      <DependentUpon>201605110039040_DatabaseGeneratedId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605110112261_DatabaseGeneratedId2.cs" />
-    <Compile Include="Migrations\201605110112261_DatabaseGeneratedId2.Designer.cs">
-      <DependentUpon>201605110112261_DatabaseGeneratedId2.cs</DependentUpon>
+    <Compile Include="Migrations\201606211514078_intial.cs" />
+    <Compile Include="Migrations\201606211514078_intial.Designer.cs">
+      <DependentUpon>201606211514078_intial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,29 +69,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604202351196_Init.resx">
-      <DependentUpon>201604202351196_Init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604282212238_EntityChanges.resx">
-      <DependentUpon>201604282212238_EntityChanges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605032132015_InvitationCode.resx">
-      <DependentUpon>201605032132015_InvitationCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605092232101_ModelChanges.resx">
-      <DependentUpon>201605092232101_ModelChanges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605102343251_CreatedGameSettingsTable.resx">
-      <DependentUpon>201605102343251_CreatedGameSettingsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605110009213_auxiliar.resx">
-      <DependentUpon>201605110009213_auxiliar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605110039040_DatabaseGeneratedId.resx">
-      <DependentUpon>201605110039040_DatabaseGeneratedId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605110112261_DatabaseGeneratedId2.resx">
-      <DependentUpon>201605110112261_DatabaseGeneratedId2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606211514078_intial.resx">
+      <DependentUpon>201606211514078_intial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

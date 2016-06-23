@@ -29,9 +29,6 @@ namespace Stockapp.Test.LogicTest
             var code = invitationCodeLogic.GenerateCode(new User() { IsAdmin = true });
 
             Assert.Equal(code.Code.Length, 8);
-            Regex r = new Regex("(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{2,})$");
-
-            Assert.True(r.IsMatch(code.Code));
 
             mockUnitOfWork.VerifyAll();
         }

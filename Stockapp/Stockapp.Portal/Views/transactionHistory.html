@@ -1,0 +1,42 @@
+﻿<div class="row">
+    <form role="form" name="searchForm" data-ng-submit="submit()">
+        <fieldset>
+            <div class="form-group">
+                <label for="pickerToUpdate"> Fecha desde </label>
+                <input class="form-control" ng-model="fromDate" name="dateFrom" date-time format="DD/MM/YYYY" min-date="1/1/1900" date-change="fromDateChanged" validate-Date>
+                <div ng-messages="searchForm.dateFrom.$error">
+                    <div ng-message="date">La fecha debe ser menor a la actual</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pickerToUpdate"> Fecha hasta </label>
+                <input class="form-control" ng-model="toDate" name="date" date-time format="DD/MM/YYYY" min-date="1/1/1900" date-change="toDateChanged" validate-Date>
+                <div ng-messages="searchForm.date.$error">
+                    <div ng-message="date">La fecha debe ser menor a la actual</div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:5px">
+                <label> Seleccione un Stock </label>
+                <select class="form-control" ng-model="selectedStock" ng-change="changedStock(selectedStock)"
+                        data-ng-options="stock as stock.Code for stock in stocks">
+                    <option value="0">-- Seleccione un Stock --</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="searchForm.$invalid"> Buscar </button>
+        </fieldset>
+    </form>
+    <div class="row">
+        <div class="col-md-6">
+            <h3> Transacciones </h3>
+            <table ng-table="customConfigParams" class="table table-condensed table-bordered table-striped">
+                <tr ng-repeat="row in transactions">
+                    <td data-title="'Fecha'">{{row.TransactionDate}}</td>
+                    <td data-title="'Stock'">{{row.Stock.Code}}</td>
+                    <td data-title="'Tipo'">{{row.Type}}</td>
+                    <td data-title="'Cantidad'">{{row.StockQuantity}}</td>
+                    <td data-title="'Valor'">{{row.TotalValue}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

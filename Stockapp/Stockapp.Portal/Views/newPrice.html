@@ -1,0 +1,54 @@
+﻿<div class="row" style="margin:5px;">
+
+    <div class="form-group" style="margin-top:5px">
+        <label> Seleccione un Stock para modificar su precio </label>
+        <select class="form-control" ng-model="selectedStock" ng-change="changedStock(selectedStock)"
+                data-ng-options="stock as stock.Code for stock in stocks">
+            <option value="0">-- Seleccione un Stock --</option>
+        </select>
+    </div>
+    <hr>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            {{selectedStock.Name}}
+        </div>
+        <div class="panel-body">
+            <div class="row" style="margin:5px;">
+                <form role="form" name="newPriceForm" data-ng-submit="submit()">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="disabledCode"> Código </label>
+                            <input disabled="" class="form-control" id="disabledCode" type="text" placeholder="Codigo" ng-model="selectedStock.Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="disabledDescripcion"> Descripción </label>
+                            <input disabled="" class="form-control" id="disabledDescripcion" type="text" placeholder="Descripcion" ng-model="selectedStock.Description">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputNewPrice"> Valor Unitario </label>
+                            <input id="inputNewPrice" class="form-control" placeholder="Valor Unitario." type="number" value="" name="newPrice" ng-model="selectedStock.UnityValue" required validate-Price>
+                            <div ng-messages="newPriceForm.newPrice.$error">
+                                <div ng-message="required">Ingrese un valor para el stock</div>
+                                <div ng-message="negative">El valor para el stock no puede ser negativo</div>
+                                <div ng-message="letter">El valor para el stock es numerico</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickerToUpdate"> Fecha de Cambio </label>
+                            <input class="form-control" ng-model="changeDate" name="date" date-time format="DD/MM/YYYY" min-date="1/1/1900" date-change="dateChanged" validateDate>
+                            <div ng-messages="newPriceForm.date.$error">
+                                <div ng-message="date">La fecha debe ser menor a la actual</div>
+                            </div>
+                        </div>
+                        <hr />
+                        <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="newPriceForm.$invalid" ng-show="!isLoading"> Modificar </button>
+                        <button type="button" class="btn btn-lg btn-default btn-block" ng-click="cancel()">Cancelar</button>
+                    </fieldset>
+                    <toaster-container></toaster-container>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

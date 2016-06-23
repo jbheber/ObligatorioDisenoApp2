@@ -17,6 +17,7 @@ namespace Stockapp.Data.Repository
         private GenericRepository<Transaction> transactionRepository;
         private GenericRepository<InvitationCode> invitationCodeRepository;
         private GenericRepository<GameSettings> gameSettingsRepository;
+        private GenericRepository<Actions> actionsRepository;
 
 
         public UnitOfWork(Context context)
@@ -144,9 +145,42 @@ namespace Stockapp.Data.Repository
             }
         }
 
+        public IRepository<Actions> ActionsRepository
+        {
+            get
+            {
+                if (this.actionsRepository == null)
+                {
+                    this.actionsRepository = new GenericRepository<Actions>(context);
+                }
+                return actionsRepository;
+            }
+        }
+
         public void Save()
         {
-            context.SaveChanges();
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+            
         }
 
         private bool disposed = false;

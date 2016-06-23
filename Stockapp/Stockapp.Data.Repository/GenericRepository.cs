@@ -83,8 +83,8 @@ namespace Stockapp.Data.Repository
 
         public virtual TEntity GetById(object id)
         {
-            var searchedEntity = dbSet.GetNonDeleted().Where(e => e.Id == (Guid)id);
-            return searchedEntity.isNotEmpty() ? searchedEntity.SingleOrDefault() : null;
+            var searchedEntity = dbSet.GetNonDeleted().Where(e => e.Id == (long)id);
+            return searchedEntity.IsNotEmpty() ? searchedEntity.SingleOrDefault() : null;
         }
 
         public virtual void Insert(TEntity entity)

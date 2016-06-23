@@ -15,7 +15,7 @@ namespace Stockapp.Logic.API
         /// <param name="news"></param>
         /// <returns></returns>
         bool RegisterStockNews(StockNews news);
-        StockNews GetStockNews(Guid stockNewsId);
+        StockNews GetStockNews(long stockNewsId);
 
         /// <summary>
         /// Deletes a specified stock news.

@@ -13,11 +13,11 @@ namespace Stockapp.Logic.API
 
         bool DeletePlayer(Player player);
 
-        bool DeletePlayer(Guid player);
+        bool DeletePlayer(long player);
 
         bool UpdatePlayer(Player player);
 
-        Player GetPlayer(Guid playerId);
+        Player GetPlayer(long userId);
 
         void Dispose();
     }

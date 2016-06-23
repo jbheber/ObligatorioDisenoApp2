@@ -18,7 +18,7 @@ namespace Stockapp.Logic.Implementation
             this.UnitOfWork = UnitOfWork;
         }
 
-        public StockNews GetStockNews(Guid stockNewsId)
+        public StockNews GetStockNews(long stockNewsId)
         {
             return UnitOfWork.StockNewsRepository.GetById(stockNewsId);
         }
@@ -32,7 +32,14 @@ namespace Stockapp.Logic.Implementation
 
         public bool RegisterStockNews(StockNews news)
         {
+            
             UnitOfWork.StockNewsRepository.Insert(news);
+            foreach (var stock in news.ReferencedStocks)
+            {
+                var dbStock = UnitOfWork.StockRepository.Get(x => x.Id == stock.Id, null, "StockNews").SingleOrDefault();
+                dbStock.StockNews.Add(news);
+                UnitOfWork.StockRepository.Update(dbStock);
+            }
             UnitOfWork.Save();
             return true;
         }

@@ -42,7 +42,7 @@ namespace Stockapp.Logic.Implementation
 
         public bool ValidInvitationCode(InvitationCode invitationCode)
         {
-            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).isNotEmpty();
+            var exisitingCode = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).IsNotEmpty();
             return exisitingCode;
         }
 
@@ -55,31 +55,27 @@ namespace Stockapp.Logic.Implementation
         {
             if (!EmailIsUnique(user.Email))
             {
-                throw new UserExceptions("El email ya esta en uso");
+                throw new UserException("El email ya está en uso");
             }
             if (MailIsEmpty(user.Email))
             {
-                throw new UserExceptions("El email no puede ser vacio");
+                throw new UserException("El email no puede ser vacío");
             }
             if (!ValidPasswordLenght(user.Password))
             {
-                throw new UserExceptions("El largo de la contraseña debe ser mayor o igual que 6");
+                throw new UserException("El largo de la contraseña debe ser mayor o igual que 6");
             }
             if (!IsAlphaNumeric(user.Password))
             {
-                throw new UserExceptions("La contraseña debe ser alpfanumerica");
+                throw new UserException("La contraseña debe ser alfanumérica");
             }
             if (!ValidInvitationCode(invitationCode))
             {
-                throw new UserExceptions("El codigo de invitacion no es correcto");
+                throw new UserException("El codigo de invitación no es correcto");
             }
             if (!IsAlphaNumeric(invitationCode.Code))
             {
-                throw new UserExceptions("El codigo de invitacion debe ser alpfanumerico");
-            }
-            if (IsInDb(user))
-            {
-                throw new UserExceptions("Ese usuario ya fue registrado");
+                throw new UserException("El codigo de invitación debe ser alfanumérico");
             }
         }
 
@@ -89,33 +85,40 @@ namespace Stockapp.Logic.Implementation
             {
                 ValidateUser(user, invitationCode);
                 UnitOfWork.UserRepository.Insert(user);
-                UnitOfWork.InvitationCodeRepository.Delete(invitationCode);
+                var invitationCodeFromDb = UnitOfWork.InvitationCodeRepository.Get(i => i.Code == invitationCode.Code).SingleOrDefault();
+                UnitOfWork.InvitationCodeRepository.Delete(invitationCodeFromDb);
                 UnitOfWork.Save();
                 return true;
             }
             catch (Exception e)
             {
-                throw new UserExceptions(e.Message);
+                throw new UserException(e.Message);
             }
+        }
+
+        public void RegisterWindowsForm(User user)
+        {
+            UnitOfWork.UserRepository.Insert(user);
+            UnitOfWork.Save();
         }
 
         public bool IsInDb(User user)
         {
             var userList = UnitOfWork.UserRepository.Get();
-            if (userList.isEmpty())
+            if (userList.IsEmpty())
                 return false;
             else
-                return userList.Any(x => x.Name == user.Name && x.Id != user.Id);
+                return userList.Any(x => x.Email == user.Email && x.Id != user.Id);
         }
 
         public User LogIn(User user)
         {
-            if (IsInDb(user) == false)
+            if (!IsInDb(user))
                 return null;
-            var searchedUser = UnitOfWork.UserRepository.Get(x => x.Name == user.Name).SingleOrDefault();
+            var searchedUser = UnitOfWork.UserRepository.Get(x => x.Email == user.Email).SingleOrDefault();
 
-            if (searchedUser.Password != searchedUser.Password)
-                throw new UserExceptions("Contraseña incorrecta");
+            if (user.Password != searchedUser.Password)
+                throw new UserException("Contraseña incorrecta");
 
             return searchedUser;
         }
@@ -139,7 +142,7 @@ namespace Stockapp.Logic.Implementation
             UnitOfWork.Dispose();
         }
 
-        public bool DeleteUser(Guid userId)
+        public bool DeleteUser(long userId)
         {
             if (UnitOfWork.UserRepository.GetById(userId) != null)
             {

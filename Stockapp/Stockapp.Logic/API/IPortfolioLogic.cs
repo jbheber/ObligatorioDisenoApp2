@@ -21,7 +21,7 @@ namespace Stockapp.Logic.API
         /// </summary>
         /// <param name="playerId">Player.Id</param>
         /// <returns></returns>
-        Portfolio FetchPlayerPortfolio(Guid playerId);
+        Portfolio FetchPlayerPortfolio(long playerId);
 
         /// <summary>
         /// Updates the portfolio with a new transaction

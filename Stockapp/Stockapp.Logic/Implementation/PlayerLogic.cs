@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockapp.Data;
 using Stockapp.Data.Repository;
+using Stockapp.Data.Extensions;
 
 namespace Stockapp.Logic.Implementation
 {
@@ -24,20 +25,22 @@ namespace Stockapp.Logic.Implementation
             return true;
         }
 
-        public bool DeletePlayer(Guid player)
+        public bool DeletePlayer(long player)
         {
             UnitOfWork.PlayerRepository.Delete(player);
             UnitOfWork.Save();
             return true;
         }
 
-        public Player GetPlayer(Guid playerId)
+        public Player GetPlayer(long userId)
         {
-            return UnitOfWork.PlayerRepository.GetById(playerId);
+            var players = UnitOfWork.PlayerRepository.Get(p => p.UserId == userId, null, "User,Portfolio");
+            return players.IsNotEmpty() ? players.SingleOrDefault() : null;
         }
 
         public bool RegisterPlayer(Player player)
         {
+            UnitOfWork.PortfolioRepository.Insert(player.Portfolio);
             UnitOfWork.PlayerRepository.Insert(player);
             UnitOfWork.Save();
             return true;
@@ -45,6 +48,7 @@ namespace Stockapp.Logic.Implementation
 
         public bool UpdatePlayer(Player player)
         {
+            UnitOfWork.UserRepository.Update(player.User);
             UnitOfWork.PlayerRepository.Update(player);
             UnitOfWork.Save();
             return true;

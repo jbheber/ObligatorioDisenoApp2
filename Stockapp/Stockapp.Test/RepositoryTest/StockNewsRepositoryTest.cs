@@ -102,7 +102,7 @@ namespace Stockapp.Test
                 Title = "News8",
                 Content = "This is the news number 8",
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.StockNewsRepository.Insert(stockNews);
@@ -129,14 +129,14 @@ namespace Stockapp.Test
                 Title = "News10",
                 Content = "This is the news number 10",
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.StockNewsRepository.Insert(stockNews);
 
             var result = unitOfWork.StockNewsRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -220,7 +220,7 @@ namespace Stockapp.Test
                     Title = "News1",
                     Content = "This is the news number 1",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1,
                 },
                 new StockNews()
                 {
@@ -229,7 +229,7 @@ namespace Stockapp.Test
                     Title = "News2",
                     Content = "This is the news number 2",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2,
                 },
                 new StockNews()
                 {
@@ -238,7 +238,7 @@ namespace Stockapp.Test
                     Title = "News3",
                     Content = "This is the news number 3",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3,
                 },
                 new StockNews()
                 {
@@ -247,7 +247,7 @@ namespace Stockapp.Test
                     Title = "News4",
                     Content = "This is the news number 4",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 4,
                 },
                  new StockNews()
                 {
@@ -256,7 +256,7 @@ namespace Stockapp.Test
                     Title = "News5",
                     Content = "This is the news number 5",
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5,
                 },
             };
         }

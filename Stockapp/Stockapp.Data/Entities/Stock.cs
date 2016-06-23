@@ -13,7 +13,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Database generated Id.
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Stock Code. Maximum 6 character, all upper case.
@@ -31,6 +32,11 @@ namespace Stockapp.Data
         public string Description { get; set; }
 
         /// <summary>
+        /// Stock quantity of actions.
+        /// </summary>
+        public double QuantiyOfActions { get; set; }
+
+        /// <summary>
         /// Single stock value.
         /// </summary>
         public double UnityValue { get; set; }
@@ -38,12 +44,30 @@ namespace Stockapp.Data
         /// <summary>
         /// News which contain current stock.
         /// </summary>
-        public virtual IEnumerable<StockNews> StockNews { get; set; }
+        public virtual ICollection<StockNews> StockNews { get; set; }
 
         /// <summary>
         /// All recorded changes for current stock.
         /// </summary>
-        public virtual IEnumerable<StockHistory> StockHistory { get; set; }
+        public virtual ICollection<StockHistory> StockHistory { get; set; }
+
+        /// <summary>
+        /// Net variation.
+        /// </summary>
+        [NotMapped]
+        public double NetVariation { get; set; }
+
+        /// <summary>
+        /// Percetage variation
+        /// </summary>
+        [NotMapped]
+        public double PercentageVariation { get; set; }
+
+        /// <summary>
+        /// Market Capital.
+        /// </summary>
+        [NotMapped]
+        public double MarketCapital { get; set; }
 
         /// <summary>
         /// Used for soft(logic) delete.
@@ -54,7 +78,11 @@ namespace Stockapp.Data
         {
             IsDeleted = false;
             UnityValue = 0;
-            Id = Guid.NewGuid();
+        }
+
+        public override string ToString()
+        {
+            return Code;
         }
 
     }

@@ -22,7 +22,7 @@ namespace Stockapp.Test.PortalTest
             mockTransactionLogic.Setup(x => x.UpdateTransaction(It.IsAny<Transaction>())).Returns(true);
             var controller = new TransactionController(mockTransactionLogic.Object);
 
-            var transactionId = Guid.NewGuid();
+            var transactionId = 1;
             IHttpActionResult actionResult = controller.PutTransaction(transactionId, new Transaction() { Id = transactionId });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -39,7 +39,7 @@ namespace Stockapp.Test.PortalTest
             mockTransactionLogic.Setup(x => x.UpdateTransaction(It.IsAny<Transaction>())).Returns(false);
             var controller = new TransactionController(mockTransactionLogic.Object);
 
-            var transactionId = Guid.NewGuid();
+            var transactionId = 1;
             IHttpActionResult actionResult = controller.PutTransaction(transactionId, new Transaction() { Id = transactionId });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
@@ -54,21 +54,17 @@ namespace Stockapp.Test.PortalTest
             mockTransactionLogic.Setup(x => x.RegisterTransaction(It.IsAny<Transaction>()))
                 .Returns(true);
             var controller = new TransactionController(mockTransactionLogic.Object);
-
-            var transactionId = Guid.NewGuid();
+            
             var transaction = new Transaction()
             {
                 Stock = new Stock(),
-                NetVariation = 4,
-                PercentageVariation = 4,
-                MarketCapital = 4,
                 StockQuantity = 4,
                 TotalValue = 4,
                 TransactionDate = DateTimeOffset.Now,
                 Type = new TransactionType(),
                 Portfolio = new Portfolio(),
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+                Id = 1
             };
             IHttpActionResult actionResult = controller.PostTransaction(transaction);
 
@@ -84,7 +80,7 @@ namespace Stockapp.Test.PortalTest
             var mockTransactionLogic = new Mock<ITransactionLogic>();
 
             mockTransactionLogic.Setup(x => x.RegisterTransaction(It.IsAny<Transaction>()))
-                .Throws(new UserExceptions("Transaction exception"));
+                .Throws(new UserException("Stock exception"));
 
             var controller = new TransactionController(mockTransactionLogic.Object);
 
@@ -93,7 +89,7 @@ namespace Stockapp.Test.PortalTest
             var contentResult = Assert.IsType<BadRequestErrorMessageResult>(actionResult);
             Assert.NotNull(contentResult);
 
-            Assert.Equal(contentResult.Message, "Transaction exception");
+            Assert.Equal(contentResult.Message, "Stock exception");
         }
     }
 }

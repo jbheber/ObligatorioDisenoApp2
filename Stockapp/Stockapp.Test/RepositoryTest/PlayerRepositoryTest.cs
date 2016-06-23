@@ -124,9 +124,9 @@ namespace Stockapp.Test
                     Email = "test@test.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.PlayerRepository.Insert(player);
@@ -161,16 +161,16 @@ namespace Stockapp.Test
                     Email = "test@test.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.PlayerRepository.Insert(player);
 
             var result = unitOfWork.PlayerRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -266,7 +266,7 @@ namespace Stockapp.Test
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
@@ -275,7 +275,7 @@ namespace Stockapp.Test
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
@@ -284,7 +284,7 @@ namespace Stockapp.Test
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
@@ -293,7 +293,7 @@ namespace Stockapp.Test
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
@@ -302,7 +302,7 @@ namespace Stockapp.Test
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 }
             };
         }
@@ -314,6 +314,7 @@ namespace Stockapp.Test
             {
                 new Player()
                 {
+                    Id = 1,
                     CI = 46640529,
                     Email = users.ElementAt(0).Email,
                     IsDeleted = users.ElementAt(0).IsDeleted,
@@ -322,10 +323,11 @@ namespace Stockapp.Test
                     User = users.ElementAt(0),
                     UserId = users.ElementAt(0).Id,
                     Portfolio = new Portfolio(),
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 2,
                     CI = 46640520,
                     Email = users.ElementAt(1).Email,
                     IsDeleted = users.ElementAt(1).IsDeleted,
@@ -334,10 +336,11 @@ namespace Stockapp.Test
                     User = users.ElementAt(1),
                     UserId = users.ElementAt(1).Id,
                     Portfolio = new Portfolio(),
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 3,
                     CI = 46640521,
                     Email = users.ElementAt(2).Email,
                     IsDeleted = users.ElementAt(2).IsDeleted,
@@ -346,10 +349,11 @@ namespace Stockapp.Test
                     User = users.ElementAt(2),
                     UserId = users.ElementAt(2).Id,
                     Portfolio = new Portfolio(),
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 4,
                     CI = 46640522,
                     Email = users.ElementAt(3).Email,
                     IsDeleted = users.ElementAt(3).IsDeleted,
@@ -358,10 +362,11 @@ namespace Stockapp.Test
                     User = users.ElementAt(3),
                     UserId = users.ElementAt(3).Id,
                     Portfolio = new Portfolio(),
-                    Id = Guid.NewGuid()
+
                 },
                  new Player()
                 {
+                     Id = 5,
                     CI = 46640523,
                     Email = users.ElementAt(4).Email,
                     IsDeleted = users.ElementAt(4).IsDeleted,
@@ -370,7 +375,7 @@ namespace Stockapp.Test
                     User = users.ElementAt(4),
                     UserId = users.ElementAt(4).Id,
                     Portfolio = new Portfolio(),
-                    Id = Guid.NewGuid()
+
                 }
             };
             players.ForEach(p => p.PortfolioId = p.Portfolio.Id);

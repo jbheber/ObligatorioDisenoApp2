@@ -23,7 +23,7 @@ namespace Stockapp.Test.PortalTest
             mockStockHistoryLogic.Setup(x => x.UpdateStockHistory(It.IsAny<StockHistory>())).Returns(true);
             var controller = new StockHistoryController(mockStockHistoryLogic.Object);
 
-            var stockHistoryId = Guid.NewGuid();
+            var stockHistoryId = 1;
             IHttpActionResult actionResult = controller.PutStockHistory(stockHistoryId, new StockHistory() { Id = stockHistoryId });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -40,7 +40,7 @@ namespace Stockapp.Test.PortalTest
             mockStockHistoryLogic.Setup(x => x.UpdateStockHistory(It.IsAny<StockHistory>())).Returns(false);
             var controller = new StockHistoryController(mockStockHistoryLogic.Object);
 
-            var stockHistoryId = Guid.NewGuid();
+            var stockHistoryId = 1;
             IHttpActionResult actionResult = controller.PutStockHistory(stockHistoryId, new StockHistory() { Id = stockHistoryId });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);

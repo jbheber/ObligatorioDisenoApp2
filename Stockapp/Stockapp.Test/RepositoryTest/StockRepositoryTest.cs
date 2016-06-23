@@ -93,7 +93,6 @@ namespace Stockapp.Test
 
             var context = new Mock<Context>();
             context.Setup(ctx => ctx.Set<Stock>()).Returns(stockSet.Object);
-
             var unitOfWork = new UnitOfWork(context.Object);
             var stock = new Stock()
             {
@@ -104,7 +103,7 @@ namespace Stockapp.Test
                 StockNews = new List<StockNews>(),
                 StockHistory = new List<StockHistory>(),
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.StockRepository.Insert(stock);
@@ -133,14 +132,14 @@ namespace Stockapp.Test
                 StockNews = new List<StockNews>(),
                 StockHistory = new List<StockHistory>(),
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.StockRepository.Insert(stock);
 
             var result = unitOfWork.StockRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -226,7 +225,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1,
                 },
                 new Stock()
                 {
@@ -237,7 +236,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new Stock()
                 {
@@ -248,7 +247,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new Stock()
                 {
@@ -259,7 +258,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                  new Stock()
                 {
@@ -270,7 +269,7 @@ namespace Stockapp.Test
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 },
             };
         }

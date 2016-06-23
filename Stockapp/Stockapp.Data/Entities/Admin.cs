@@ -14,7 +14,8 @@ namespace Stockapp.Data
         /// <summary>
         /// DataBase generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Unique C.I. Alternate key
@@ -24,7 +25,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Reference for the User
         /// </summary>
-        public Guid UserId { get; set; }
+        public long UserId { get; set; }
 
         /// <summary>
         /// Asociated User.
@@ -58,12 +59,9 @@ namespace Stockapp.Data
             IsDeleted = false;
         }
 
-        public Admin(User user)
+        public override string ToString()
         {
-            User = user;
-            Email = user.Email;
-            IsDeleted = false;
+            return Email;
         }
-
     }
 }

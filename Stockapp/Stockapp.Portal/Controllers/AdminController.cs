@@ -19,13 +19,15 @@ namespace Stockapp.Portal.Controllers
             this.adminLogic = adminLogic;
         }
 
-        public IHttpActionResult Get(Guid adminId)
+        [HttpGet]
+        [Route("api/admin/{userId:long}")]
+        public IHttpActionResult Get(long userId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            Admin admin = adminLogic.GetAdmin(adminId);
+            Admin admin = adminLogic.GetUserAdmin(userId);
             if (admin == null)
             {
                 return NotFound();
@@ -40,17 +42,14 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">Admin.Id</param>
         /// <param name="user">Updated admin</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/admin/")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutAdmin(Guid id, Admin admin)
+        public IHttpActionResult PutAdmin(Admin admin)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            if (id != admin.Id)
-            {
-                return BadRequest();
             }
 
             if (!adminLogic.UpdateAdmin(admin))
@@ -60,41 +59,16 @@ namespace Stockapp.Portal.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Admin
-        /// <summary>
-        /// Register a new Admin
-        /// </summary>
-        /// <param name="user">Admin created client-side</param>
-        /// <returns></returns>
-        [ResponseType(typeof(Admin))]
-        public IHttpActionResult PostAdmin(Admin admin)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            try
-            {
-                if (adminLogic.CreateAdmin(admin))
-                    return CreatedAtRoute("DefaultApi", new { id = admin.Id }, admin);
-                return BadRequest();
-            }
-            catch (UserExceptions ue)
-            {
-                return BadRequest(ue.Message);
-            }
-
-        }
-
         // DELETE: api/Admin/5
         /// <summary>
         /// Delete admin
         /// </summary>
         /// <param name="id">Admin.Id</param>
         /// <returns></returns>
+        [HttpDelete]
+        [Route("api/admin/{id:long}")]
         [ResponseType(typeof(Admin))]
-        public IHttpActionResult DeleteAdmin(Guid id)
+        public IHttpActionResult DeleteAdmin(long id)
         {
             if (adminLogic.DeleteAdmin(id))
             {

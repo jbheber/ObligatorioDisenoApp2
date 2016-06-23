@@ -12,6 +12,7 @@ namespace Stockapp.Data.Access
     {
         protected override void Seed(Context context)
         {
+            #region Users
             var users = new List<User>()
             {
                 new User()
@@ -20,8 +21,7 @@ namespace Stockapp.Data.Access
                     Password = "Jb.12345",
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new User()
                 {
@@ -29,8 +29,7 @@ namespace Stockapp.Data.Access
                     Password = "Art.12345",
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new User()
                 {
@@ -38,8 +37,7 @@ namespace Stockapp.Data.Access
                     Password = "Jh.1234554",
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new User()
                 {
@@ -47,22 +45,22 @@ namespace Stockapp.Data.Access
                     Password = "Artoo.1234554",
                     Email = "arto@gmail.com",
                     IsAdmin = true,
-                    IsDeleted = true,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new User()
                 {
                     Name = "maca",
-                    Password = "Maluso.1234554",
-                    Email = "macaluso@gmail.com",
+                    Email = "maca@hotmail.com",
+                    Password = "Maca12345",
                     IsAdmin = false,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 }
             };
             users.ForEach(u => context.Users.Add(u));
             context.SaveChanges();
+            #endregion
 
+            #region players
             var players = new List<Player>()
             {
                 new Player()
@@ -73,7 +71,11 @@ namespace Stockapp.Data.Access
                     Name = "Juan Bautista",
                     Surname = "Heber",
                     User = users.ElementAt(0),
-                     Id = Guid.NewGuid()
+                    Portfolio = new Portfolio()
+                        {
+                            AvailableMoney = 1000,
+                            Transactions = new List<Transaction>(),
+                        },
                 },
                 new Player()
                 {
@@ -83,7 +85,11 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(1),
-                     Id = Guid.NewGuid()
+                    Portfolio = new Portfolio()
+                        {
+                            AvailableMoney = 20005,
+                            Transactions = new List<Transaction>(),
+                        }
                 },
                 new Player()
                 {
@@ -93,7 +99,11 @@ namespace Stockapp.Data.Access
                     Name = "Juan",
                     Surname = "Heber",
                     User = users.ElementAt(2),
-                     Id = Guid.NewGuid()
+                    Portfolio = new Portfolio()
+                        {
+                            AvailableMoney = 20000000,
+                            Transactions = new List<Transaction>(),
+                        }
                 },
                 new Player()
                 {
@@ -103,7 +113,12 @@ namespace Stockapp.Data.Access
                     Name = "Fernando",
                     Surname = "Artola",
                     User = users.ElementAt(3),
-                     Id = Guid.NewGuid()
+                    Portfolio = new Portfolio()
+                        {
+                            AvailableMoney = 15,
+                            ActionsValue = 15,
+                            Transactions = new List<Transaction>(),
+                        }
                 },
                  new Player()
                 {
@@ -113,12 +128,18 @@ namespace Stockapp.Data.Access
                     Name = "Damian",
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
-                     Id = Guid.NewGuid()
+                    Portfolio =  new Portfolio()
+                        {
+                            AvailableMoney = 3000,
+                            Transactions = new List<Transaction>()
+                        }
                 },
             };
             players.ForEach(p => context.Players.Add(p));
             context.SaveChanges();
+            #endregion
 
+            #region admins
             var admins = new List<Admin>()
             {
                 new Admin()
@@ -128,8 +149,7 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(0).IsDeleted,
                     Name = "Juan Bautista",
                     Surname = "Heber",
-                    User = users.ElementAt(0),
-                     Id = Guid.NewGuid()
+                    UserId = users.ElementAt(0).Id
                 },
                 new Admin()
                 {
@@ -138,8 +158,7 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(1).IsDeleted,
                     Name = "Fernando",
                     Surname = "Artola",
-                    User = users.ElementAt(1),
-                     Id = Guid.NewGuid()
+                    UserId = users.ElementAt(1).Id
                 },
                 new Admin()
                 {
@@ -148,8 +167,7 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(2).IsDeleted,
                     Name = "Juan",
                     Surname = "Heber",
-                    User = users.ElementAt(2),
-                     Id = Guid.NewGuid()
+                    UserId = users.ElementAt(2).Id
                 },
                 new Admin()
                 {
@@ -158,8 +176,7 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(3).IsDeleted,
                     Name = "Fernando",
                     Surname = "Artola",
-                    User = users.ElementAt(3),
-                     Id = Guid.NewGuid()
+                    UserId = users.ElementAt(3).Id
                 },
                  new Admin()
                 {
@@ -168,93 +185,88 @@ namespace Stockapp.Data.Access
                     IsDeleted = users.ElementAt(4).IsDeleted,
                     Name = "Damian",
                     Surname = "Macaluso",
-                    User = users.ElementAt(4),
-                     Id = Guid.NewGuid()
+                    UserId = users.ElementAt(4).Id
                 },
             };
             admins.ForEach(a => context.Admins.Add(a));
             context.SaveChanges();
+            #endregion
 
+            #region codes
             var invitationCodes = new List<InvitationCode>()
             {
                 new InvitationCode()
                 {
                     Code = "AA245GJ1",
                     IsDeleted = users.ElementAt(0).IsDeleted,
-                    ParentUser = users.ElementAt(0),
-                     Id = Guid.NewGuid()
+                    ParentUserId = users.ElementAt(0).Id
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ2",
                     IsDeleted = users.ElementAt(1).IsDeleted,
-                    ParentUser = users.ElementAt(1),
-                     Id = Guid.NewGuid()
+                    ParentUserId = users.ElementAt(1).Id
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ3",
                     IsDeleted = users.ElementAt(2).IsDeleted,
-                    ParentUser = users.ElementAt(2),
-                     Id = Guid.NewGuid()
+                    ParentUserId = users.ElementAt(2).Id
                 },
                 new InvitationCode()
                 {
                     Code = "AA245GJ4",
                     IsDeleted = users.ElementAt(3).IsDeleted,
-                    ParentUser = users.ElementAt(3),
-                     Id = Guid.NewGuid()
+                    ParentUserId = users.ElementAt(3).Id
                 },
                  new InvitationCode()
                 {
                     Code = "AA245GJ5",
                     IsDeleted = users.ElementAt(4).IsDeleted,
-                    ParentUser = users.ElementAt(4),
-                     Id = Guid.NewGuid()
+                    ParentUserId = users.ElementAt(4).Id
                 },
             };
             invitationCodes.ForEach(ic => context.InvitationCodes.Add(ic));
             context.SaveChanges();
+            #endregion
 
+            #region histories
             var stockHistories = new List<StockHistory>()
             {
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 0,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 1,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 2,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 3,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                  new StockHistory()
                 {
                     DateOfChange = DateTimeOffset.Now,
                     RecordedValue = 4,
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
-                },
+                    IsDeleted = false
+                }
             };
+            #endregion
 
+            #region news
             var stockNews = new List<StockNews>()
             {
                 new StockNews()
@@ -263,8 +275,7 @@ namespace Stockapp.Data.Access
                     PublicationDate = DateTimeOffset.Now,
                     Title = "News1",
                     Content = "This is the news number 1",
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    IsDeleted = false
                 },
                 new StockNews()
                 {
@@ -273,7 +284,7 @@ namespace Stockapp.Data.Access
                     Title = "News2",
                     Content = "This is the news number 2",
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+
                 },
                 new StockNews()
                 {
@@ -282,7 +293,7 @@ namespace Stockapp.Data.Access
                     Title = "News3",
                     Content = "This is the news number 3",
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+
                 },
                 new StockNews()
                 {
@@ -291,7 +302,7 @@ namespace Stockapp.Data.Access
                     Title = "News4",
                     Content = "This is the news number 4",
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+
                 },
                  new StockNews()
                 {
@@ -300,10 +311,12 @@ namespace Stockapp.Data.Access
                     Title = "News5",
                     Content = "This is the news number 5",
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+
                 },
             };
+            #endregion
 
+            #region stocks
             var stocks = new List<Stock>()
             {
                 new Stock()
@@ -315,7 +328,7 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1)},
                     StockHistory = new List<StockHistory>(){stockHistories.ElementAt(0), stockHistories.ElementAt(1)},
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    QuantiyOfActions = 5000
                 },
                 new Stock()
                 {
@@ -326,7 +339,8 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(){stockNews.ElementAt(2), stockNews.ElementAt(3)},
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    QuantiyOfActions = 5000
+
                 },
                 new Stock()
                 {
@@ -337,7 +351,8 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2)},
                     StockHistory = new List<StockHistory>(){stockHistories.ElementAt(2), stockHistories.ElementAt(3), stockHistories.ElementAt(2)},
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    QuantiyOfActions = 5000
+
                 },
                 new Stock()
                 {
@@ -348,7 +363,8 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(){stockNews.ElementAt(0), stockNews.ElementAt(1), stockNews.ElementAt(2), stockNews.ElementAt(3)},
                     StockHistory = new List<StockHistory>(){stockHistories.ElementAt(4)},
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    QuantiyOfActions = 5000
+
                 },
                  new Stock()
                 {
@@ -359,141 +375,101 @@ namespace Stockapp.Data.Access
                     StockNews = new List<StockNews>(),
                     StockHistory = new List<StockHistory>(),
                     IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    QuantiyOfActions = 5000
+
                 },
             };
             stocks.ForEach(s => context.Stocks.Add(s));
             context.SaveChanges();
+            #endregion
 
-            var portfolios = new List<Portfolio>()
-            {
-                new Portfolio()
-                {
-                    AvailableMoney = 0,
-                    ActionsValue = 0,
-                    Transactions = new List<Transaction>(),
-                    IsDeleted = players.ElementAt(0).IsDeleted,
-                     Id = Guid.NewGuid()
-                },
-                new Portfolio()
-                {
-                    AvailableMoney = 5,
-                    ActionsValue = 5,
-                    Transactions = new List<Transaction>(),
-                    IsDeleted = players.ElementAt(1).IsDeleted,
-                     Id = Guid.NewGuid()
-                },
-                new Portfolio()
-                {
-                    AvailableMoney = 10,
-                    ActionsValue = 10,
-                    Transactions = new List<Transaction>(),
-                    IsDeleted = players.ElementAt(2).IsDeleted,
-                     Id = Guid.NewGuid()
-                },
-                new Portfolio()
-                {
-                    AvailableMoney = 15,
-                    ActionsValue = 15,
-                    Transactions = new List<Transaction>(),
-                    IsDeleted = players.ElementAt(3).IsDeleted,
-                     Id = Guid.NewGuid()
-                },
-                 new Portfolio()
-                {
-                    AvailableMoney = 20,
-                    ActionsValue = 20,
-                    Transactions = new List<Transaction>(),
-                    IsDeleted = players.ElementAt(4).IsDeleted,
-                     Id = Guid.NewGuid()
-                },
-            };
-            portfolios.ForEach(p => context.Portfolios.Add(p));
-            context.SaveChanges();
-
+            #region transactions
             var transactions = new List<Transaction>()
             {
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(0),
-                    NetVariation = 0,
-                    PercentageVariation = 0,
-                    MarketCapital = 0,
-                    StockQuantity = 0,
-                    TotalValue = 0,
+                    StockQuantity = 5,
+                    TotalValue = 1000,
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
-                    Portfolio = portfolios.ElementAt(0),
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    PortfolioId = 1,
+                    IsDeleted = false
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(1),
-                    NetVariation = 1,
-                    PercentageVariation = 1,
-                    MarketCapital = 1,
-                    StockQuantity = 1,
-                    TotalValue = 1,
+                    StockQuantity = 60,
+                    TotalValue = 1000,
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
-                    Portfolio = portfolios.ElementAt(1),
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    PortfolioId = 1,
+                    IsDeleted = false
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(2),
-                    NetVariation = 2,
-                    PercentageVariation = 2,
-                    MarketCapital = 2,
                     StockQuantity = 2,
                     TotalValue = 2,
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
-                    Portfolio = portfolios.ElementAt(2),
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    PortfolioId = 2,
+                    IsDeleted = false
                 },
                 new Transaction()
                 {
                     Stock = stocks.ElementAt(3),
-                    NetVariation = 3,
-                    PercentageVariation = 3,
-                    MarketCapital = 3,
                     StockQuantity = 3,
                     TotalValue = 3,
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
-                    Portfolio = portfolios.ElementAt(3),
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    PortfolioId = 2,
+                    IsDeleted = false
                 },
                  new Transaction()
                 {
                     Stock = stocks.ElementAt(4),
-                    NetVariation = 4,
-                    PercentageVariation = 4,
-                    MarketCapital = 4,
                     StockQuantity = 4,
                     TotalValue = 4,
                     TransactionDate = DateTimeOffset.Now,
                     Type = new TransactionType(),
-                    Portfolio = portfolios.ElementAt(0),
-                    IsDeleted = false,
-                     Id = Guid.NewGuid()
+                    PortfolioId = 3,
+                    IsDeleted = false
                 },
             };
             transactions.ForEach(t => context.Transactions.Add(t));
             context.SaveChanges();
+            #endregion
+
+            #region actions
+            var actions = new List<Actions>()
+            {
+                new Actions()
+                {
+                    IsDeleted = false,
+                    PortfolioId = 1,
+                    StockId = 1,
+                    QuantityOfActions = 40
+                },
+                new Actions()
+                {
+                    IsDeleted = false,
+                    PortfolioId = 1,
+                    StockId = 2,
+                    QuantityOfActions = 60
+                }
+            };
+            actions.ForEach(a => context.Actions.Add(a));
+            context.SaveChanges();
+            #endregion
 
             context.GameSettings.Add(new GameSettings()
             {
                 InitialMoney = 1000000,
                 MaxTransactionsPerDay = 50,
-                IsDeleted = false,
-                Id = Guid.NewGuid()
+                IsDeleted = false
             });
+            context.SaveChanges();
         }
     }
 }

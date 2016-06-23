@@ -22,7 +22,7 @@ namespace Stockapp.Test.PortalTest
             mockUserLogic.Setup(x => x.UpdateUser(It.IsAny<User>())).Returns(true);
             var controller = new UserController(mockUserLogic.Object);
 
-            var userId = Guid.NewGuid();
+            var userId = 1;
             IHttpActionResult actionResult = controller.PutUser(userId, new User() { Id = userId });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -39,7 +39,7 @@ namespace Stockapp.Test.PortalTest
             mockUserLogic.Setup(x => x.UpdateUser(It.IsAny<User>())).Returns(false);
             var controller = new UserController(mockUserLogic.Object);
 
-            var userId = Guid.NewGuid();
+            var userId = 1;
             IHttpActionResult actionResult = controller.PutUser(userId, new User() { Id = userId });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
@@ -55,23 +55,27 @@ namespace Stockapp.Test.PortalTest
                 .Returns(true);
             var controller = new UserController(mockUserLogic.Object);
 
-            var userId = Guid.NewGuid();
-            var user = new User()
+            var userId = 1;
+            var newUser = new RegisterUserDTO()
             {
-                Name = "fartolaa",
-                Password = "Art.12345",
-                Email = "artolaa@outlook.com",
-                Id = userId
+                User = new User()
+                {
+                    Name = "fartolaa",
+                    Password = "Art.12345",
+                    Email = "artolaa@outlook.com",
+                    Id = userId
+                },
+                InvitationCode = new InvitationCode()
+                {
+                    Code = "AA245GJ1",
+                }
             };
-            IHttpActionResult actionResult = controller.PostUser(user, new InvitationCode()
-            {
-                Code = "AA245GJ1",
-            });
+            IHttpActionResult actionResult = controller.PostUser(newUser);
 
             var contentResult = Assert.IsType<CreatedAtRouteNegotiatedContentResult<User>>(actionResult);
             Assert.NotNull(contentResult);
 
-            Assert.Equal(contentResult.Content, user);
+            Assert.Equal(contentResult.Content, newUser.User);
 
         }
 
@@ -81,11 +85,15 @@ namespace Stockapp.Test.PortalTest
             var mockUserLogic = new Mock<IUserLogic>();
 
             mockUserLogic.Setup(x => x.RegisterUser(It.IsAny<User>(), It.IsAny<InvitationCode>()))
-                .Throws(new UserExceptions("User exception"));
+                .Throws(new UserException("User exception"));
 
             var controller = new UserController(mockUserLogic.Object);
 
-            IHttpActionResult actionResult = controller.PostUser(new User(), new InvitationCode());
+            IHttpActionResult actionResult = controller.PostUser(new RegisterUserDTO()
+            {
+                User = new User(),
+                InvitationCode = new InvitationCode()
+            });
 
             var contentResult = Assert.IsType<BadRequestErrorMessageResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -98,10 +106,10 @@ namespace Stockapp.Test.PortalTest
         {
             var mockUserLogic = new Mock<IUserLogic>();
 
-            mockUserLogic.Setup(x => x.DeleteUser(It.IsAny<Guid>())).Returns(true);
+            mockUserLogic.Setup(x => x.DeleteUser(It.IsAny<long>())).Returns(true);
             var controller = new UserController(mockUserLogic.Object);
 
-            var userId = Guid.NewGuid();
+            var userId = 1;
             IHttpActionResult actionResult = controller.DeleteUser(userId);
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -114,10 +122,10 @@ namespace Stockapp.Test.PortalTest
         {
             var mockUserLogic = new Mock<IUserLogic>();
 
-            mockUserLogic.Setup(x => x.DeleteUser(It.IsAny<Guid>())).Returns(false);
+            mockUserLogic.Setup(x => x.DeleteUser(It.IsAny<long>())).Returns(false);
             var controller = new UserController(mockUserLogic.Object);
 
-            var userId = Guid.NewGuid();
+            var userId = 1;
             IHttpActionResult actionResult = controller.DeleteUser(userId);
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
@@ -134,16 +142,13 @@ namespace Stockapp.Test.PortalTest
                 Name = "fartolaa",
                 Password = "Art.12345",
                 Email = "artolaa@outlook.com",
-                Id = Guid.NewGuid()
+                Id = 1
             };
 
             mockUserLogic.Setup(x => x.LogIn(It.IsAny<User>())).Returns(user);
             var controller = new UserController(mockUserLogic.Object);
 
-            IHttpActionResult actionResult = controller.SignIn(new UserSignInDTO {
-                UserName = user.Name,
-                Password = user.Password
-            });
+            IHttpActionResult actionResult = controller.SignIn(user.Name, user.Password);
 
             var contentResult = Assert.IsType<OkNegotiatedContentResult<User>>(actionResult);
             Assert.NotNull(contentResult);
@@ -160,17 +165,13 @@ namespace Stockapp.Test.PortalTest
                 Name = "fartolaa",
                 Password = "Art.12345",
                 Email = "artolaa@outlook.com",
-                Id = Guid.NewGuid()
+                Id = 1
             };
 
-            mockUserLogic.Setup(x => x.LogIn(It.IsAny<User>())).Throws(new UserExceptions("User exception"));
+            mockUserLogic.Setup(x => x.LogIn(It.IsAny<User>())).Throws(new UserException("User exception"));
             var controller = new UserController(mockUserLogic.Object);
 
-            IHttpActionResult actionResult = controller.SignIn(new UserSignInDTO
-            {
-                UserName = user.Name,
-                Password = user.Password
-            });
+            IHttpActionResult actionResult = controller.SignIn(user.Name, user.Password);
 
             var contentResult = Assert.IsType<BadRequestErrorMessageResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -187,17 +188,13 @@ namespace Stockapp.Test.PortalTest
                 Name = "fartolaa",
                 Password = "Art.12345",
                 Email = "artolaa@outlook.com",
-                Id = Guid.NewGuid()
+                Id = 1
             };
 
             mockUserLogic.Setup(x => x.LogIn(It.IsAny<User>()));
             var controller = new UserController(mockUserLogic.Object);
 
-            IHttpActionResult actionResult = controller.SignIn(new UserSignInDTO
-            {
-                UserName = user.Name,
-                Password = user.Password
-            });
+            IHttpActionResult actionResult = controller.SignIn(user.Name, user.Password);
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
             Assert.NotNull(contentResult);

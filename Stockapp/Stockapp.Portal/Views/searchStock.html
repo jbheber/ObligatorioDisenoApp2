@@ -1,0 +1,58 @@
+﻿<div class="row">
+    <div class="row" style="margin:5px;">
+        <div class="form-group">
+            <input class="form-control" placeholder="Nombre" type="text" value="" name="firstName" ng-model="searchName">
+        </div>
+        <div class="form-group">
+            <input class="form-control" placeholder="Descripcion" type="text" value="" name="firstName" ng-model="searchDescription">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" ng-click="submit()"> Buscar </button>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-bar-chart-o fa-fw"></i> Stock Buscadas
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <table ng-table="customConfigParams" class="table table-condensed table-bordered table-striped">
+                        <tr ng-repeat="row in stocks">
+                            <td ng-click="generateChart(row)" data-title="'Stock'">{{row.Code}}, {{row.Name}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-5">
+                    <div id="chart"></div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <span>Precio Actual: {{currentPrice}}</span>
+                    </div>
+                    <div class="row">
+                        <span>Volumen: {{quantity}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-newspaper-o fa-fw"></i> Noticias del Stock
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-9">
+                    <table ng-table="configNews" class="table table-condensed table-bordered table-striped">
+                        <tr ng-repeat="row in news">
+                            <td data-title="'Noticias Relacionadas'"> {{row.PublicationDate}}: <strong>{{row.Title}}</strong>, {{row.Content}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+</div>

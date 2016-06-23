@@ -14,7 +14,8 @@ namespace Stockapp.Data
         /// <summary>
         /// DataBase generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Unique C.I. Alternate key
@@ -24,7 +25,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Reference for the User
         /// </summary>
-        public Guid UserId { get; set; }
+        public long UserId { get; set; }
 
         /// <summary>
         /// Asociated User.
@@ -52,7 +53,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Reference to the portfolio
         /// </summary>
-        public Guid PortfolioId { get; set; }
+        public long PortfolioId { get; set; }
 
         /// <summary>
         /// Player's portfolio.
@@ -66,16 +67,7 @@ namespace Stockapp.Data
 
         public Player()
         {
-            this.Id = Guid.NewGuid();
             this.IsDeleted = false;
-            this.Portfolio = new Portfolio();
-        }
-        public Player(User user)
-        {
-            IsDeleted = false;
-            Portfolio = new Portfolio();
-            User = user;
-            Email = user.Email;
         }
 
     }

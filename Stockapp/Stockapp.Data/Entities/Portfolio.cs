@@ -1,4 +1,5 @@
-﻿using Stockapp.Data.Interfaces;
+﻿using Stockapp.Data.Entities;
+using Stockapp.Data.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,7 +14,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Database generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Player available liquid money
@@ -35,7 +37,12 @@ namespace Stockapp.Data
         /// <summary>
         /// Player's transactions
         /// </summary>
-        public virtual IEnumerable<Transaction> Transactions { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
+
+        /// <summary>
+        /// Available actions
+        /// </summary>
+        public virtual ICollection<Actions> AvailableActions { get; set; }
 
         /// <summary>
         /// Soft delete
@@ -45,11 +52,10 @@ namespace Stockapp.Data
         public Portfolio()
         {
             IsDeleted = false;
-            ActionsValue = 0;
-            AvailableMoney = 0;
-            TotalMoney = 0;
             Transactions = new List<Transaction>();
-            Id = Guid.NewGuid();
+            AvailableActions = new List<Actions>();
+            ActionsValue = Transactions.Sum(t => t.TotalValue);
+            TotalMoney = AvailableMoney + ActionsValue;
         }
 
     }

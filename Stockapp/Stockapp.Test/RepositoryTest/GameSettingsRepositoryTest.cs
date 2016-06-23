@@ -55,7 +55,7 @@ namespace Stockapp.Test.RepositoryTest
         {
             var gameSettings = new GameSettings()
             {
-                Id = Guid.NewGuid()
+               
             };
             var gameSet = new Mock<DbSet<GameSettings>>().SetupData(new List<GameSettings>() { gameSettings });
 

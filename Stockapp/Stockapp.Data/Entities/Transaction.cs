@@ -13,32 +13,18 @@ namespace Stockapp.Data
         /// <summary>
         /// Database generated Id.
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Referenced Stock
         /// </summary>
-        public Guid StockId { get; set; }
+        public long StockId { get; set; }
 
         /// <summary>
         /// Stock in the transaction.
         /// </summary>
         public virtual Stock Stock { get; set; }
-
-        /// <summary>
-        /// Net variation.
-        /// </summary>
-        public double NetVariation { get; set; }
-
-        /// <summary>
-        /// Percetage variation
-        /// </summary>
-        public double PercentageVariation { get; set; }
-
-        /// <summary>
-        /// Market Capital.
-        /// </summary>
-        public double MarketCapital { get; set; }
 
         /// <summary>
         /// Stock Quantity
@@ -63,7 +49,7 @@ namespace Stockapp.Data
         /// <summary>
         /// reference to the portfolio
         /// </summary>
-        public Guid PortfolioId { get; set; }
+        public long PortfolioId { get; set; }
 
         /// <summary>
         /// Portfolio which the transaction belongs to
@@ -77,7 +63,6 @@ namespace Stockapp.Data
 
         public Transaction()
         {
-            this.Id = Guid.NewGuid();
             this.IsDeleted = false;
         }
     }

@@ -13,7 +13,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Database Generated Id.
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Stocks that are mentioned.
@@ -43,7 +44,6 @@ namespace Stockapp.Data
         public StockNews()
         {
             IsDeleted = false;
-            Id = Guid.NewGuid();
         }
 
     }

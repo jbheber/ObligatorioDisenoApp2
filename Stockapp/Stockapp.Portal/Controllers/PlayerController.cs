@@ -11,19 +11,26 @@ namespace Stockapp.Portal.Controllers
     public class PlayerController : ApiController
     {
         private readonly IPlayerLogic playerLogic;
+        private readonly IPortfolioLogic portfolioLogic;
 
-        public PlayerController(IPlayerLogic playerLogic)
+
+        public PlayerController(IPlayerLogic playerLogic, IPortfolioLogic portfolioLogic)
         {
             this.playerLogic = playerLogic;
+            this.portfolioLogic = portfolioLogic;
         }
 
-        public IHttpActionResult Get(Guid playerId)
+        [HttpGet]
+        [Route("api/player/{userId:long}")]
+        [ResponseType(typeof(Player))]
+        public IHttpActionResult Get(long userId)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            Player player = playerLogic.GetPlayer(playerId);
+            var player = playerLogic.GetPlayer(userId);
+            player.Portfolio = portfolioLogic.FetchPlayerPortfolio(player);
             if (player == null)
             {
                 return NotFound();
@@ -38,17 +45,14 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">Player.Id</param>
         /// <param name="player">Updated player</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/player/")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPlayer(Guid id, Player player)
+        public IHttpActionResult PutPlayer(Player player)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-
-            if (id != player.Id)
-            {
-                return BadRequest();
             }
 
             if (!playerLogic.UpdatePlayer(player))
@@ -65,8 +69,10 @@ namespace Stockapp.Portal.Controllers
         /// <param name="userId">Current user Id</param>
         /// <param name="newPlayer">Player to register</param>
         /// <returns></returns>
+        [HttpPost]
+        [Route("api/player/")]
         [ResponseType(typeof(Player))]
-        public IHttpActionResult PostPlayer(Guid userId, Player newPlayer)
+        public IHttpActionResult PostPlayer(Player newPlayer)
         {
             if (!ModelState.IsValid)
             {
@@ -76,10 +82,10 @@ namespace Stockapp.Portal.Controllers
             try
             {
                 if (playerLogic.RegisterPlayer(newPlayer))
-                    return CreatedAtRoute("DefaultApi", new { id = newPlayer.Id }, newPlayer);
+                    return Ok(newPlayer);
                 return BadRequest();
             }
-            catch (PlayerExceptions pe)
+            catch (PlayerException pe)
             {
                 return BadRequest(pe.Message);
             }
@@ -92,8 +98,10 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="id">Player.Id</param>
         /// <returns></returns>
+        [HttpDelete]
+        [Route("api/player/{id:long}")]
         [ResponseType(typeof(Player))]
-        public IHttpActionResult DeletePlayer(Guid id)
+        public IHttpActionResult DeletePlayer(long id)
         {
             if (playerLogic.DeletePlayer(id))
             {

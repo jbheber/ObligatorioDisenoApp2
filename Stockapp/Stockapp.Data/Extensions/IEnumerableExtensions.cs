@@ -14,7 +14,7 @@ namespace Stockapp.Data.Extensions
         /// <typeparam name="TSource"></typeparam>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static bool isNotEmpty<TSource>(this IEnumerable<TSource> source)
+        public static bool IsNotEmpty<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) return false;
             return source.Any();
@@ -26,7 +26,7 @@ namespace Stockapp.Data.Extensions
         /// <typeparam name="TSource"></typeparam>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static bool isEmpty<TSource>(this IEnumerable<TSource> source)
+        public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
         {
             if (source == null) return true;
             return (source.Any() == false);
@@ -40,7 +40,7 @@ namespace Stockapp.Data.Extensions
         /// <returns></returns>
         public static int SafeCount<TSource>(this IEnumerable<TSource> source)
         {
-            return source.isEmpty() ? 0 : source.Count();
+            return source.IsEmpty() ? 0 : source.Count();
         }
     }
 }

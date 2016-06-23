@@ -13,7 +13,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Database Generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Date of change
@@ -28,7 +29,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Reference to the stock.
         /// </summary>
-        public Guid StockId { get; set; }
+        public long StockId { get; set; }
 
         /// <summary>
         /// Parent Stock
@@ -45,7 +46,6 @@ namespace Stockapp.Data
             DateOfChange = DateTimeOffset.Now;
             IsDeleted = false;
             RecordedValue = 0;
-            Id = Guid.NewGuid();
         }
 
         public StockHistory(Stock stock)
@@ -54,7 +54,6 @@ namespace Stockapp.Data
             IsDeleted = false;
             Stock = stock;
             RecordedValue = stock.UnityValue;
-            Id = Guid.NewGuid();
         }
 
     }

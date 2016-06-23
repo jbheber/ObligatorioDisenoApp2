@@ -1,0 +1,47 @@
+﻿<div class="row">
+    <div class="form-group" style="margin-top:5px">
+        <label> Seleccione un Stock para comprar acciones </label>
+        <select class="form-control" ng-model="selectedStock" ng-change="changedStock(selectedStock)"
+                data-ng-options="stock as stock.Code for stock in stocks">
+            <option value="0">-- Seleccione un Stock --</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="disabledName"> Nombre </label>
+        <input disabled="" class="form-control" id="disabledName" type="text" placeholder="Nombre" ng-model="selectedStock.Name">
+    </div>
+    <div class="form-group">
+        <label for="disabledDescripcion"> Descripción </label>
+        <input disabled="" class="form-control" id="disabledDescripcion" type="text" placeholder="Descripción" ng-model="selectedStock.Description">
+    </div>
+    <div class="form-group">
+        <label for="disabledQuantity"> Cantidad Disponible </label>
+        <input disabled="" class="form-control" id="disabledQuantity" type="text" placeholder="Cantidad" ng-model="selectedStock.QuantiyOfActions">
+    </div>
+    <hr />
+    <form role="form" name="buyForm" ng-submit="submit()">
+        <fieldset>
+            <div class="form-group">
+                <label for="inputBuy"> Cantidad a comprar </label>
+                <input id="inputBuy" class="form-control" placeholder="Cantidad a comprar." type="number" value="" name="quantity" ng-model="quantity" ng-change="calculateInput()" required validate-Price>
+                <div ng-messages="buyForm.quantity.$error">
+                    <div ng-message="required">Ingrese una cantidad de compra</div>
+                    <div ng-message="negative">No puede comprar 0 o menos acciones</div>
+                    <div ng-message="letter">Debe ser numerico</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="disabledMoney"> Dinero a gastar </label>
+                <input disabled="" class="form-control" id="disabledMoney" type="text" placeholder="Dinero" ng-model="moneySpend">
+            </div>
+            <div class="form-group">
+                <label for="disabledSpendMoney"> Dinero disponible </label>
+                <input disabled="" class="form-control" id="disabledSpendMoney" type="text" placeholder="Dinero" ng-model="availableMoney">
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="buyForm.$invalid" ng-show="!isLoading" ng-click="type = 1"> Comprar </button>
+            <button type="submit" class="btn btn-lg btn-danger btn-block" ng-disabled="buyForm.$invalid" ng-show="!isLoading" ng-click="type = 0"> Vender </button>
+            <button type="button" class="btn btn-lg btn-default btn-block" ng-click="cancel()">Cancelar</button>
+        </fieldset>
+    </form>
+    <toaster-container></toaster-container>
+</div>

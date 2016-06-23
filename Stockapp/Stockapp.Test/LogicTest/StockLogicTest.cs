@@ -6,6 +6,7 @@ using Stockapp.Logic.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -26,7 +27,7 @@ namespace Stockapp.Test.LogicTest
 
 
             IStockLogic stockLogic = new StockLogic(mockUnitOfWork.Object);
-            var result = stockLogic.CreateStock(new Stock());
+            var result = stockLogic.CreateStock(new Stock() { Code = "aaaa" });
 
             mockUnitOfWork.Verify(un => un.StockRepository.Get(null, null, ""), Times.Once());
             mockUnitOfWork.Verify(un => un.StockRepository.Insert(It.IsAny<Stock>()), Times.Once());
@@ -42,7 +43,7 @@ namespace Stockapp.Test.LogicTest
 
             var stock = new Stock()
             {
-                Id = Guid.NewGuid()
+                Id = 1
             };
 
             mockUnitOfWork.Setup(un => un.StockRepository.Update(It.IsAny<Stock>()));
@@ -68,17 +69,17 @@ namespace Stockapp.Test.LogicTest
             {
                 new Stock()
                 {
-                    Id = Guid.NewGuid(),
+                    
                     Code = "AAA"
                 },
                 new Stock()
                 {
-                    Id = Guid.NewGuid(),
+                    
                     Code = "BBBB"
                 },
                 new Stock()
                 {
-                    Id = Guid.NewGuid(),
+                    
                     Code = "CCCC"
                 },
             };
@@ -100,15 +101,13 @@ namespace Stockapp.Test.LogicTest
 
             var stock = new Stock()
             {
-                Id = Guid.NewGuid()
+                Id = 1
             };
-
-            mockUnitOfWork.Setup(un => un.StockRepository.GetById(It.IsAny<Guid>())).Returns(stock);
+            mockUnitOfWork.Setup(un => un.StockRepository.Get(It.IsAny<Expression<Func<Stock, bool>>>(), null, It.IsAny<string>())).Returns(new List<Stock>() { stock });
 
             IStockLogic stockLogic = new StockLogic(mockUnitOfWork.Object);
             var result = stockLogic.GetStock(stock.Id);
 
-            mockUnitOfWork.Verify(un => un.StockRepository.GetById(It.IsAny<Guid>()), Times.Once());
             Assert.Equal(result, stock);
         }
     }

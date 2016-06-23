@@ -10,7 +10,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Identifies the User.
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// User's name can be the email.

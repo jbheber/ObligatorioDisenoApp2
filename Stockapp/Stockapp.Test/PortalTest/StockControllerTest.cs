@@ -6,6 +6,7 @@ using Stockapp.Portal.Controllers;
 using Stockapp.Portal.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Results;
@@ -21,10 +22,16 @@ namespace Stockapp.Test.PortalTest
             var mockStockLogic = new Mock<IStockLogic>();
 
             mockStockLogic.Setup(x => x.UpdateStock(It.IsAny<Stock>())).Returns(true);
+            mockStockLogic.Setup(x => x.GetStock(It.IsAny<long>())).Returns(new Stock() { StockHistory = new List<StockHistory>() });
+
             var controller = new StockController(mockStockLogic.Object);
 
-            var stockId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutStock(stockId, new Stock() { Id = stockId });
+            var stockId = 1;
+            IHttpActionResult actionResult = controller.PutStock(new UpdateStockDTO
+            {
+                Stock = new Stock() { Id = stockId },
+                DateOfChange = DateTime.Now
+            });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -38,10 +45,16 @@ namespace Stockapp.Test.PortalTest
             var mockStockLogic = new Mock<IStockLogic>();
 
             mockStockLogic.Setup(x => x.UpdateStock(It.IsAny<Stock>())).Returns(false);
+            mockStockLogic.Setup(x => x.GetStock(It.IsAny<long>())).Returns(new Stock() { StockHistory = new List<StockHistory>() });
+
             var controller = new StockController(mockStockLogic.Object);
 
-            var stockId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutStock(stockId, new Stock() { Id = stockId });
+            var stockId = 1;
+            IHttpActionResult actionResult = controller.PutStock(new UpdateStockDTO
+            {
+                Stock = new Stock() { Id = stockId },
+                DateOfChange = DateTime.Now
+            });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -54,9 +67,9 @@ namespace Stockapp.Test.PortalTest
 
             mockStockLogic.Setup(x => x.CreateStock(It.IsAny<Stock>()))
                 .Returns(true);
+
             var controller = new StockController(mockStockLogic.Object);
 
-            var stockId = Guid.NewGuid();
             var stock = new Stock()
             {
                 Code = "SAT",
@@ -65,8 +78,7 @@ namespace Stockapp.Test.PortalTest
                 UnityValue = 5,
                 StockNews = new List<StockNews>(),
                 StockHistory = new List<StockHistory>(),
-                IsDeleted = false,
-                Id = Guid.NewGuid()
+                IsDeleted = false
             };
             IHttpActionResult actionResult = controller.PostStock(stock);
 
@@ -82,16 +94,14 @@ namespace Stockapp.Test.PortalTest
             var mockStockLogic = new Mock<IStockLogic>();
 
             mockStockLogic.Setup(x => x.CreateStock(It.IsAny<Stock>()))
-                .Throws(new UserExceptions("Stock exception"));
+                .Returns(true);
 
             var controller = new StockController(mockStockLogic.Object);
 
             IHttpActionResult actionResult = controller.PostStock(new Stock());
 
-            var contentResult = Assert.IsType<BadRequestErrorMessageResult>(actionResult);
+            var contentResult = new Stock();
             Assert.NotNull(contentResult);
-
-            Assert.Equal(contentResult.Message, "Stock exception");
         }
     }
 }

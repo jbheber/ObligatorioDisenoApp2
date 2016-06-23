@@ -1,0 +1,14 @@
+﻿<div class="row">
+    <div class="col-md-10">
+        <h3> Acciones </h3>
+        <table ng-table="customConfigParams" class="table table-condensed table-bordered table-striped">
+            <tr ng-repeat="row in stocks">
+                <td data-title="'Nombre'">{{row.Name}}</td>
+                <td data-title="'Codigo'">{{row.Code}}</td>
+                <td data-title="'Descripcion'">{{row.Description}}</td>
+                <td data-title="'Cantidad'">{{row.QuantiyOfActions}}</td>
+                <td data-title="'Valor Unitario'">{{row.UnityValue}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

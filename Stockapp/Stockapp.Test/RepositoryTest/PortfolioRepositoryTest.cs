@@ -116,7 +116,7 @@ namespace Stockapp.Test
                 ActionsValue = 0,
                 Transactions = new List<Transaction>(),
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.PortfolioRepository.Insert(portfolio);
@@ -145,14 +145,14 @@ namespace Stockapp.Test
                 ActionsValue = 0,
                 Transactions = new List<Transaction>(),
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.PortfolioRepository.Insert(portfolio);
 
             var result = unitOfWork.PortfolioRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -243,48 +243,53 @@ namespace Stockapp.Test
             {
                 new User()
                 {
+                    Id = 1,
                     Name = "jbheber",
                     Password = "Jb12345",
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 2,
                     Name = "fartolaa",
                     Password = "Art12345",
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 3,
                     Name = "jheber",
                     Password = "Jh1234554",
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 4,
                     Name = "arto",
                     Password = "Artoo1234554",
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 5,
                     Name = "maca",
                     Password = "Maluso1234554",
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 }
             };
         }
@@ -296,6 +301,7 @@ namespace Stockapp.Test
             {
                 new Player()
                 {
+                    Id = 1,
                     CI = 46640529,
                     Email = users.ElementAt(0).Email,
                     IsDeleted = users.ElementAt(0).IsDeleted,
@@ -303,10 +309,11 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(0),
                     UserId = users.ElementAt(0).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 2,
                     CI = 46640520,
                     Email = users.ElementAt(1).Email,
                     IsDeleted = users.ElementAt(1).IsDeleted,
@@ -314,10 +321,11 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(1),
                     UserId = users.ElementAt(1).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 3,
                     CI = 46640521,
                     Email = users.ElementAt(2).Email,
                     IsDeleted = users.ElementAt(2).IsDeleted,
@@ -325,10 +333,11 @@ namespace Stockapp.Test
                     Surname = "Heber",
                     User = users.ElementAt(2),
                     UserId = users.ElementAt(2).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new Player()
                 {
+                    Id = 4,
                     CI = 46640522,
                     Email = users.ElementAt(3).Email,
                     IsDeleted = users.ElementAt(3).IsDeleted,
@@ -336,10 +345,11 @@ namespace Stockapp.Test
                     Surname = "Artola",
                     User = users.ElementAt(3),
                     UserId = users.ElementAt(3).Id,
-                    Id = Guid.NewGuid()
+
                 },
                  new Player()
                 {
+                     Id = 5,
                     CI = 46640523,
                     Email = users.ElementAt(4).Email,
                     IsDeleted = users.ElementAt(4).IsDeleted,
@@ -347,7 +357,7 @@ namespace Stockapp.Test
                     Surname = "Macaluso",
                     User = users.ElementAt(4),
                     UserId = users.ElementAt(4).Id,
-                    Id = Guid.NewGuid()
+
                 },
             };
         }
@@ -359,43 +369,48 @@ namespace Stockapp.Test
             {
                 new Portfolio()
                 {
+                    Id = 1,
                     AvailableMoney = 0,
                     ActionsValue = 0,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(0).IsDeleted,
-                    Id = Guid.NewGuid()
+
                 },
                 new Portfolio()
                 {
+                    Id = 2,
                     AvailableMoney = 5,
                     ActionsValue = 5,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(1).IsDeleted,
-                    Id = Guid.NewGuid()
+
                 },
                 new Portfolio()
                 {
+                    Id = 3,
                     AvailableMoney = 10,
                     ActionsValue = 10,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(2).IsDeleted,
-                    Id = Guid.NewGuid()
+
                 },
                 new Portfolio()
                 {
+                    Id = 4,
                     AvailableMoney = 15,
                     ActionsValue = 15,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(3).IsDeleted,
-                    Id = Guid.NewGuid()
+
                 },
                  new Portfolio()
                 {
+                     Id = 5,
                     AvailableMoney = 20,
                     ActionsValue = 20,
                     Transactions = new List<Transaction>(),
                     IsDeleted = players.ElementAt(4).IsDeleted,
-                    Id = Guid.NewGuid()
+
                 },
             };
         }

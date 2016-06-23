@@ -19,6 +19,9 @@ namespace Stockapp.Portal.Controllers
             this.stockHistoryLogic = stockHistoryLogic;
         }
 
+        [HttpGet]
+        [Route("api/stockhistory/{from:int}/{to:int}")]
+        [ResponseType(typeof(StockHistory))]
         public IHttpActionResult Get(Stock stock, int from = 0, int to = 20)
         {
             if (!ModelState.IsValid)
@@ -40,8 +43,10 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">StockHistory.Id</param>
         /// <param name="player">Updated StockHistory</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/stockhistory/{id:long}")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutStockHistory(Guid id, StockHistory stockHistory)
+        public IHttpActionResult PutStockHistory(long id, StockHistory stockHistory)
         {
             if (!ModelState.IsValid)
             {

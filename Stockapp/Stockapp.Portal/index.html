@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Stockapp">
+<head>
+    <title>Stockapp</title>
+    <meta charset="utf-8" />
+    <!--Icono-->
+    <link rel="shortcut icon" type="image/x-icon" href="Fonts/stockIcon.ico" />
+
+    <!--CSS aqui-->
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/metisMenu.min.css" />
+    <link rel="stylesheet" type="text/css" href="Content/sb-admin-2.css" />
+    <link rel="stylesheet" type="text/css" href="Content/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/toaster.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/angular-datepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/ng-table.min.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/c3.min.css" />
+
+    <!--Librerias js aqui-->
+    <script src="Scripts/libs/jquery-1.11.3.min.js"></script>
+    <script src="Scripts/libs/bootstrap.min.js"></script>
+    <script src="Scripts/libs/theme/metisMenu.min.js"></script>
+    <script src="Scripts/libs/theme/sb-admin-2.js"></script>
+    <script src="Scripts/libs/moment/moment.min.js"></script>
+    <script src="Scripts/libs/c3/d3.min.js"></script>
+    <script src="Scripts/libs/c3/c3.min.js"></script>
+    <script src="Scripts/libs/angular/angular.js"></script>
+    <script src="Scripts/libs/angular/angular-route.js"></script>
+    <script src="Scripts/libs/angular/angular-messages.js"></script>
+    <script src="Scripts/libs/angular/angular-animate.min.js"></script>
+    <script src="Scripts/libs/angular/angular-aria.min.js"></script>
+    <script src="Scripts/libs/angular/angular-material.js"></script>
+    <script src="Scripts/libs/angular/angular-datepicker.min.js"></script>
+    <script src="Scripts/libs/angular/angular-datepicker.min.js"></script>
+    <script src="Scripts/libs/toaster/toaster.min.js"></script>
+    <script src="Scripts/libs/moment/angular-moment.min.js"></script>
+    <script src="Scripts/libs/ng-table/ng-table.min.js"></script>
+    <script src="Scripts/libs/c3/c3-angular.min.js"></script>
+
+    <!--Script inicial aqui-->
+    <script src="Scripts/app/application.js"></script>
+
+    <script src="Scripts/app/Services/GameSettingsService.js"></script>
+    <script src="Scripts/app/Services/UserService.js"></script>
+    <script src="Scripts/app/Services/PlayerService.js"></script>
+    <script src="Scripts/app/Services/AdminService.js"></script>
+    <script src="Scripts/app/Services/GlobalService.js"></script>
+    <script src="Scripts/app/Services/GenerateCodeService.js"></script>
+    <script src="Scripts/app/Services/StockService.js"></script>
+    <script src="Scripts/app/Services/StockNewsService.js"></script>
+    <script src="Scripts/app/Services/TransactionService.js"></script>
+
+    <script src="Scripts/app/Controllers/LoginController.js"></script>
+    <script src="Scripts/app/Controllers/RegisterController.js"></script>
+    <script src="Scripts/app/Controllers/MenuController.js"></script>
+    <script src="Scripts/app/Controllers/PortfolioController.js"></script>
+    <script src="Scripts/app/Controllers/AdminHomeController.js"></script>
+    <script src="Scripts/app/Controllers/UpdateController.js"></script>
+    <script src="Scripts/app/Controllers/GenerateInvitationCodesController.js"></script>
+    <script src="Scripts/app/Controllers/NewPriceController.js"></script>
+    <script src="Scripts/app/Controllers/RegisterNewsController.js"></script>
+    <script src="Scripts/app/Controllers/NewTransactionController.js"></script>
+    <script src="Scripts/app/Controllers/AllTransactionsController.js"></script>
+    <script src="Scripts/app/Controllers/StockPoolController.js"></script>
+    <script src="Scripts/app/Controllers/TransactionHistoryController.js"></script>
+    <script src="Scripts/app/Controllers/SearchStockController.js"></script>
+
+    <script src="Scripts/app/validations/Validator.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" ng-controller="MenuController">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Stockapp</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" >
+                        <i class="fa fa-user fa-fw"></i> <span ng-bind="userName"></span> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li  ng-hide="logged">
+                            <a href="#/login"><i class="fa fa-sign-in fa-fw"></i> Iniciar Sesion </a>
+                        </li>
+                        <li ng-hide="!logged">
+                            <a href="#/edit"><i class="fa fa-user fa-fw"></i> Tu Perfil </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li  ng-hide="logged">
+                            <a href="#/register"><i class="fa fa-user-plus fa-fw"></i> Registrarse </a>
+                        </li>
+                        <li ng-hide="!logged" ng-click="logOut()">
+                            <a href="#/"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse" >
+                    <div id="users" ng-hide="!logged">
+                        <ul class="nav" id="side-menu">
+                            <li ng-hide="adminUser">
+                                <a href="#/portfolio"><i class="fa fa-folder-open-o fa-fw"></i> Portfolio </a>
+                            </li>
+                            <li ng-hide="adminUser">
+                                <a href="#/newTransaction"><i class="fa fa-exchange"></i> Realizar Transaccion </a>
+                            </li>
+                            <li ng-hide="adminUser">
+                                <a href="#/searchStock"><i class="fa fa-search"></i> Buscar Stock </a>
+                            </li>
+                            <li ng-hide="adminUser">
+                                <a href="#/transactionHistory"><i class="fa fa-tasks"></i> Historial de Transacciones </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/adminHome"><i class="fa fa-home"></i> Inicio </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/newPrice"><i class="fa fa-money"></i> Definir un nuevo precio </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/stockPool"><i class="fa fa-tasks"></i> Pool de Acciones </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/registerNews"><i class="fa fa-newspaper-o"></i> Ingresar Noticias </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/allTransactions"><i class="fa fa-exchange"></i> Listado de Transacciones </a>
+                            </li>
+                            <li ng-hide="!adminUser">
+                                <a href="#/generateCode"><i class="fa fa-plus"></i> Generacion de Invitaciones </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="no-users" ng-hide="logged">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="#/register"><i class="fa fa-user-plus fa-fw"></i> Registrarse </a>
+                            </li>
+                            <li>
+                                <a href="#/login"><i class="fa fa-sign-in fa-fw"></i> Iniciar Sesion </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            <div ng-view></div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="input-group">
+            <p> Juan Bautista Heber 180829</p>
+            <p> Fernando Artola 183331</p>
+        </div>
+    </div>
+</body>
+</html>

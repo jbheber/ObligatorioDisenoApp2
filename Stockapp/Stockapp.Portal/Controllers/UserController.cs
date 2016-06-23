@@ -19,6 +19,8 @@ namespace Stockapp.Portal.Controllers
             this.userLogic = userLogic;
         }
 
+        [HttpGet]
+        [Route("api/user/")]
         public IHttpActionResult Get()
         {
             if (!ModelState.IsValid)
@@ -40,8 +42,10 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">User.Id</param>
         /// <param name="user">Updated user</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/user/{id:long}")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUser(Guid id, User user)
+        public IHttpActionResult PutUser(long id, User user)
         {
             if (!ModelState.IsValid)
             {
@@ -67,8 +71,10 @@ namespace Stockapp.Portal.Controllers
         /// <param name="user">User created client-side</param>
         /// <param name="invitationCode">Invitation Code recieved</param>
         /// <returns></returns>
+        [HttpPost]
+        [Route("api/user/")]
         [ResponseType(typeof(User))]
-        public IHttpActionResult PostUser(User user, InvitationCode invitationCode)
+        public IHttpActionResult PostUser(RegisterUserDTO newUser)
         {
             if (!ModelState.IsValid)
             {
@@ -77,11 +83,11 @@ namespace Stockapp.Portal.Controllers
 
             try
             {
-                if(userLogic.RegisterUser(user, invitationCode))
-                    return CreatedAtRoute("DefaultApi", new { id = user.Id }, user);
+                if(userLogic.RegisterUser(newUser.User, newUser.InvitationCode))
+                    return Ok(newUser.User);
                 return BadRequest();
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 return BadRequest(ue.Message);
             }
@@ -94,8 +100,10 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="id">User.Id</param>
         /// <returns></returns>
+        [HttpDelete]
+        [Route("api/user/{id:long}")]
         [ResponseType(typeof(User))]
-        public IHttpActionResult DeleteUser(Guid id)
+        public IHttpActionResult DeleteUser(long id)
         {
             if (userLogic.DeleteUser(id))
             {
@@ -110,8 +118,10 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="user">User name and password</param>
         /// <returns></returns>
+        [HttpGet]
+        [Route("api/user/signin/{email}/{password}/")]
         [ResponseType(typeof(User))]
-        public IHttpActionResult SignIn(UserSignInDTO user)
+        public IHttpActionResult SignIn(string email, string password)
         {
             if (!ModelState.IsValid)
             {
@@ -119,8 +129,8 @@ namespace Stockapp.Portal.Controllers
             }
             var localUser = new User()
             {
-                Name = user.UserName,
-                Password = user.Password
+                Email = email,
+                Password = password
             };
             try
             {
@@ -129,7 +139,7 @@ namespace Stockapp.Portal.Controllers
                     return NotFound();
                 return Ok(appUser);
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 return BadRequest(ue.Message);
             }

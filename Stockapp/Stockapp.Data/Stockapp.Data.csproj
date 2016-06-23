@@ -49,16 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Actions.cs" />
     <Compile Include="Entities\GameSettings.cs" />
-    <Compile Include="Exceptions\AdminExceptions.cs" />
-    <Compile Include="Exceptions\InvitationCodeExceptions.cs" />
-    <Compile Include="Exceptions\PlayerExceptions.cs" />
-    <Compile Include="Exceptions\PortfolioExceptions.cs" />
-    <Compile Include="Exceptions\StockExceptions.cs" />
-    <Compile Include="Exceptions\StockHistoryExceptions.cs" />
-    <Compile Include="Exceptions\StockNewsExceptions.cs" />
-    <Compile Include="Exceptions\TransactionExceptions.cs" />
-    <Compile Include="Exceptions\UserExceptions.cs" />
+    <Compile Include="Exceptions\AdminException.cs" />
+    <Compile Include="Exceptions\InvitationCodeException.cs" />
+    <Compile Include="Exceptions\PlayerException.cs" />
+    <Compile Include="Exceptions\PortfolioException.cs" />
+    <Compile Include="Exceptions\StockException.cs" />
+    <Compile Include="Exceptions\StockHistoryException.cs" />
+    <Compile Include="Exceptions\StockNewsException.cs" />
+    <Compile Include="Exceptions\TransactionException.cs" />
+    <Compile Include="Exceptions\UserException.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Interfaces\Identificable.cs" />
     <Compile Include="Entities\InvitationCode.cs" />

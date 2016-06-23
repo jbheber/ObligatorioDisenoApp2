@@ -9,7 +9,8 @@ namespace Stockapp.Data
         /// <summary>
         /// Database generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// Generated Code
@@ -19,7 +20,7 @@ namespace Stockapp.Data
         /// <summary>
         /// Reference to that created the code
         /// </summary>
-        public Guid ParentUserId { get; set; }
+        public long ParentUserId { get; set; }
 
         /// <summary>
         /// User that created the code

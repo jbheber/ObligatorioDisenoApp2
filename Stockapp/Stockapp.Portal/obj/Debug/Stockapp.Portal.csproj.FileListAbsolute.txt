@@ -204,15 +204,16 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Unity.WebApi.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\WebActivatorEx.dll
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\EntityFramework.xml
@@ -224,12 +225,15 @@ C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.xml
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.xml
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
-C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.pdb
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio 1\Stockapp\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.xml
+C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe.config
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.rsp
@@ -292,6 +296,70 @@ C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.pdb
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.pdb
-C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
 C:\Users\Juan bautista Heber\Documents\DA2\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csc.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csi.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\csi.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.AppContext.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\vbc.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\vbc.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\vbc.rsp
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\VBCSCompiler.exe
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll.config
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Portal.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\EntityFramework.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Unity.WebApi.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\WebActivatorEx.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Logic.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Resolver.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\EntityFramework.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\EntityFramework.SqlServer.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Newtonsoft.Json.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Net.Http.Formatting.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\System.Web.Http.WebHost.xml
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Repository.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\bin\Stockapp.Data.Access.pdb
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.csprojResolveAssemblyReference.cache
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.dll
+C:\Users\ferna\Desktop\Facultad\Diseño de Aplicaciones 2\Obligatorio\Stockapp\Stockapp\Stockapp.Portal\obj\Debug\Stockapp.Portal.pdb

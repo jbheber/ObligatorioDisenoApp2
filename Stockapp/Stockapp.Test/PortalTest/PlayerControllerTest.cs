@@ -20,12 +20,14 @@ namespace Stockapp.Test.PortalTest
         public void UpdatePlayerReturnsNoContentTest()
         {
             var mockPlayerLogic = new Mock<IPlayerLogic>();
+            var mockPortfolioLogic = new Mock<IPortfolioLogic>();
+
 
             mockPlayerLogic.Setup(x => x.UpdatePlayer(It.IsAny<Player>())).Returns(true);
-            var controller = new PlayerController(mockPlayerLogic.Object);
+            var controller = new PlayerController(mockPlayerLogic.Object, mockPortfolioLogic.Object);
 
-            var playerId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutPlayer(playerId, new Player() { Id = playerId });
+            var playerId = 1;
+            IHttpActionResult actionResult = controller.PutPlayer(new Player() { Id = playerId });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -37,12 +39,13 @@ namespace Stockapp.Test.PortalTest
         public void UpdatePlayerReturnsNotFoundTest()
         {
             var mockPlayerLogic = new Mock<IPlayerLogic>();
+            var mockPortfolioLogic = new Mock<IPortfolioLogic>();
 
             mockPlayerLogic.Setup(x => x.UpdatePlayer(It.IsAny<Player>())).Returns(false);
-            var controller = new PlayerController(mockPlayerLogic.Object);
+            var controller = new PlayerController(mockPlayerLogic.Object, mockPortfolioLogic.Object);
 
-            var playerId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutPlayer(playerId, new Player() { Id = playerId });
+            var playerId = 1;
+            IHttpActionResult actionResult = controller.PutPlayer(new Player() { Id = playerId });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -52,23 +55,22 @@ namespace Stockapp.Test.PortalTest
         public void RegisterPlayerReturnsCreatedAtRouteTest()
         {
             var mockPlayerLogic = new Mock<IPlayerLogic>();
+            var mockPortfolioLogic = new Mock<IPortfolioLogic>();
 
             mockPlayerLogic.Setup(x => x.RegisterPlayer(It.IsAny<Player>()))
                 .Returns(true);
 
-            var controller = new PlayerController(mockPlayerLogic.Object);
+            var controller = new PlayerController(mockPlayerLogic.Object, mockPortfolioLogic.Object);
 
-            var userId = Guid.NewGuid();
             var player = new Player()
             {
                 CI = 46640523,
                 Email = "dm13@gmail.com",
                 Name = "Damian",
                 Surname = "Macaluso",
-                User = new User(),
-                Id = Guid.NewGuid()
+                User = new User()
             };
-            IHttpActionResult actionResult = controller.PostPlayer(userId, player);
+            IHttpActionResult actionResult = controller.PostPlayer(player);
 
             var contentResult = Assert.IsType<CreatedAtRouteNegotiatedContentResult<Player>>(actionResult);
             Assert.NotNull(contentResult);
@@ -81,11 +83,12 @@ namespace Stockapp.Test.PortalTest
         public void DeletePlayerReturnsNoContentTest()
         {
             var mockPlayerLogic = new Mock<IPlayerLogic>();
+            var mockPortfolioLogic = new Mock<IPortfolioLogic>();
 
-            mockPlayerLogic.Setup(x => x.DeletePlayer(It.IsAny<Guid>())).Returns(true);
-            var controller = new PlayerController(mockPlayerLogic.Object);
+            mockPlayerLogic.Setup(x => x.DeletePlayer(It.IsAny<long>())).Returns(true);
+            var controller = new PlayerController(mockPlayerLogic.Object, mockPortfolioLogic.Object);
 
-            var userId = Guid.NewGuid();
+            var userId = 1;
             IHttpActionResult actionResult = controller.DeletePlayer(userId);
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -97,11 +100,12 @@ namespace Stockapp.Test.PortalTest
         public void DeletePlayerReturnsNotFoundTest()
         {
             var mockPlayerLogic = new Mock<IPlayerLogic>();
+            var mockPortfolioLogic = new Mock<IPortfolioLogic>();
 
-            mockPlayerLogic.Setup(x => x.DeletePlayer(It.IsAny<Guid>())).Returns(false);
-            var controller = new PlayerController(mockPlayerLogic.Object);
+            mockPlayerLogic.Setup(x => x.DeletePlayer(It.IsAny<long>())).Returns(false);
+            var controller = new PlayerController(mockPlayerLogic.Object, mockPortfolioLogic.Object);
 
-            var playerId = Guid.NewGuid();
+            var playerId = 1;
             IHttpActionResult actionResult = controller.DeletePlayer(playerId);
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);

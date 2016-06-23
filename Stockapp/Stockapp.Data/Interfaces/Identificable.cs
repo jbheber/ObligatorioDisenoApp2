@@ -8,6 +8,6 @@ namespace Stockapp.Data.Interfaces
 {
     public interface Identificable
     {
-        Guid Id { get; set; }
+        long Id { get; set; }
     }
 }

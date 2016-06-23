@@ -4,6 +4,7 @@ using Stockapp.Logic.API;
 using Stockapp.Portal.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -19,13 +20,15 @@ namespace Stockapp.Portal.Controllers
             this.transactionLogic = transactionLogic;
         }
 
-        public IHttpActionResult Get(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null)
+        [HttpGet]
+        [Route("api/transaction/{from}/{to}/{stockId:long?}/{transactionType:alpha?}")]
+        public IHttpActionResult Get(DateTimeOffset from, DateTimeOffset to, long stockId = 0, string transactionType = null)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            IEnumerable<Transaction> transactions = transactionLogic.GetTransacions(from, to, stock, transactionType);
+            IEnumerable<Transaction> transactions = transactionLogic.GetTransacions(from, to, stockId, transactionType);
             if (transactions == null)
             {
                 return NotFound();
@@ -33,15 +36,34 @@ namespace Stockapp.Portal.Controllers
             return Ok(transactions);
         }
 
-        // PUT: api/Transaction/5
+        [HttpGet]
+        [Route("api/transaction/getusertransactions/{portfolioId:long}/{from}/{to}/{stockId:long?}")]
+        public IHttpActionResult GetUserTransactions(long portfolioId, DateTimeOffset from, DateTimeOffset to, long stockId = 0)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var transactions = transactionLogic.GetTransacions(from, to, stockId);
+            transactions = transactions.Where(t => t.PortfolioId == portfolioId);
+            if (transactions == null)
+            {
+                return NotFound();
+            }
+            return Ok(transactions);
+        }
+
+        // PUT: api/Stock/5
         /// <summary>
-        /// Update Transaction
+        /// Update Stock
         /// </summary>
-        /// <param name="id">Transaction.Id</param>
-        /// <param name="user">Updated Transaction</param>
+        /// <param name="id">Stock.Id</param>
+        /// <param name="user">Updated Stock</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/transaction/{id:long}")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutTransaction(Guid id, Transaction transaction)
+        public IHttpActionResult PutTransaction(long id, Transaction transaction)
         {
             if (!ModelState.IsValid)
             {
@@ -60,12 +82,14 @@ namespace Stockapp.Portal.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Transaction
+        // POST: api/Stock
         /// <summary>
-        /// Register a new Transaction
+        /// Register a new Stock
         /// </summary>
-        /// <param name="user">Transaction created client-side</param>
+        /// <param name="user">Stock created client-side</param>
         /// <returns></returns>
+        [HttpPost]
+        [Route("api/transaction/")]
         [ResponseType(typeof(Transaction))]
         public IHttpActionResult PostTransaction(Transaction transaction)
         {
@@ -75,11 +99,12 @@ namespace Stockapp.Portal.Controllers
             }
             try
             {
+                transaction.TransactionDate = DateTimeOffset.Now;
                 if (transactionLogic.RegisterTransaction(transaction))
-                    return CreatedAtRoute("DefaultApi", new { id = transaction.Id }, transaction);
+                    return Ok();
                 return BadRequest();
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 return BadRequest(ue.Message);
             }

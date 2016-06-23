@@ -24,7 +24,6 @@ namespace Stockapp.Test.PortalTest
                 .Returns(true);
             var controller = new StockNewsController(mockStockNewsLogic.Object);
 
-            var stockNewsId = Guid.NewGuid();
             var stockNews = new StockNews()
             {
                 ReferencedStocks = new List<Stock>(),
@@ -32,7 +31,7 @@ namespace Stockapp.Test.PortalTest
                 Title = "News5",
                 Content = "This is the news number 5",
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+                Id = 1
             };
             IHttpActionResult actionResult = controller.PostStockNews(stockNews);
 
@@ -48,7 +47,7 @@ namespace Stockapp.Test.PortalTest
             var mockStockNewsLogic = new Mock<IStockNewsLogic>();
 
             mockStockNewsLogic.Setup(x => x.RegisterStockNews(It.IsAny<StockNews>()))
-                .Throws(new UserExceptions("StockNews exception"));
+                .Throws(new UserException("StockNews exception"));
 
             var controller = new StockNewsController(mockStockNewsLogic.Object);
 

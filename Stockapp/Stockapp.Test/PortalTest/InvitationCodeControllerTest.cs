@@ -25,10 +25,8 @@ namespace Stockapp.Test.PortalTest
                     Name = "fartolaa",
                     Password = "Art.12345",
                     Email = "artolaa@outlook.com",
-                    IsAdmin = true,
-                    Id = Guid.NewGuid()
-                },
-                Id = Guid.NewGuid()
+                    IsAdmin = true
+                }
             };
             var mockInvitationCodeLogic = new Mock<IInvitationCodeLogic>();
 
@@ -50,7 +48,7 @@ namespace Stockapp.Test.PortalTest
             var mockInvitationCodeLogic = new Mock<IInvitationCodeLogic>();
 
             mockInvitationCodeLogic.Setup(x => x.GenerateCode(It.IsAny<User>()))
-                .Throws(new InvitationCodeExceptions("Admin exception"));
+                .Throws(new InvitationCodeException("Admin exception"));
 
             var controller = new InvitationCodeController(mockInvitationCodeLogic.Object);
 

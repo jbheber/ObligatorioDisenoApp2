@@ -59,6 +59,7 @@ namespace Stockapp.Data.Access
         public DbSet<InvitationCode> InvitationCodes { get; set; }
 
         public DbSet<GameSettings> GameSettings { get; set; }
+        public DbSet<Actions> Actions { get; set; }
         #endregion
 
         // Additional conventions to help EF understand our data relationships

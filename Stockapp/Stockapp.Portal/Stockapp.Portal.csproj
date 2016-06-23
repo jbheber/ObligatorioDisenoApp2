@@ -114,7 +114,97 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\angular-datepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\c3.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\metisMenu.min.css" />
+    <Content Include="Content\ng-table.min.css" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="Content\timeline.css" />
+    <Content Include="Content\toaster.min.css" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Fonts\stockIcon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\app\application.js" />
+    <Content Include="Scripts\app\Controllers\AdminHomeController.js" />
+    <Content Include="Scripts\app\Controllers\AllTransactionsController.js" />
+    <Content Include="Scripts\app\Controllers\GenerateInvitationCodesController.js" />
+    <Content Include="Scripts\app\Controllers\LoginController.js" />
+    <Content Include="Scripts\app\Controllers\MenuController.js" />
+    <Content Include="Scripts\app\Controllers\NewPriceController.js" />
+    <Content Include="Scripts\app\Controllers\NewTransactionController.js" />
+    <Content Include="Scripts\app\Controllers\PortfolioController.js" />
+    <Content Include="Scripts\app\Controllers\RegisterController.js" />
+    <Content Include="Scripts\app\Controllers\RegisterNewsController.js" />
+    <Content Include="Scripts\app\Controllers\SearchStockController.js" />
+    <Content Include="Scripts\app\Controllers\StockPoolController.js" />
+    <Content Include="Scripts\app\Controllers\TransactionHistoryController.js" />
+    <Content Include="Scripts\app\Controllers\UpdateController.js" />
+    <Content Include="Scripts\app\Services\AdminService.js" />
+    <Content Include="Scripts\app\Services\GameSettingsService.js" />
+    <Content Include="Scripts\app\Services\GenerateCodeService.js" />
+    <Content Include="Scripts\app\Services\GlobalService.js" />
+    <Content Include="Scripts\app\Services\PlayerService.js" />
+    <Content Include="Scripts\app\Services\StockNewsService.js" />
+    <Content Include="Scripts\app\Services\StockService.js" />
+    <Content Include="Scripts\app\Services\TransactionService.js" />
+    <Content Include="Scripts\app\Services\UserService.js" />
+    <Content Include="Scripts\app\validations\Validator.js" />
+    <Content Include="Scripts\libs\angular\angular-datepicker.min.js" />
+    <Content Include="Scripts\libs\c3\c3-angular.min.js" />
+    <Content Include="Scripts\libs\c3\c3.min.js" />
+    <Content Include="Scripts\libs\c3\d3.min.js" />
+    <Content Include="Scripts\libs\ng-table\ng-table.min.js" />
+    <Content Include="Scripts\libs\toaster\toaster.min.js" />
+    <Content Include="Views\adminHome.html" />
+    <Content Include="Views\allTransactions.html" />
+    <Content Include="Views\edit.html" />
+    <Content Include="Views\generateInvitationCodes.html" />
+    <Content Include="Views\home.html" />
+    <Content Include="Views\newPrice.html" />
+    <Content Include="Views\newTransaction.html" />
+    <Content Include="Views\portfolio.html" />
+    <Content Include="Views\register.html" />
+    <Content Include="Views\login.html" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="Scripts\libs\angular\angular-animate.min.js" />
+    <Content Include="Scripts\libs\angular\angular-aria.min.js" />
+    <Content Include="Scripts\libs\angular\angular-material.js" />
+    <Content Include="Scripts\libs\angular\angular-messages.js" />
+    <Content Include="Scripts\libs\angular\angular-mocks.js" />
+    <Content Include="Scripts\libs\angular\angular-route.js" />
+    <Content Include="Scripts\libs\angular\angular.js" />
+    <Content Include="Scripts\libs\bootstrap.js" />
+    <Content Include="Scripts\libs\bootstrap.min.js" />
+    <Content Include="Scripts\libs\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\libs\moment\angular-moment.min.js" />
+    <Content Include="Scripts\libs\moment\moment-with-locales.js" />
+    <Content Include="Scripts\libs\moment\moment-with-locales.min.js" />
+    <Content Include="Scripts\libs\moment\moment.js" />
+    <Content Include="Scripts\libs\moment\moment.min.js" />
+    <Content Include="Scripts\libs\theme\metisMenu.min.js" />
+    <Content Include="Scripts\libs\theme\sb-admin-2.js" />
+    <Content Include="Views\registerNews.html" />
+    <Content Include="Views\searchStock.html" />
+    <Content Include="Views\transactionHistory.html" />
+    <Content Include="Views\viewStockPool.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -131,12 +221,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserSignInDTO.cs" />
+    <Compile Include="Models\RegisterUserDTO.cs" />
+    <Compile Include="Models\UpdateStockDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

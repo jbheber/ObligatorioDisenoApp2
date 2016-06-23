@@ -22,7 +22,7 @@ namespace Stockapp.Logic.Implementation
         public GameSettings GetOrCreateGameSettings()
         {
             var gameSettings = UnitOfWork.GameSettingsRepository.Get();
-            if (gameSettings.isEmpty())
+            if (gameSettings.IsEmpty())
             {
                 var newSettings = new GameSettings();
                 UnitOfWork.GameSettingsRepository.Insert(newSettings);
@@ -32,16 +32,16 @@ namespace Stockapp.Logic.Implementation
             return gameSettings.SingleOrDefault();
         }
 
-        public GameSettings get()
+        public GameSettings Get()
         {
-           var x = UnitOfWork.GameSettingsRepository.Get().First();
+            var x = UnitOfWork.GameSettingsRepository.Get().First();
             return x;
         }
-        
+
 
         public bool UpdateOrCreateGameSettings(GameSettings settings)
         {
-            if (UnitOfWork.GameSettingsRepository.GetById(settings.Id) != null)
+            if (UnitOfWork.GameSettingsRepository.GetById(settings.Id) == null)
             {
                 var newSettings = new GameSettings();
                 UnitOfWork.GameSettingsRepository.Insert(newSettings);
@@ -49,6 +49,7 @@ namespace Stockapp.Logic.Implementation
                 return true;
             }
             UnitOfWork.GameSettingsRepository.Update(settings);
+            UnitOfWork.Save();
             return true;
         }
     }

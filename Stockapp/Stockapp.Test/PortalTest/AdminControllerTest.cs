@@ -21,9 +21,10 @@ namespace Stockapp.Test.PortalTest
 
             mockAdminLogic.Setup(x => x.UpdateAdmin(It.IsAny<Admin>())).Returns(true);
             var controller = new AdminController(mockAdminLogic.Object);
+            var adminId = 1;
 
-            var adminId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutAdmin(adminId, new Admin() { Id = adminId });
+            
+            IHttpActionResult actionResult = controller.PutAdmin(new Admin() { Id = adminId });
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
             Assert.NotNull(contentResult);
@@ -35,77 +36,27 @@ namespace Stockapp.Test.PortalTest
         public void UpdateAdminsReturnsNotFoundTest()
         {
             var mockAdminLogic = new Mock<IAdminLogic>();
+            var adminId = 1;
 
             mockAdminLogic.Setup(x => x.UpdateAdmin(It.IsAny<Admin>())).Returns(false);
             var controller = new AdminController(mockAdminLogic.Object);
 
-            var adminId = Guid.NewGuid();
-            IHttpActionResult actionResult = controller.PutAdmin(adminId, new Admin() { Id = adminId });
+            
+            IHttpActionResult actionResult = controller.PutAdmin(new Admin() { Id = adminId });
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);
             Assert.NotNull(contentResult);
         }
 
         [Fact]
-        public void RegisterAdminReturnsCreatedAtRouteTest()
-        {
-            var mockAdminLogic = new Mock<IAdminLogic>();
-
-            mockAdminLogic.Setup(x => x.CreateAdmin(It.IsAny<Admin>()))
-                .Returns(true);
-            var controller = new AdminController(mockAdminLogic.Object);
-
-            var adminId = Guid.NewGuid();
-            var admin = new Admin()
-            {
-                Name = "fartolaa",
-                CI = 12345678,
-                Surname = "artola",
-                Email = "artolaa@outlook.com",
-                User = new User()
-                {
-                    Name = "fartolaa",
-                    Password = "Art.12345",
-                    Email = "artolaa@outlook.com",
-                    Id = Guid.NewGuid()
-                },
-                Id = adminId
-            };
-            IHttpActionResult actionResult = controller.PostAdmin(admin);
-
-            var contentResult = Assert.IsType<CreatedAtRouteNegotiatedContentResult<Admin>>(actionResult);
-            Assert.NotNull(contentResult);
-
-            Assert.Equal(contentResult.Content, admin);
-        }
-
-        [Fact]
-        public void RegisterAdminReturnsBadRequestTest()
-        {
-            var mockAdminLogic = new Mock<IAdminLogic>();
-
-            mockAdminLogic.Setup(x => x.CreateAdmin(It.IsAny<Admin>()))
-                .Throws(new UserExceptions("Admin exception"));
-
-            var controller = new AdminController(mockAdminLogic.Object);
-
-            IHttpActionResult actionResult = controller.PostAdmin(new Admin());
-
-            var contentResult = Assert.IsType<BadRequestErrorMessageResult>(actionResult);
-            Assert.NotNull(contentResult);
-
-            Assert.Equal(contentResult.Message, "Admin exception");
-        }
-
-        [Fact]
         public void DeleteAdminReturnsNoContentTest()
         {
             var mockAdminLogic = new Mock<IAdminLogic>();
-
-            mockAdminLogic.Setup(x => x.DeleteAdmin(It.IsAny<Guid>())).Returns(true);
+            var adminId = 1;
+            mockAdminLogic.Setup(x => x.DeleteAdmin(It.IsAny<long>())).Returns(true);
             var controller = new AdminController(mockAdminLogic.Object);
 
-            var adminId = Guid.NewGuid();
+            
             IHttpActionResult actionResult = controller.DeleteAdmin(adminId);
 
             StatusCodeResult contentResult = Assert.IsType<StatusCodeResult>(actionResult);
@@ -118,10 +69,10 @@ namespace Stockapp.Test.PortalTest
         {
             var mockAdminLogic = new Mock<IAdminLogic>();
 
-            mockAdminLogic.Setup(x => x.DeleteAdmin(It.IsAny<Guid>())).Returns(false);
+            mockAdminLogic.Setup(x => x.DeleteAdmin(It.IsAny<long>())).Returns(false);
             var controller = new AdminController(mockAdminLogic.Object);
+            var adminId = 1;
 
-            var adminId = Guid.NewGuid();
             IHttpActionResult actionResult = controller.DeleteAdmin(adminId);
 
             var contentResult = Assert.IsType<NotFoundResult>(actionResult);

@@ -32,7 +32,7 @@ namespace Stockapp.Test.LogicTest
                     .ToList()
                     .Add(new StockHistory()
                     {
-                        Id = Guid.NewGuid(),
+                        Id = i,
                         DateOfChange = DateTimeOffset.Now.AddDays(-i),
                         RecordedValue = 1000 * i
                     });

@@ -28,17 +28,17 @@ namespace Stockapp.Logic.Implementation
         public InvitationCode GenerateCode(User administator)
         {
             if (administator.IsAdmin == false)
-                throw new InvitationCodeExceptions("Solo administaradores pueden generar codigos");
+                throw new InvitationCodeException("Solo administaradores pueden generar codigos");
 
             var exisitngCodes = UnitOfWork.InvitationCodeRepository.Get();
 
             var newInvitationCode = new InvitationCode()
             {
                 Code = RandomAlphanumericString(8),
-                ParentUser = administator
+                ParentUserId = administator.Id
             };
 
-            while (exisitngCodes.isNotEmpty() && exisitngCodes.Any(c => c.Code == newInvitationCode.Code))
+            while (exisitngCodes.IsNotEmpty() && exisitngCodes.Any(c => c.Code == newInvitationCode.Code))
                 newInvitationCode.Code = RandomAlphanumericString(8);
 
             UnitOfWork.InvitationCodeRepository.Insert(newInvitationCode);

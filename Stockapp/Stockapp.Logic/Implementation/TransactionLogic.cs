@@ -25,27 +25,31 @@ namespace Stockapp.Logic.Implementation
         {
             if (portfolioLogic.UpdatePortfolio(transaction) == false)
                 return false;
-            UnitOfWork.TransactionRepository.Update(transaction);
+            UnitOfWork.TransactionRepository.Insert(transaction);
             UnitOfWork.Save();
             return true;
         }
 
-        public IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, Stock stock = null, string transactionType = null)
+        public IEnumerable<Transaction> GetTransacions(DateTimeOffset from, DateTimeOffset to, long stockId, string transactionType = null)
          {
-             var transactions = UnitOfWork.TransactionRepository.Get(null, null, "Portfolio,Stock");
-             if (transactions.isEmpty())
+             var transactions = UnitOfWork.TransactionRepository.Get(null, null, "Stock");
+             if (transactions.IsEmpty())
                  return null;
- 
-            transactions = transactions.Where(x => x.TransactionDate > from && x.TransactionDate < to);
 
-             if (stock != null)
-                transactions = transactions.Where(x => x.StockId == stock.Id);
+            var filteredTransactions = new List<Transaction>();
+            foreach(var transaction in transactions)
+            {
+                if (transaction.TransactionDate.Date >= from.Date && transaction.TransactionDate.Date <= to.Date) { 
+                    filteredTransactions.Add(transaction);
+                }
+            }
+            if (stockId != 0)
+                filteredTransactions = filteredTransactions.Where(x => x.StockId == stockId).ToList();
  
              if (transactionType != null)
-                transactions = transactions.Where(x => x.Type.ToString() == transactionType);
-
+                filteredTransactions = filteredTransactions.Where(x => x.Type.ToString() == transactionType).ToList();
  
-             return transactions;
+             return filteredTransactions;
          }
 
         public bool UpdateTransaction(Transaction transaction)

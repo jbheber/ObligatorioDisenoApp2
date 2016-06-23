@@ -97,7 +97,7 @@ namespace Stockapp.Test
                 Email = "dario.rodriguez@outlook.com",
                 IsAdmin = false,
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.UserRepository.Insert(newUser);
@@ -123,14 +123,14 @@ namespace Stockapp.Test
                 Email = "dario.rodriguez@outlook.com",
                 IsAdmin = false,
                 IsDeleted = false,
-                Id = Guid.NewGuid()
+               
             };
 
             unitOfWork.UserRepository.Insert(newUser);
 
             var result = unitOfWork.UserRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -217,7 +217,7 @@ namespace Stockapp.Test
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 1
                 },
                 new User()
                 {
@@ -226,7 +226,7 @@ namespace Stockapp.Test
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 2
                 },
                 new User()
                 {
@@ -235,7 +235,7 @@ namespace Stockapp.Test
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 3
                 },
                 new User()
                 {
@@ -244,7 +244,7 @@ namespace Stockapp.Test
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+                   Id = 4
                 },
                 new User()
                 {
@@ -253,7 +253,7 @@ namespace Stockapp.Test
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+                   Id = 5
                 }
             };
         }

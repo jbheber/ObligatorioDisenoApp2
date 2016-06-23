@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Genera Codigos de invitacion
+        </div>
+        <div class="panel-body">
+            <ul ng-repeat="code in codes">
+                <li>
+                    <label>Codigo: {{code}}</label>
+                    <br />
+                </li>
+            </ul>
+
+            <div id="push"></div>
+
+            <div id="footer">
+                <div class="container">
+                    <a class="btn btn-default" ng-click="generateCode()"><i class="icon-plus"></i> Generar </a>
+                </div>
+            </div>
+            <toaster-container></toaster-container>
+        </div>
+    </div>
+</div>

@@ -23,8 +23,10 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">User.Id</param>
         /// <param name="settings">GameSettings admin</param>
         /// <returns></returns>
+        [HttpPut]
+        [Route("api/gamesettings/{id:long}")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutGameSettings(Guid id, GameSettings settings)
+        public IHttpActionResult PutGameSettings(long id, GameSettings settings)
         {
             if (!ModelState.IsValid)
             {
@@ -46,6 +48,8 @@ namespace Stockapp.Portal.Controllers
         /// <param name="id">User.Id</param>
         /// <param name="user">Updated admin</param>
         /// <returns></returns>
+        [HttpGet]
+        [Route("api/gamesettings/")]
         [ResponseType(typeof(GameSettings))]
         public IHttpActionResult GetGameSettings()
         {

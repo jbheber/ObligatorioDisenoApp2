@@ -19,26 +19,14 @@ namespace Stockapp.Portal.Controllers
             this.invitationCodeLogic = invitationCodeLogic;
         }
 
-        public IHttpActionResult Get(User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            InvitationCode invitationCode = invitationCodeLogic.GenerateCode(user);
-            if (invitationCode == null)
-            {
-                return NotFound();
-            }
-            return Ok(invitationCode);
-        }
-
         // POST: api/InvitationCode
         /// <summary>
         /// Register a new InvitationCode
         /// </summary>
         /// <param name="user">InvitationCode created client-side</param>
         /// <returns></returns>
+        [HttpPost]
+        [Route("api/invitationcode/")]
         [ResponseType(typeof(InvitationCode))]
         public IHttpActionResult PostInvitationCode(User user)
         {
@@ -50,11 +38,12 @@ namespace Stockapp.Portal.Controllers
             try
             {
                 var newCode = invitationCodeLogic.GenerateCode(user);
-                if (newCode != null)
-                    return CreatedAtRoute("DefaultApi", new { id = newCode.Id }, newCode);
+                if (newCode != null) {
+                    return Ok(newCode);
+                }
                 return BadRequest();
             }
-            catch (InvitationCodeExceptions ie)
+            catch (InvitationCodeException ie)
             {
                 return BadRequest(ie.Message);
             }

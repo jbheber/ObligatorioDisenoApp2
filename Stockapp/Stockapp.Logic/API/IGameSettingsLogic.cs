@@ -9,7 +9,7 @@ namespace Stockapp.Logic.API
 {
     public interface IGameSettingsLogic
     {
-        GameSettings get();
+        GameSettings Get();
         GameSettings GetOrCreateGameSettings();
         bool UpdateOrCreateGameSettings(GameSettings settings);
     }

@@ -120,9 +120,9 @@ namespace Stockapp.Test
                     Email = "test@test.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.InvitationCodeRepository.Insert(invitationCode);
@@ -156,16 +156,16 @@ namespace Stockapp.Test
                     Email = "test@test.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
-                Id = Guid.NewGuid()
+
             };
 
             unitOfWork.InvitationCodeRepository.Insert(invitationCode);
 
             var result = unitOfWork.InvitationCodeRepository.GetAll();
 
-            Assert.True(result.isNotEmpty());
+            Assert.True(result.IsNotEmpty());
         }
 
         [Theory]
@@ -253,48 +253,53 @@ namespace Stockapp.Test
             {
                 new User()
                 {
+                    Id = 1,
                     Name = "jbheber",
                     Password = "Jb12345",
                     Email = "juanbheber@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 2,
                     Name = "fartolaa",
                     Password = "Art12345",
                     Email = "artolaa@outlook.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 3,
                     Name = "jheber",
                     Password = "Jh1234554",
                     Email = "juanbautistaheber@gmail.com",
                     IsAdmin = true,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 4,
                     Name = "arto",
                     Password = "Artoo1234554",
                     Email = "arto@gmail.com",
                     IsAdmin = true,
                     IsDeleted = true,
-                    Id = Guid.NewGuid()
+
                 },
                 new User()
                 {
+                    Id = 5,
                     Name = "maca",
                     Password = "Maluso1234554",
                     Email = "macaluso@gmail.com",
                     IsAdmin = false,
                     IsDeleted = false,
-                    Id = Guid.NewGuid()
+
                 }
             };
         }
@@ -306,43 +311,48 @@ namespace Stockapp.Test
             {
                 new InvitationCode()
                 {
+                    Id = 1,
                     Code = "AA245GJ1",
                     IsDeleted = users.ElementAt(0).IsDeleted,
                     ParentUser = users.ElementAt(0),
                     ParentUserId = users.ElementAt(0).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new InvitationCode()
                 {
+                    Id = 2,
                     Code = "AA245GJ2",
                     IsDeleted = users.ElementAt(1).IsDeleted,
                     ParentUser = users.ElementAt(1),
                     ParentUserId = users.ElementAt(1).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new InvitationCode()
                 {
+                    Id = 3,
                     Code = "AA245GJ3",
                     IsDeleted = users.ElementAt(2).IsDeleted,
                     ParentUser = users.ElementAt(2),
                     ParentUserId = users.ElementAt(2).Id,
-                    Id = Guid.NewGuid()
+
                 },
                 new InvitationCode()
                 {
+                    Id = 4,
                     Code = "AA245GJ4",
                     IsDeleted = users.ElementAt(3).IsDeleted,
                     ParentUser = users.ElementAt(3),
                     ParentUserId = users.ElementAt(3).Id,
-                    Id = Guid.NewGuid()
+
                 },
                  new InvitationCode()
                 {
+                     Id = 5,
                     Code = "AA245GJ5",
                     IsDeleted = users.ElementAt(4).IsDeleted,
                     ParentUser = users.ElementAt(4),
                     ParentUserId = users.ElementAt(4).Id,
-                    Id = Guid.NewGuid()
+
                 },
             };
         }

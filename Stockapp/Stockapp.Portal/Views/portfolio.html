@@ -1,0 +1,43 @@
+﻿<div ng-controller="PortfolioController">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Portfolio
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label>Efectivo disponible:</label>
+                <p class="form-control-static">U$S: <span ng-bind="Portfolio.AvailableMoney"></span></p>
+            </div>
+            <div class="form-group">
+                <label>Valor de tus acciones:</label>
+                <p class="form-control-static">U$S: <span ng-bind="Portfolio.ActionsValue"></span></p>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="form-group">
+                <label>Valor Neto Total:</label>
+                <p class="form-control-static">U$S: <span ng-bind="Portfolio.TotalMoney"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-10">
+                    <h3> Acciones </h3>
+                    <table ng-table="customConfigParams" class="table table-condensed table-bordered table-striped">
+                        <tr ng-repeat="row in actions">
+                            <td data-title="'Stock'">{{row.Stock.Code}}</td>
+                            <td data-title="'V.U.'">{{row.Stock.UnityValue}}</td>
+                            <td data-title="'Var.'">{{row.Stock.NetVariation}}</td>
+                            <td data-title="'Var. Por.'">{{row.Stock.PercentageVariation}} %</td>
+                            <td data-title="'Cap. Merc.'">{{row.Stock.MarketCapital}}</td>
+                            <td data-title="'Cant.'">{{row.QuantityOfActions}}</td>
+                            <td data-title="'Valor'">{{row.TotalValue}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

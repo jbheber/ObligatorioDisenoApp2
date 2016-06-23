@@ -156,7 +156,7 @@ namespace Stockapp.Test.LogicTest
                 // If test gets to this assert then it failed
                 throwUserException = false;
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 //For debug purposes
                 var exceptionMessage = ue.Message;
@@ -197,7 +197,7 @@ namespace Stockapp.Test.LogicTest
                 // If test gets to this assert then its correct
                 Assert.True(true);
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 //For debug purposes
                 var exceptionMessage = ue.Message;
@@ -221,9 +221,10 @@ namespace Stockapp.Test.LogicTest
             invitationCode.Code = ic;
             // Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
-            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(It.IsAny<Expression<Func<InvitationCode, bool>>>(), null, ""))
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Get(It.IsAny<Expression<Func<InvitationCode, bool>>>(), null, It.IsAny<string>()))
                 .Returns(new List<InvitationCode>() { invitationCode });
             mockUnitOfWork.Setup(un => un.UserRepository.Insert(It.IsAny<User>()));
+            mockUnitOfWork.Setup(un => un.InvitationCodeRepository.Delete(It.IsAny<InvitationCode>()));
             mockUnitOfWork.Setup(un => un.Save());
 
             IUserLogic userLogic = new UserLogic(mockUnitOfWork.Object);
@@ -243,7 +244,7 @@ namespace Stockapp.Test.LogicTest
                 mockUnitOfWork.Verify(un => un.Save(), Times.Exactly(1));
                 Assert.True(response);
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 //For debug purposes
                 var exceptionMessage = ue.Message;
@@ -290,7 +291,7 @@ namespace Stockapp.Test.LogicTest
                 Name = "Carlos",
                 Email = "car@gmail.com",
                 Password = "carlos123",
-                Id = Guid.NewGuid()
+                Id = 1
             };
             // Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
@@ -308,7 +309,7 @@ namespace Stockapp.Test.LogicTest
                 Name = "Carlos",
                 Email = "car@gmail.com",
                 Password = "carlos123",
-                Id = Guid.NewGuid()
+                Id = 1
             };
             //Arrange
             var mockUnitOfWork = new Mock<IUnitOfWork>();
@@ -345,7 +346,7 @@ namespace Stockapp.Test.LogicTest
             //Arrange 
             var mockUnitOfWork = new Mock<IUnitOfWork>();
             mockUnitOfWork
-                .Setup(un => un.UserRepository.GetById(It.IsAny<Guid>()))
+                .Setup(un => un.UserRepository.GetById(It.IsAny<long>()))
                 .Returns(() => new User() { });
 
             mockUnitOfWork.Setup(un => un.UserRepository.Update(It.IsAny<User>()));

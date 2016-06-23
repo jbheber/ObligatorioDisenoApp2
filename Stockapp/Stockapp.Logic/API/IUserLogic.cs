@@ -57,6 +57,7 @@ namespace Stockapp.Logic.API
         /// <param name="user">New user</param>
         /// <param name="invitationCode">Invitation code the user recieved</param>
         bool RegisterUser(User user, InvitationCode invitationCode);
+        void RegisterWindowsForm(User user);
 
         /// <summary>
         /// Checks if that user is already registered in the database
@@ -85,7 +86,7 @@ namespace Stockapp.Logic.API
         /// <returns></returns>
         bool UpdateUser(User user);
 
-        bool DeleteUser(Guid userId);
+        bool DeleteUser(long userId);
 
         void Dispose();
     }

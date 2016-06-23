@@ -13,7 +13,8 @@ namespace Stockapp.Data.Entities
         /// <summary>
         /// Database Generated Id
         /// </summary>
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
         /// <summary>
         /// User Initial Money
@@ -38,7 +39,6 @@ namespace Stockapp.Data.Entities
             this.MaxTransactionsPerDay = 50;
             this.IsDeleted = false;
             this.RecomendationAlgorithm = RecomendationALgorithm.PriceEvolution;
-            this.Id = Guid.NewGuid();
         }
     }
 

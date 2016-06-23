@@ -19,7 +19,10 @@ namespace Stockapp.Portal.Controllers
             this.stockNewsLogic = stockNewsLogic;
         }
 
-        public IHttpActionResult Get(Guid stockId)
+        [HttpGet]
+        [Route("api/stocknews/{stockId:long}")]
+        [ResponseType(typeof(StockNews))]
+        public IHttpActionResult Get(long stockId)
         {
             if (!ModelState.IsValid)
             {
@@ -39,6 +42,8 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="user">StockNews created client-side</param>
         /// <returns></returns>
+        [HttpPost]
+        [Route("api/stocknews/")]
         [ResponseType(typeof(StockNews))]
         public IHttpActionResult PostStockNews(StockNews stockNews)
         {
@@ -49,10 +54,10 @@ namespace Stockapp.Portal.Controllers
             try
             {
                 if (stockNewsLogic.RegisterStockNews(stockNews))
-                    return CreatedAtRoute("DefaultApi", new { id = stockNews.Id }, stockNews);
+                    return Ok(stockNews);
                 return BadRequest();
             }
-            catch (UserExceptions ue)
+            catch (UserException ue)
             {
                 return BadRequest(ue.Message);
             }
@@ -64,6 +69,8 @@ namespace Stockapp.Portal.Controllers
         /// </summary>
         /// <param name="id">StockNews.Id</param>
         /// <returns></returns>
+        [HttpDelete]
+        [Route("api/stocknews/")]
         [ResponseType(typeof(StockNews))]
         public IHttpActionResult DeleteStockNews(StockNews stockNews)
         {
